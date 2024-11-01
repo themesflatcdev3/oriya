@@ -1,0 +1,13 @@
+.tf-topbar {
+    background-color: var(--Onsurface);
+    .topbar-left {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        gap: 29px;
+    }
+}
