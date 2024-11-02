@@ -41,10 +41,10 @@
   --main: #000000;
   --white: #ffffff;
   --Onsurface: #181818;
-  --Primary: #E43131;
+  --Primary: #DC9056;
   --Secondary: #4D4E4F;
   --Secondary2: #A0A0A0;
-  --Surface: #F7F7F7;
+  --Surface: #F6F6F6;
   --Line: #E9E9E9;
   --Critical: #F03E3E;
   --Success: #3DAB25;
@@ -670,10 +670,15 @@ label {
   z-index: 50;
 }
 
+.tf-md-hidden {
+  display: none;
+}
+
 /*------------ Components ---------------- */
 /*------------ header ---------------- */
 .tf-topbar {
   background-color: var(--Onsurface);
+  padding: 11px 0;
 }
 .tf-topbar .topbar-left {
   display: flex;
@@ -1404,8 +1409,6 @@ label {
 
 /*------------ sections ---------------- */
 /*-------------- Responsive ----------------- */
-/* Media Queries
--------------------------------------------------------------- */
 @media (min-width: 576px) {
   .card-product .description {
     display: block;
