@@ -1,16 +1,20 @@
-
 if ($(".tf-sw-top_bar").length > 0) {
-  var preview = $(".tf-sw-top_bar").data("preview");
-  var spacing = $(".tf-sw-top_bar").data("space");
-  var loop = $(".tf-sw-top_bar").data("loop");
-  var speed = $(".tf-sw-top_bar").data("speed");
-  var delay = $(".tf-sw-top_bar").data("delay");
+  var tfSwTopbar = $(".tf-sw-top_bar");
+  var preview = tfSwTopbar.data("preview");
+  var spacing = tfSwTopbar.data("space");
+  var loop = tfSwTopbar.data("loop");
+  var speed = tfSwTopbar.data("speed");
+  var play = tfSwTopbar.data("auto-play");
+  var delay = tfSwTopbar.data("delay");
   var swiper = new Swiper(".tf-sw-top_bar", {
     autoplay: {
       delay: delay,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
+    observer: true,
+    observeParents: true,
+    autoplay: play,
     slidesPerView: preview,
     loop: loop,
     spaceBetween: spacing,
@@ -22,7 +26,7 @@ if ($(".tf-sw-top_bar").length > 0) {
     },
   });
 
-  $(".tf-sw-top_bar").hover(
+  tfSwTopbar.hover(
     function () {
       this.swiper.autoplay.stop();
     },
@@ -33,34 +37,37 @@ if ($(".tf-sw-top_bar").length > 0) {
 }
 
 if ($(".tf-sw-slideshow").length > 0) {
-  var preview = $(".tf-sw-slideshow").data("preview");
-  var tablet = $(".tf-sw-slideshow").data("tablet");
-  var mobile = $(".tf-sw-slideshow").data("mobile");
-  var spacing = $(".tf-sw-slideshow").data("space");
-  var loop = $(".tf-sw-slideshow").data("loop");
-  var play = $(".tf-sw-slideshow").data("auto-play");
-  var delay = $(".tf-sw-slideshow").data("delay");
-  var speed = $(".tf-sw-slideshow").data("speed");
-  var centered = $(".tf-sw-slideshow").data("centered");
-  var swiper = new Swiper(".tf-sw-slideshow", {
+  var tfSwSlideshow = $(".tf-sw-slideshow");
+  var preview = tfSwSlideshow.data("preview");
+  var tablet = tfSwSlideshow.data("tablet");
+  var mobile = tfSwSlideshow.data("mobile");
+  var spacing = tfSwSlideshow.data("space");
+  var spacingMb = tfSwSlideshow.data("space-mb");
+  var loop = tfSwSlideshow.data("loop");
+  var play = tfSwSlideshow.data("auto-play");
+  var centered = tfSwSlideshow.data("centered");
+  var effect = tfSwSlideshow.data("effect");
+  var speed = tfSwSlideshow.data("speed") !== undefined ? tfSwSlideshow.data("speed") : 1000;
+  var swiperSlider =  {
     autoplay: {
-      delay: delay,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
     autoplay: play,
     slidesPerView: mobile,
     loop: loop,
-    spaceBetween: 0,
+    spaceBetween: spacingMb,
     speed: speed,
+    observer: true,
+    observeParents: true,
     pagination: {
       el: ".sw-pagination-slider",
       clickable: true,
     },
     navigation: {
       clickable: true,
-      nextEl: ".navigation-prev-slider",
-      prevEl: ".navigation-next-slider",
+      nextEl: ".navigation-next-slider",
+      prevEl: ".navigation-prev-slider",
     },
     centeredSlides: false,
     breakpoints: {
@@ -70,26 +77,30 @@ if ($(".tf-sw-slideshow").length > 0) {
         centeredSlides: false,
 
       },
-      1150: {
+      1200: {
         slidesPerView: preview,
         spaceBetween: spacing,
         centeredSlides: centered,
       },
     },
-  });
-
-
+  };
+  if (effect === 'fade') {
+    swiperSlider.effect = 'fade';
+    swiperSlider.fadeEffect = {
+      crossFade: true,
+    };
+  }
+  
+  var swiper = new Swiper(".tf-sw-slideshow", swiperSlider);
 }
 
 if ($(".tf-sw-effect").length > 0) {
   var swiper2 = new Swiper(".tf-sw-effect", {
     spaceBetween: 0,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
     speed: 2000,
     effect: "fade",
+    observer: true,
+    observeParents: true,
     fadeEffect: {
       crossFade: true,
     },
@@ -99,302 +110,272 @@ if ($(".tf-sw-effect").length > 0) {
     },
     navigation: {
       clickable: true,
-      nextEl: ".nav-prev-slider",
-      prevEl: ".nav-next-slider",
+      nextEl: ".nav-next-slider",
+      prevEl: ".nav-prev-slider",
     },
   });
 }
-
-
-if ($(".thumbs-default").length > 0) {
-  var direction = $(".tf-product-media-thumbs-default").data("direction");
-  var thumbsSlider = new Swiper(".tf-product-media-thumbs-default", {
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    // slidesPerView: 2,
-    direction: "vertical",
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      0: {
-        direction: "horizontal",
-        slidesPerView: 5,
-      },
-      1150: {
-        direction: "vertical",
-        direction: direction,
-      },
-    },
-    450: {
-      direction: "vertical",
-    },
-  });
-  var mainSlider = new Swiper(".tf-product-media-main-default", {
-    spaceBetween: 0,
-    // observer: true,
-    // observeParents: true,
-    navigation: {
-      nextEl: ".thumbs-next",
-      prevEl: ".thumbs-prev",
-    },
-    thumbs: {
-      swiper: thumbsSlider,
-    },
-
-  });
-
-}
-
-if ($(".thumbs-slider-black").length > 0) {
-  var direction = $(".tf-product-media-thumbs-black").data("direction");
-  var thumbsSlider = new Swiper(".tf-product-media-thumbs-black", {
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    // slidesPerView: 2,
-    direction: "vertical",
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      0: {
-        direction: "horizontal",
-        slidesPerView: 5,
-      },
-      1150: {
-        direction: "vertical",
-        direction: direction,
-      },
-    },
-    450: {
-      direction: "vertical",
-    },
-  });
-  var mainSlider = new Swiper(".tf-product-media-main-black", {
-    spaceBetween: 0,
-    // observer: true,
-    // observeParents: true,
-    navigation: {
-      nextEl: ".thumbs-next-black",
-      prevEl: ".thumbs-prev-black",
-    },
-    thumbs: {
-      swiper: thumbsSlider,
-    },
-
-  });
-
-
-
-
-}
-
-if ($(".thumbs-slider-blue").length > 0) {
-  var direction = $(".tf-product-media-thumbs-blue").data("direction");
-  var thumbsSlider = new Swiper(".tf-product-media-thumbs-blue", {
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    // slidesPerView: 2,
-    direction: "vertical",
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      0: {
-        direction: "horizontal",
-        slidesPerView: 5,
-      },
-      1150: {
-        direction: "vertical",
-        direction: direction,
-      },
-    },
-    450: {
-      direction: "vertical",
-    },
-  });
-  var mainSlider = new Swiper(".tf-product-media-main-blue", {
-    spaceBetween: 0,
-    // observer: true,
-    // observeParents: true,
-    navigation: {
-      nextEl: ".thumbs-next-blue",
-      prevEl: ".thumbs-prev-blue",
-    },
-    thumbs: {
-      swiper: thumbsSlider,
-    },
-
-  });
-
-
-
-
-}
-
-if ($(".thumbs-slider-white").length > 0) {
-  var direction = $(".tf-product-media-thumbs-white").data("direction");
-  var thumbsSlider = new Swiper(".tf-product-media-thumbs-white", {
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    // slidesPerView: 2,
-    direction: "vertical",
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      0: {
-        direction: "horizontal",
-        slidesPerView: 5,
-      },
-      1150: {
-        direction: "vertical",
-        direction: direction,
-      },
-    },
-    450: {
-      direction: "vertical",
-    },
-  });
-  var mainSlider = new Swiper(".tf-product-media-main-white", {
-    spaceBetween: 0,
-    // observer: true,
-    // observeParents: true,
-    navigation: {
-      nextEl: ".thumbs-next-white",
-      prevEl: ".thumbs-prev-white",
-    },
-    thumbs: {
-      swiper: thumbsSlider,
-    },
-
-  });
-
-
-
-
-}
-
-
-
 
 if ($(".tf-sw-collection").length > 0) {
-  var preview = $(".tf-sw-collection").data("preview");
-  var tablet = $(".tf-sw-collection").data("tablet");
-  var mobile = $(".tf-sw-collection").data("mobile");
-  var spacingLg = $(".tf-sw-collection").data("space-lg");
-  var spacingMd = $(".tf-sw-collection").data("space-md");
-  var spacing = $(".tf-sw-collection").data("space");
-  var loop = $(".tf-sw-collection").data("loop");
-  var play = $(".tf-sw-collection").data("auto-play");
+  var tfSwCls = $(".tf-sw-collection");
+  var preview = tfSwCls.data("preview");
+  var tablet = tfSwCls.data("tablet");
+  var mobile = tfSwCls.data("mobile");
+  var mobileSm = tfSwCls.data("mobile-sm") !== undefined ? tfSwCls.data("mobile-sm") : mobile;
+  var spacingLg = tfSwCls.data("space-lg");
+  var spacingMd = tfSwCls.data("space-md");
+  var spacing = tfSwCls.data("space");
+  var loop = tfSwCls.data("loop");
+  var perGroup = tfSwCls.data("pagination") || 1;
+  var perGroupMd = tfSwCls.data("pagination-md") || 1;
+  var perGroupLg = tfSwCls.data("pagination-lg") || 1;
   var swiper = new Swiper(".tf-sw-collection", {
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    // observer: true,
-    // observeParents: true,
-    autoplay: play,
     slidesPerView: mobile,
-    loop: loop,
     spaceBetween: spacing,
     speed: 1000,
     pagination: {
       el: ".sw-pagination-collection",
       clickable: true,
     },
-    slidesPerGroup: 1,
+    observer: true,
+    observeParents: true,
+    slidesPerGroup: perGroup,
     navigation: {
       clickable: true,
-      nextEl: ".nav-prev-collection",
-      prevEl: ".nav-next-collection",
+      nextEl: ".nav-next-collection",
+      prevEl: ".nav-prev-collection",
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
+        slidesPerGroup: perGroup,
+      },
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+}
+
+if ($(".tf-sw-categories").length > 0) {
+  var tfSwCategories = $(".tf-sw-categories");
+  var preview = tfSwCategories.data("preview");
+  var tablet = tfSwCategories.data("tablet");
+  var mobile = tfSwCategories.data("mobile");
+  var mobileSm = tfSwCategories.data("mobile-sm") !== undefined ? tfSwCategories.data("mobile-sm") : mobile;
+  var spacingLg = tfSwCategories.data("space-lg");
+  var spacingMd = tfSwCategories.data("space-md");
+  var spacing = tfSwCategories.data("space");
+  var perGroup = tfSwCategories.data("pagination") || 1;
+  var perGroupMd = tfSwCategories.data("pagination-md") || 1;
+  var perGroupLg = tfSwCategories.data("pagination-lg") || 1;
+  var loop = tfSwCategories.data("loop") !== undefined ?  tfSwCategories.data("loop") : false;
+  var swiper = new Swiper(".tf-sw-categories", {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    speed: 1000,
+    pagination: {
+      el: ".sw-pagination-categories",
+      clickable: true,
+    },
+    slidesPerGroup: perGroup,
+    observer: true,
+    observeParents: true,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-next-categories",
+      prevEl: ".nav-prev-categories",
+    },
+    loop:loop,
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
+        slidesPerGroup: perGroup,
+      },
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+}
+
+if ($(".tf-sw-recent").length > 0) {
+  var preview = $(".tf-sw-recent").data("preview");
+  var tablet = $(".tf-sw-recent").data("tablet");
+  var mobile = $(".tf-sw-recent").data("mobile");
+  var spacingLg = $(".tf-sw-recent").data("space-lg");
+  var spacingMd = $(".tf-sw-recent").data("space-md");
+  var spacing = $(".tf-sw-recent").data("space");
+  var perGroup = $(".tf-sw-recent").data("pagination");
+  var perGroupMd = $(".tf-sw-recent").data("pagination-md");
+  var perGroupLg = $(".tf-sw-recent").data("pagination-lg");
+  var swiper = new Swiper(".tf-sw-recent", {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    pagination: {
+      el: ".sw-pagination-recent",
+      clickable: true,
+    },
+    slidesPerGroup: perGroup,
+    observer: true,
+    observeParents: true,
+    speed: 1000,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-prev-recent",
+      prevEl: ".nav-next-recent",
     },
     breakpoints: {
       768: {
         slidesPerView: tablet,
         spaceBetween: spacingMd,
-        slidesPerGroup: 2,
+        slidesPerGroup: perGroupMd,
       },
-      1150: {
+      1200: {
         slidesPerView: preview,
         spaceBetween: spacingLg,
-        slidesPerGroup: 2,
+        slidesPerGroup: perGroupLg,
       },
     },
   });
 }
 
-if ($(".tf-sw-lookbook").length > 0) {
-  var preview = $(".tf-sw-lookbook").data("preview");
-  var tablet = $(".tf-sw-lookbook").data("tablet");
-  var mobile = $(".tf-sw-lookbook").data("mobile");
-  var spacingLg = $(".tf-sw-lookbook").data("space-lg");
-  var spacingMd = $(".tf-sw-lookbook").data("space-md");
-  var swiper = new Swiper(".tf-sw-lookbook", {
+if ($(".tf-sw-latest").length > 0) {
+  var preview = $(".tf-sw-latest").data("preview");
+  var tablet = $(".tf-sw-latest").data("tablet");
+  var mobile = $(".tf-sw-latest").data("mobile");
+  var spacingLg = $(".tf-sw-latest").data("space-lg");
+  var spacingMd = $(".tf-sw-latest").data("space-md");
+  var spacing = $(".tf-sw-latest").data("space");
+  var perGroup = $(".tf-sw-latest").data("pagination");
+  var perGroupMd = $(".tf-sw-latest").data("pagination-md");
+  var perGroupLg = $(".tf-sw-latest").data("pagination-lg");
+  var swiper = new Swiper(".tf-sw-latest", {
     slidesPerView: mobile,
-    spaceBetween: spacingMd,
+    spaceBetween: spacing,
+    observer: true,
+    observeParents: true,
     speed: 1000,
+    pagination: {
+      el: ".sw-pagination-latest",
+      clickable: true,
+    },
+    slidesPerGroup: perGroup,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-prev-latest",
+      prevEl: ".nav-next-latest",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+}
+
+if ($(".tf-sw-products").length > 0) {
+  var preview = $(".tf-sw-products").data("preview");
+  var tablet = $(".tf-sw-products").data("tablet");
+  var mobile = $(".tf-sw-products").data("mobile");
+  var spacingLg = $(".tf-sw-products").data("space-lg");
+  var spacingMd = $(".tf-sw-products").data("space-md");
+  var spacing = $(".tf-sw-products").data("space");
+  var perGroup = $(".tf-sw-products").data("pagination");
+  var perGroupMd = $(".tf-sw-products").data("pagination-md");
+  var perGroupLg = $(".tf-sw-products").data("pagination-lg");
+  var swiper = new Swiper(".tf-sw-products", {
+    speed: 1000,
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    pagination: {
+      el: ".sw-pagination-products",
+      clickable: true,
+    },
+    slidesPerGroup: perGroup,
+    observer: true,
+    observeParents: true,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-prev-products",
+      prevEl: ".nav-next-products",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+}
+
+if ($(".tf-sw-products1").length > 0) {
+  var preview = $(".tf-sw-products1").data("preview");
+  var tablet = $(".tf-sw-products1").data("tablet");
+  var mobile = $(".tf-sw-products1").data("mobile");
+  var spacingLg = $(".tf-sw-products1").data("space-lg");
+  var spacingMd = $(".tf-sw-products1").data("space-md");
+  var spacing = $(".tf-sw-products1").data("space");
+  var perGroup = $(".tf-sw-products1").data("pagination");
+  var perGroupMd = $(".tf-sw-products1").data("pagination-md");
+  var perGroupLg = $(".tf-sw-products1").data("pagination-lg");
+  var swiper = new Swiper(".tf-sw-products1", {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
     observer: true,
     observeParents: true,
     pagination: {
-      el: ".sw-pagination-lookbook",
+      el: ".sw-pagination-products1",
       clickable: true,
-      
     },
-    navigation: {
-      clickable: true,
-      nextEl: ".nav-prev-lookbook",
-      prevEl: ".nav-next-lookbook",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: tablet,
-        spaceBetween: spacingLg,
-      },
-      1150: {
-        slidesPerView: preview,
-        spaceBetween: spacingLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-lookbook").length > 0) {
-  var preview = $(".tf-lookbook").data("preview");
-  var tablet = $(".tf-lookbook").data("tablet");
-  var mobile = $(".tf-lookbook").data("mobile");
-  var spacingLg = $(".tf-lookbook").data("space-lg");
-  var spacingMd = $(".tf-lookbook").data("space-md");
-  var swiper1 = new Swiper(".tf-lookbook", {
-    slidesPerView: mobile,
-    spaceBetween: spacingMd,
     speed: 1000,
-    direction: "horizontal",
-    pagination: {
-      el: ".sw-pagination-lookbook",
-      clickable: true,
-    },
+    slidesPerGroup: perGroup,
     navigation: {
       clickable: true,
-      nextEl: ".prev-lookbook",
-      prevEl: ".next-lookbook",
+      nextEl: ".nav-prev-products1",
+      prevEl: ".nav-next-products1",
     },
     breakpoints: {
       768: {
         slidesPerView: tablet,
-        spaceBetween: spacingLg,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
       },
-      1150: {
+      1200: {
         slidesPerView: preview,
         spaceBetween: spacingLg,
-        direction: "vertical",
+        slidesPerGroup: perGroupLg,
       },
     },
-  });
-  $(".swiper-button").click(function () {
-    var slideIndex = $(this).data("slide");
-    swiper1.slideTo(slideIndex,500,false);
   });
 }
 
@@ -404,119 +385,265 @@ if ($(".tf-sw-testimonial").length > 0) {
   var mobile = $(".tf-sw-testimonial").data("mobile");
   var spacingLg = $(".tf-sw-testimonial").data("space-lg");
   var spacingMd = $(".tf-sw-testimonial").data("space-md");
+  var spacing = $(".tf-sw-testimonial").data("space");
+  var perGroup = $(".tf-sw-testimonial").data("pagination");
+  var perGroupMd = $(".tf-sw-testimonial").data("pagination-md");
+  var perGroupLg = $(".tf-sw-testimonial").data("pagination-lg");
   var swiper = new Swiper(".tf-sw-testimonial", {
     slidesPerView: mobile,
-    spaceBetween: spacingMd,
+    spaceBetween: spacing,
     speed: 1000,
     pagination: {
       el: ".sw-pagination-testimonial",
       clickable: true,
     },
-    navigation: {
-      clickable: true,
-      nextEl: ".nav-prev-testimonial",
-      prevEl: ".nav-next-testimonial",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: tablet,
-        spaceBetween: spacingLg,
-      },
-      1150: {
-        slidesPerView: preview,
-        spaceBetween: spacingLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-sw-brand").length > 0) {
-  var preview = $(".tf-sw-brand").data("preview");
-  var tablet = $(".tf-sw-brand").data("tablet");
-  var mobile = $(".tf-sw-brand").data("mobile");
-  var spacingLg = $(".tf-sw-brand").data("space-lg");
-  var spacingMd = $(".tf-sw-brand").data("space-md");
-  var play = $(".tf-sw-brand").data("play");
-  var loop = $(".tf-sw-brand").data("loop");
-  var swiper = new Swiper(".tf-sw-brand", {
-    slidesPerView: mobile,
-    spaceBetween: spacingMd,
-    speed: 1000,
-    pagination: {
-      el: ".sw-pagination-brand",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    loop: loop,
-    autoplay: play,
     observer: true,
     observeParents: true,
-    slidesPerGroup: 2,
+    slidesPerGroup: perGroup,
     navigation: {
       clickable: true,
-      nextEl: ".nav-prev-brand",
-      prevEl: ".nav-next-brand",
+      nextEl: ".nav-next-testimonial",
+      prevEl: ".nav-prev-testimonial",
     },
     breakpoints: {
       768: {
         slidesPerView: tablet,
-        spaceBetween: spacingLg,
-        slidesPerGroup: 3,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
       },
-      1150: {
+      1200: {
         slidesPerView: preview,
         spaceBetween: spacingLg,
-        slidesPerGroup: 3,
+        slidesPerGroup: perGroupLg,
       },
     },
   });
 }
 
 if ($(".tf-sw-shop-gallery").length > 0) {
-  var preview = $(".tf-sw-shop-gallery").data("preview");
-  var tablet = $(".tf-sw-shop-gallery").data("tablet");
-  var mobile = $(".tf-sw-shop-gallery").data("mobile");
-  var spacingLg = $(".tf-sw-shop-gallery").data("space-lg");
-  var spacingMd = $(".tf-sw-shop-gallery").data("space-md");
+  var tfSwGallery = $(".tf-sw-shop-gallery");
+  var preview = tfSwGallery.data("preview");
+  var tablet = tfSwGallery.data("tablet");
+  var mobile = tfSwGallery.data("mobile");
+  var spacingLg = tfSwGallery.data("space-lg");
+  var spacingMd = tfSwGallery.data("space-md");
+  var spacing = tfSwGallery.data("space");
+  var perGroup = tfSwGallery.data("pagination") || 1;
+  var perGroupMd = tfSwGallery.data("pagination-md") || 1;
+  var perGroupLg = tfSwGallery.data("pagination-lg") || 1;
+  var loop = tfSwGallery.data("loop") !== undefined ?  tfSwGallery.data("loop") : false;
+  var centered = tfSwGallery.data("centered") !== undefined ? tfSwGallery.data("centered") : false;
+  var mobileSm = tfSwGallery.data("mobile-sm") !== undefined ? tfSwGallery.data("mobile-sm") : mobile;
   var swiper = new Swiper(".tf-sw-shop-gallery", {
     slidesPerView: mobile,
-    spaceBetween: spacingMd,
-    speed: 1000,
+    spaceBetween: spacing,
+    observer: true,
+    observeParents: true,
     pagination: {
       el: ".sw-pagination-gallery",
       clickable: true,
     },
-    slidesPerGroup: 2,
+    loop:loop,
+    slidesPerGroup: perGroup,
+    centeredSlides: false,
+    speed: 1000,
     navigation: {
       clickable: true,
-      nextEl: ".nav-prev-gallery",
-      prevEl: ".nav-next-gallery",
+      nextEl: ".nav-next-gallery",
+      prevEl: ".nav-prev-gallery",
     },
     breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
+        slidesPerGroup: perGroup,
+      },
       768: {
         slidesPerView: tablet,
-        spaceBetween: spacingLg,
-        slidesPerGroup: 3,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+        centeredSlides: false,
       },
-      1150: {
+      1200: {
         slidesPerView: preview,
         spaceBetween: spacingLg,
-        slidesPerGroup: 3,
+        slidesPerGroup: perGroupLg,
+        centeredSlides: centered,
       },
     },
   });
 }
 
+if ($(".tf-sw-iconbox").length > 0) {
+  var preview = $(".tf-sw-iconbox").data("preview");
+  var tablet = $(".tf-sw-iconbox").data("tablet");
+  var mobile = $(".tf-sw-iconbox").data("mobile");
+  var mobileSm = $(".tf-sw-iconbox").data("mobile-sm");
+  var spacingLg = $(".tf-sw-iconbox").data("space-lg");
+  var spacingMd = $(".tf-sw-iconbox").data("space-md");
+  var spacing = $(".tf-sw-iconbox").data("space");
+  var perGroup = $(".tf-sw-iconbox").data("pagination");
+  var perGroupSm = $(".tf-sw-iconbox").data("pagination-sm");
+  var perGroupMd = $(".tf-sw-iconbox").data("pagination-md");
+  var perGroupLg = $(".tf-sw-iconbox").data("pagination-lg");
+  var swiper = new Swiper(".tf-sw-iconbox", {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    speed: 1000,
+    pagination: {
+      el: ".sw-pagination-iconbox",
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+    slidesPerGroup: perGroup,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-next-iconbox",
+      prevEl: ".nav-prev-iconbox",
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupSm,
+      },
+
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+}
+
+if ($(".tf-sw-lookbook").length > 0) {
+  var tfSwLb = $(".tf-sw-lookbook");
+  var preview = tfSwLb.data("preview");
+  var tablet = tfSwLb.data("tablet");
+  var mobile = tfSwLb.data("mobile");
+  var spacingLg = tfSwLb.data("space-lg");
+  var spacingMd = tfSwLb.data("space-md");
+  var spacing = tfSwLb.data("space");
+  var perGroup = tfSwLb.data("pagination");
+  var perGroupMd = tfSwLb.data("pagination-md");
+  var perGroupLg = tfSwLb.data("pagination-lg");
+  var mobileSm = tfSwLb.data("mobile-sm") !== undefined ? tfSwLb.data("mobile-sm") : mobile;
+  var swiperLb = new Swiper(".tf-sw-lookbook", {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    observer: true,
+    observeParents: true,
+    speed: 1000,
+    pagination: {
+      el: ".sw-pagination-lookbook",
+      clickable: true,
+    },
+    slidesPerGroup: perGroup,
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-prev-lookbook",
+      prevEl: ".nav-next-lookbook",
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
+        slidesPerGroup: perGroup,
+      },
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+        slidesPerGroup: perGroupMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+        slidesPerGroup: perGroupLg,
+      },
+    },
+  });
+
+  $(".swiper-button").click(function () {
+    var slideIndex = $(this).data("slide");
+    swiperLb.slideTo(slideIndex,500,false);
+  });
+}
+
+
+
+
+
+if ($(".tf-sw-partner").length > 0) {
+  var preview = $(".tf-sw-partner").data("preview");
+  var tablet = $(".tf-sw-partner").data("tablet");
+  var mobile = $(".tf-sw-partner").data("mobile");
+  var mobileSm = $(".tf-sw-partner").data("mobile-sm");
+  var spacingLg = $(".tf-sw-partner").data("space-lg");
+  var spacingMd = $(".tf-sw-partner").data("space-md");
+  var spacing = $(".tf-sw-partner").data("space");
+  var loop = $(".tf-sw-partner").data("loop");
+  var play = $(".tf-sw-partner").data("auto-play");
+  var speed = $(".tf-sw-partner").data("speed") !== undefined ? $(".tf-sw-slideshow").data("speed") : 1000;
+  var swiper = new Swiper(".tf-sw-partner", {
+    autoplay: {
+      delay: delay,
+      disableOnInteraction: false,
+    },
+    autoplay: play,
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    speed: speed,
+    loop: loop,
+    observer: true,
+    observeParents: true,
+    pagination: {
+      el: ".sw-pagination-partner",
+      clickable: true,
+    },
+    navigation: {
+      clickable: true,
+      nextEl: ".nav-next-partner",
+      prevEl: ".nav-prev-partner",
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacingMd,
+      },
+
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
+      },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+      },
+    },
+  });
+  $(".tf-sw-partner").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
+}
 
 
 if ($(".tf-sw-mobile").length > 0) {
   var swiperMb;
+  var screenWidth = $('.tf-sw-mobile').data('screen');
   function initSwiper() {
-    if (matchMedia("only screen and (max-width: 767px)").matches) {
+    if (matchMedia(`only screen and (max-width: ${screenWidth}px)`).matches) {
       if (!swiperMb) {
         var preview = $(".tf-sw-mobile").data("preview");
         var spacing = $(".tf-sw-mobile").data("space");
@@ -549,229 +676,6 @@ if ($(".tf-sw-mobile").length > 0) {
   initSwiper();
   window.addEventListener("resize", function () {
     initSwiper();
-  });
-}
-
-
-if ($(".tf-sw-mobile-1").length > 0) {
-  var swiperMb1;
-  function initSwiperMb() {
-    if (matchMedia("only screen and (max-width: 767px)").matches) {
-      if (!swiperMb1) {
-        var preview = $(".tf-sw-mobile-1").data("preview");
-        var spacing = $(".tf-sw-mobile-1").data("space");
-
-        swiperMb1 = new Swiper(".tf-sw-mobile-1", {
-          slidesPerView: preview,
-          spaceBetween: spacing,
-          speed: 1000,
-          pagination: {
-            el: ".sw-pagination-mb-1",
-            clickable: true,
-          },
-          navigation: {
-            clickable: true,
-            nextEl: ".nav-prev-mb-1",
-            prevEl: ".nav-next-mb-1",
-          },
-        });
-      }
-    } else {
-      if (swiperMb1) {
-        swiperMb1.destroy(true, true); 
-        swiperMb1 = null; 
-        $(".tf-sw-mobile-1 .swiper-wrapper").removeAttr('style');
-        $(".tf-sw-mobile-1 .swiper-slide").removeAttr('style');
-      }
-    }
-  }
-
-  initSwiperMb();
-  window.addEventListener("resize", function () {
-    initSwiperMb();
-  });
-}
-
-
-if ($(".tf-sw-product-sell-1").length > 0) {
-  var preview = $(".tf-sw-product-sell-1").data("preview");
-  var tablet = $(".tf-sw-product-sell-1").data("tablet");
-  var mobile = $(".tf-sw-product-sell-1").data("mobile");
-  var spacingLg = $(".tf-sw-product-sell-1").data("space-lg");
-  var spacingMd = $(".tf-sw-product-sell-1").data("space-md");
-  var perGroup = $(".tf-sw-product-sell-1").data("pagination");
-  var perGroupMd = $(".tf-sw-product-sell-1").data("pagination-md");
-  var perGroupLg = $(".tf-sw-product-sell-1").data("pagination-lg");
-  var swiper = new Swiper(".tf-sw-product-sell-1", {
-    slidesPerView: mobile,
-    spaceBetween: spacingMd,
-    speed: 1000,
-    pagination: {
-      el: ".sw-pagination-sell-1",
-      clickable: true,
-    },
-    slidesPerGroup: perGroup,
-    navigation: {
-      clickable: true,
-      nextEl: ".nav-prev-sell-1",
-      prevEl: ".nav-next-sell-1",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: tablet,
-        spaceBetween: spacingLg,
-        slidesPerGroup: perGroupMd,
-      },
-      1150: {
-        slidesPerView: preview,
-        spaceBetween: spacingLg,
-        slidesPerGroup: perGroupLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-sw-product-sell").length > 0) {
-  var preview = $(".tf-sw-product-sell").data("preview");
-  var tablet = $(".tf-sw-product-sell").data("tablet");
-  var mobile = $(".tf-sw-product-sell").data("mobile");
-  var spacingLg = $(".tf-sw-product-sell").data("space-lg");
-  var spacingMd = $(".tf-sw-product-sell").data("space-md");
-  var perGroup = $(".tf-sw-product-sell").data("pagination");
-  var perGroupMd = $(".tf-sw-product-sell").data("pagination-md");
-  var perGroupLg = $(".tf-sw-product-sell").data("pagination-lg");
-  var swiper = new Swiper(".tf-sw-product-sell", {
-    slidesPerView: mobile,
-    spaceBetween: spacingMd,
-    speed: 1000,
-    pagination: {
-      el: ".sw-pagination-product",
-      clickable: true,
-    },
-    slidesPerGroup: perGroup,
-    navigation: {
-      clickable: true,
-      nextEl: ".nav-prev-product",
-      prevEl: ".nav-next-product",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: tablet,
-        spaceBetween: spacingLg,
-        slidesPerGroup: perGroupMd,
-      },
-      1150: {
-        slidesPerView: preview,
-        spaceBetween: spacingLg,
-        slidesPerGroup: perGroupLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-sw-recent").length > 0) {
-  var preview = $(".tf-sw-recent").data("preview");
-  var tablet = $(".tf-sw-recent").data("tablet");
-  var mobile = $(".tf-sw-recent").data("mobile");
-  var spacingLg = $(".tf-sw-recent").data("space-lg");
-  var spacingMd = $(".tf-sw-recent").data("space-md");
-  var spacing = $(".tf-sw-recent").data("space");
-  var perGroup = $(".tf-sw-recent").data("pagination");
-  var perGroupMd = $(".tf-sw-recent").data("pagination-md");
-  var perGroupLg = $(".tf-sw-recent").data("pagination-lg");
-  var swiper = new Swiper(".tf-sw-recent", {
-    slidesPerView: mobile,
-    spaceBetween: spacing,
-    speed: 1000,
-    pagination: {
-      el: ".sw-pagination-recent",
-      clickable: true,
-    },
-    slidesPerGroup: perGroup,
-    navigation: {
-      clickable: true,
-      nextEl: ".nav-prev-recent",
-      prevEl: ".nav-next-recent",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: tablet,
-        spaceBetween: spacingMd,
-        slidesPerGroup: perGroupMd,
-      },
-      1150: {
-        slidesPerView: preview,
-        spaceBetween: spacingLg,
-        slidesPerGroup: perGroupLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-single-slide").length > 0) {
-  var swiper = new Swiper(".tf-single-slide", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    navigation: {
-      clickable: true,
-      nextEl: ".single-slide-prev",
-      prevEl: ".single-slide-next",
-    },
-  });
-}
-
-
-if ($(".flat-thumbs-testimonial").length > 0) {
-  var previewThumbs = $(".tf-thumb-tes").data("preview");
-  var spacingThumbs = $(".tf-thumb-tes").data("space");
-  var thumbImg = new Swiper(".tf-thumb-tes", {
-    speed: 1000,
-
-    spaceBetween: spacingThumbs,
-    slidesPerView: previewThumbs,
-    // slidesPerView: 2,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      768: {
-        spaceBetween: spacingThumbs,
-      },
-    },
-  });
-  var preview = $(".tf-sw-tes-2").data("preview");
-  var spacingMd = $(".tf-sw-tes-2").data("space-md");
-  var spacingLg = $(".tf-sw-tes-2").data("space-lg");
-  var swiperThumbs = new Swiper(".tf-sw-tes-2", {
-    speed: 1000,
-    slidesPerView: preview,
-    spaceBetween: spacingMd,
-    navigation: {
-      nextEl: ".nav-prev-tes-2",
-      prevEl: ".nav-next-tes-2",
-    },
-    thumbs: {
-      swiper: thumbImg,
-    },
-    pagination: {
-      el: ".sw-pagination-tes-2",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        spaceBetween: spacingLg,
-      },
-    },
-  });
-}
-
-if ($(".tf-cart-slide").length > 0) {
-  var swiper = new Swiper(".tf-cart-slide", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    pagination: {
-      el: ".cart-slide-pagination",
-      clickable: true,
-    },
   });
 }
 

@@ -12,3 +12,37 @@
         gap: 29px;
     }
 }
+
+.header-default {
+    .main-header {
+        padding: 25px 0 25px;
+    }
+    .nav-icon {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: end;
+        .nav-icon-item {
+            display: flex;
+            font-size: 28px;
+            position: relative;
+        }
+        .count-box {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--Primary);
+            color: var(--White);
+            top: -4px;
+            right: -4px;
+        }
+    }
+    .header-bottom {
+        padding: 12px 0 13px;
+        border-top: 1px solid var(--line);
+    }
+}

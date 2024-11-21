@@ -2,8 +2,6 @@ import ImageCompare from "./image-compare-viewer.min.js";
 
 const element = document.getElementById("image-compare");
 const options = {
-
-    // UI Theme Defaults
     controlColor: "#FFFFFF",
     controlShadow: false,
     addCircle: true,
@@ -13,8 +11,35 @@ const options = {
     labelOptions: {
         before: 'Before',
         after: 'After',
-    }
+    },
+    maxHeight: 300,
 };
 
-// Add your options object as the second argument
 const viewer1 = new ImageCompare(element, options).mount();
+
+const imageCompareElement = document.getElementById("image-compare");
+const labelBefore = imageCompareElement.querySelector(".icv__label-before");
+const labelAfter = imageCompareElement.querySelector(".icv__label-after");
+const control = imageCompareElement.querySelector(".icv__control");
+
+function adjustLabelOpacity() {
+    const controlRect = control.getBoundingClientRect();
+    const beforeRect = labelBefore.getBoundingClientRect();
+    const afterRect = labelAfter.getBoundingClientRect();
+
+    if (controlRect.right > beforeRect.left && controlRect.left < beforeRect.right) {
+        labelBefore.style.opacity = "0";
+    } else {
+        labelBefore.style.opacity = "1";
+    }
+
+    if (controlRect.left < afterRect.right && controlRect.right > afterRect.left) {
+        labelAfter.style.opacity = "0";
+    } else {
+        labelAfter.style.opacity = "1";
+    }
+}
+
+imageCompareElement.addEventListener("mousemove", adjustLabelOpacity);
+imageCompareElement.addEventListener("touchmove", adjustLabelOpacity);
+

@@ -125,7 +125,7 @@ body {
     line-height: 26px;
     font-weight: 400;
     color: var(--main);
-    background-color: var(--white);
+    background-color: var(--White);
 }
 
 img {
@@ -191,7 +191,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
     font-family: $font-main;
-    border: 1px solid var(--Line);
+    border: 1px solid var(--line);
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -201,11 +201,11 @@ input[type="color"] {
     border-radius: 3px;
     padding: 12px 18px;
     width: 100%;
-    background: var(--white);
+    background: var(--White);
     color: var(--Secondary);
     font-weight: 400;
     &:focus {
-        border-color: var(--Line);
+        border-color: var(--line);
     }
 }
 
@@ -243,6 +243,12 @@ textarea {
 ::-moz-placeholder {
     color: var(--Secondary);
     opacity: 1;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
 }
 
 /* Since FF19 lowers the opacity of the placeholder by default */
@@ -374,12 +380,12 @@ video {
 
 // background color
 .bg_white {
-    background-color: var(--white) !important;
+    background-color: var(--White) !important;
 }
 
 // color text
 .text_white {
-    color: var(--white) !important;
+    color: var(--White) !important;
 }
 .text_primary {
     color: var(--Primary) !important;

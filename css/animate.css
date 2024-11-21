@@ -2671,7 +2671,7 @@
   }
 }
 
-@keyframes nime2 {
+@keyframes rollIn {
   0% {
       opacity: 0;
       -webkit-transform: translateX(-100%)rotate(-120deg);
@@ -2725,4 +2725,56 @@
 .rollOut {
   -webkit-animation-name: rollOut;
   animation-name: rollOut
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes infiniteScrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@-webkit-keyframes tf-ani-flash {
+  50%,
+  from,
+  to {
+      opacity: 1;
+  }
+  25%,
+  75% {
+      opacity: 0;
+  }
+}
+
+@keyframes tf-ani-flash {
+  50%,
+  from,
+  to {
+      opacity: 1;
+  }
+  25%,
+  75% {
+      opacity: 0;
+  }
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

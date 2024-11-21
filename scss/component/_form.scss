@@ -1,0 +1,23 @@
+.form-search {
+    position: relative;
+    input {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        color: var(--Secondary2);
+        &::placeholder {
+            font-size: 16px;
+            line-height: 26px;
+            color: var(--Secondary2);
+        }
+    }
+    button {
+        font-size: 24px;
+        display: flex;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

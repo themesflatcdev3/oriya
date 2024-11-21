@@ -114,7 +114,7 @@
 }
 
 .nice-select .list {
-    background-color: var(--white);
+    background-color: var(--White);
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
     box-sizing: border-box;
@@ -203,7 +203,7 @@
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
-    background-color: var(--white);
+    background-color: var(--White);
     color: var(--primary);
 }
 .nice-select .option.selected {
@@ -267,7 +267,7 @@
             padding: 15px 20px;
             border-radius: 0;
             border: 0;
-            background-color: var(--white);
+            background-color: var(--White);
             box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 18px 0px;
             a {
                 padding: 5px 0;
@@ -295,7 +295,7 @@
                 width: 16px;
                 height: 16px;
                 transform: translate(-50%,-50%) rotate(45deg);
-                background-color: var(--white);
+                background-color: var(--White);
                 top: 0;
                 left: 50%;
                 z-index: 2;
@@ -310,7 +310,7 @@
                     width: 16px;
                     height: 16px;
                     transform: translate(-50%,50%) rotate(45deg);
-                    background-color: var(--white);
+                    background-color: var(--White);
                     bottom: 00%;
                     left: 50%;
                     z-index: 2;
@@ -345,13 +345,13 @@
     }
     &.color-white {
         > .dropdown-toggle {
-            color: var(--white);
+            color: var(--White);
             &::after {
-                color: var(--white);
+                color: var(--White);
             }
             .filter-option {
                 .filter-option-inner {
-                    color: var(--white);
+                    color: var(--White);
                 }
             }
         }
