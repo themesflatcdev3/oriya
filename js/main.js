@@ -1183,17 +1183,6 @@
     }
   }
 
-  var heightModalmenu = function () {
-    function height() {
-      var height = $('.mega-menu .row-demo .demo-item').first().outerHeight();
-      $('.mega-menu .row-demo').height(height * 2 + 22);
-    }
-    height();
-    $(window).resize(function () {
-      height();
-    });
-  }
-
   /* footer accordion
   -------------------------------------------------------------------------*/
   var handleFooter = function () {
@@ -1269,7 +1258,6 @@
     checkPaymentCard();
     handleFooter();
     handleProgress();
-    heightModalmenu();
     scrollQuickView();
     ajaxSubscribe.eventLoad();
     new WOW().init();
