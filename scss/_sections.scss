@@ -1,0 +1,49 @@
+.main-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.page-title {
+    position: relative;
+    .image-wrap {
+        max-height: 280px;
+        overflow: hidden;
+    }
+    .content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .title {
+            color: var(--White);
+            margin-bottom: 12px;
+        }
+        .breadcrumb {
+            @include d-flex();
+            align-items: center;
+            gap: 20px;
+            a {
+                color: var(--White);
+                &:hover {
+                    color: var(--Onsurface);
+                }
+            }
+            li {
+                font-size: 14px;
+                line-height: 22px;
+                color: var(--White);
+                &:not(:last-child) {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: "\e92e";
+                        font-family: $fontIcon;
+                        right: -17px;
+                        top: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

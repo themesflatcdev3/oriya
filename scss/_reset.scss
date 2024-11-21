@@ -391,19 +391,10 @@ video {
     color: var(--Primary) !important;
 }
 
-a {
-    @include transition3;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    color: var(--main);
-    &:focus,
-    &:hover {
-        @include transition3;
-        text-decoration: none;
-        outline: 0;
-    }
+.text_secondary {
+    color: var(--Secondary) !important;
 }
+
 label {
     font-weight: 600;
 }
@@ -413,6 +404,42 @@ label {
         color: var(--Primary) !important;
     }
 }
+
+// line-clamp
+.line-clamp-1 {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+.line-clamp-4 {
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+a {
+    @include transition3;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--Onsurface);
+    &:focus,
+    &:hover {
+        @include transition3;
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+
 
 // grid
 .grid-2 {
@@ -426,6 +453,18 @@ label {
 }
 .grid-6 {
     @include grid(6, 1fr);
+}
+
+.tf-grid-layout {
+    display: grid;
+    column-gap: 15px;
+    row-gap: 30px;
+    &.tf-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    &.gap30 {
+        gap: 30px;
+    }
 }
 
 // gap
@@ -502,6 +541,9 @@ label {
 .mb_20 {
     margin-bottom: 20px;
 }
+.mb_48 {
+    margin-bottom: 48px;
+}
 // spacing
 .flat-spacing-1 {
     padding: 10px 0;
@@ -549,16 +591,6 @@ label {
     row-gap: 30px;
 }
 
-.tf-grid-layout {
-    display: grid;
-    gap: 15px;
-    &.tf-col-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-    &.gap30 {
-        gap: 30px;
-    }
-}
 .tf-grid-layout-v2 {
     display: grid;
     gap: 15px;
@@ -570,4 +602,14 @@ label {
 
 .tf-md-hidden {
     display: none;
+}
+
+// position
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
 }
