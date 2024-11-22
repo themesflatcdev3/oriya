@@ -1,3 +1,36 @@
 .btn-line {
     
 }
+
+
+.tf-btn-link {
+    @include d-flex();
+    align-items: center;
+    gap: 4px;
+    span {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: var(--Onsurface);
+            @include transition3();
+            bottom: 0;
+            left: 0;
+        }
+    }
+    i{
+        font-size: 20px;
+        font-weight: 700;
+  
+    }
+    &:hover {
+        span {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+

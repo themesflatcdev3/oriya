@@ -655,6 +655,10 @@ a:focus, a:hover {
   margin-bottom: 20px;
 }
 
+.mb_40 {
+  margin-bottom: 40px;
+}
+
 .mb_48 {
   margin-bottom: 48px;
 }
@@ -1320,9 +1324,145 @@ header {
 }
 
 /*------------ footer ---------------- */
+footer {
+  background-color: var(--Surface);
+}
+footer .footer-body {
+  padding: 80px 0;
+}
+footer .footer-heading {
+  margin-bottom: 16px;
+}
+footer .footer-phone-number {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+footer .footer-phone-number .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  font-size: 36px;
+  background-color: var(--line);
+}
+footer .footer-phone-number p {
+  margin-bottom: 4px;
+}
+footer .footer-info {
+  margin-bottom: 20px;
+}
+footer .footer-info p {
+  margin-bottom: 8px;
+}
+footer .footer-menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  gap: 140px;
+}
+footer .footer-menu .footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .wrap-newsletter p {
+  margin-bottom: 12px;
+}
+footer .form-newsletter {
+  margin-bottom: 24px;
+  position: relative;
+}
+footer .form-newsletter fieldset input {
+  border-radius: 8px;
+}
+footer .subscribe-button {
+  position: absolute;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--Onsurface);
+  color: var(--White);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+}
+footer .subscribe-button i {
+  font-weight: 700;
+}
+footer .footer-bottom {
+  border-top: 1px solid var(--line);
+}
+footer .footer-bottom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.tf-payment ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tf-payment ul img {
+  width: 38px;
+  height: 24px;
+}
+
 /*------------ tabs ---------------- */
 /*------------ slider banner ---------------- */
 /*------------ button ---------------- */
+.tf-btn-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tf-btn-link span {
+  position: relative;
+}
+.tf-btn-link span::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--Onsurface);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  bottom: 0;
+  left: 0;
+}
+.tf-btn-link i {
+  font-size: 20px;
+  font-weight: 700;
+}
+.tf-btn-link:hover span::after {
+  width: 100%;
+}
+
 /*------------ range slider ---------------- */
 .noUi-target,
 .noUi-target * {
@@ -1988,6 +2128,28 @@ header {
 }
 
 /*------------ box icon ---------------- */
+.tf-social-icon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  gap: 12px;
+}
+.tf-social-icon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--Onsurface);
+}
+.tf-social-icon li:hover a {
+  background-color: var(--Onsurface);
+  color: var(--White);
+}
+
 /*------------ hover ---------------- */
 /*------------ collection ---------------- */
 /*------------ product ---------------- */
@@ -1997,6 +2159,7 @@ header {
   overflow: hidden;
   margin-bottom: 24px;
   position: relative;
+  max-width: 410px;
 }
 .blog-article-item .article-thumb a {
   width: 100%;
@@ -2045,6 +2208,22 @@ header {
 .blog-article-item .article-title {
   margin-bottom: 8px;
 }
+.blog-article-item.style-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.blog-article-item.style-list .article-thumb {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.blog-article-item.style-list .article-description {
+  margin-bottom: 12px;
+}
 
 .wg-pagination {
   display: flex;
@@ -2065,6 +2244,81 @@ header {
   background-color: var(--Onsurface);
   border-color: var(--Onsurface);
   color: var(--White);
+}
+
+.blog-list-main .wrap-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.sidebar .sidebar-heading {
+  margin-bottom: 20px;
+}
+.sidebar .sidebar-relatest-post .blog-article-item .meta {
+  margin-bottom: 8px;
+}
+.sidebar .relatest-post-item:not(:last-child) {
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+
+.relatest-post-item .image {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.relatest-post-item .content {
+  display: grid;
+  gap: 12px;
+  flex-grow: 1;
+}
+.relatest-post-item .meta .icon {
+  font-size: 16px;
+  line-height: 1;
+}
+.relatest-post-item .title a {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.relatest-post-item:not(:last-child) {
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.relatest-post-item.style-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.relatest-post-item.style-row .content {
+  gap: 8px;
+}
+.relatest-post-item.style-row .image {
+  margin-bottom: 0;
+  width: 112px;
+  flex-shrink: 0;
+}
+.relatest-post-item.style-row .meta {
+  gap: 10px 17px;
+}
+.relatest-post-item.style-row .meta p {
+  color: var(--main);
+}
+.relatest-post-item.style-row .meta .meta-item:not(:last-child)::after {
+  right: -9px;
 }
 
 /*------------ testimonial ---------------- */
@@ -2269,6 +2523,20 @@ header {
   }
   .tf-grid-layout.lg-col-7 {
     grid-template-columns: repeat(7, 1fr);
+  }
+  .sidebar.maxw-360 {
+    max-width: 360px;
+    margin-left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-menu {
+    gap: 140px;
+    padding-left: 80px;
+    padding-right: 36px;
+  }
+  .footer .footer-newsletter {
+    padding-left: 50px;
   }
 }
 @media (max-width: 576px) {

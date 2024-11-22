@@ -1,0 +1,19 @@
+.tf-social-icon {
+    @include d-flex();
+    gap: 12px;
+    li{
+        a{
+            @include flex(center,center);
+            height: 40px;
+            width: 40px;
+            border-radius: 999px;
+            border: 1px solid var(--Onsurface);
+        }
+        &:hover{
+            a{
+                background-color: var(--Onsurface);
+                color: var(--White);
+            }
+        }
+    }
+}
