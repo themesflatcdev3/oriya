@@ -65,4 +65,22 @@
             grid-template-columns: repeat(7, 1fr);
         }
     }
+    .sidebar {
+        &.maxw-360 {
+            max-width: 360px;
+            margin-left: auto;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .footer {
+        .footer-menu {
+            gap: 140px;
+            padding-left: 80px;
+            padding-right: 36px;
+        }
+        .footer-newsletter {
+            padding-left: 50px;
+        }
+    }
 }

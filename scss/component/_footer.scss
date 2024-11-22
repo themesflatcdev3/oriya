@@ -1,0 +1,91 @@
+footer {
+    background-color: var(--Surface);
+    .footer-body {
+        padding: 80px 0;
+    }
+    .footer-heading {
+        margin-bottom: 16px;
+    }
+    .footer-phone-number {
+        @include d-flex();
+        margin-bottom: 20px;
+        gap: 16px;
+        .icon {
+            @include flex(center, center);
+            width: 60px;
+            height: 60px;
+            border-radius: 999px;
+            font-size: 36px;
+            background-color: var(--line);
+        }
+        p {
+            margin-bottom: 4px;
+        }
+    }
+    .footer-info {
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 8px;
+        }
+    }
+    .footer-menu {
+        @include d-flex();
+        gap: 140px;
+        .footer-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+    .wrap-newsletter {
+        p {
+            margin-bottom: 12px;
+        }
+    }
+    .form-newsletter {
+        margin-bottom: 24px;
+        position: relative;
+        fieldset {
+            input {
+                border-radius: 8px;
+            }
+        }
+    }
+    .subscribe-button {
+        position: absolute;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 6px;
+        @include d-flex();
+        align-items: center;
+        gap: 4px;
+        background-color: var(--Onsurface);
+        color: var(--White);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 6px;
+        i {
+            font-weight: 700;
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--line);
+    }
+    .footer-bottom-wrap {
+        @include flex(center, space-between);
+        padding: 10px 0;
+    }
+}
+.tf-payment {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        img {
+            width: 38px;
+            height: 24px;
+        }
+    }
+}
