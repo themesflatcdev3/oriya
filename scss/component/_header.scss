@@ -11,6 +11,32 @@
         align-items: center;
         gap: 29px;
     }
+
+    .wrapper-slider-topbar{
+        position: relative;
+        .tf-sw-top_bar {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .navigation-topbar{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        @include flex(center,center);
+        top: 50%;
+        transform: translateY(-50%);
+        .icon{
+            font-size: 20px;
+            color: var(--White);
+        }
+        &.nav-next-topbar{
+            left: 0;
+        }
+        &.nav-prev-topbar{
+            right: 0;
+        }
+    }
 }
 
 header {

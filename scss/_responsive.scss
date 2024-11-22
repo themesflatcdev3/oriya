@@ -1,3 +1,5 @@
+
+// min-width
 @media (min-width: 576px) {
     .tf-grid-layout {
         &.sm-col-2 {
@@ -63,6 +65,16 @@
         }
         &.lg-col-7 {
             grid-template-columns: repeat(7, 1fr);
+        }
+    }
+}
+
+// max-width
+@media (max-width: 576px) {
+    .header-default .nav-icon {
+        gap: 12px;
+        .nav-icon-item {
+            font-size: 22px;
         }
     }
 }

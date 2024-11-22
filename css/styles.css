@@ -50,6 +50,7 @@
   --Success: #3DAB25;
   --Yellow: #F0A750;
   --pink: #EC749D;
+  --backdrop: rgba(24, 24, 24, 0.2) ;
 }
 
 /*---------- Reset css styles ----------- */
@@ -464,6 +465,10 @@ video {
   background-color: var(--White) !important;
 }
 
+.bg_onsurface {
+  background-color: var(--Onsurface) !important;
+}
+
 .text_white {
   color: var(--White) !important;
 }
@@ -741,6 +746,33 @@ a:focus, a:hover {
   display: flex;
   align-items: center;
   gap: 29px;
+}
+.tf-topbar .wrapper-slider-topbar {
+  position: relative;
+}
+.tf-topbar .wrapper-slider-topbar .tf-sw-top_bar {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.tf-topbar .navigation-topbar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tf-topbar .navigation-topbar .icon {
+  font-size: 20px;
+  color: var(--White);
+}
+.tf-topbar .navigation-topbar.nav-next-topbar {
+  left: 0;
+}
+.tf-topbar .navigation-topbar.nav-prev-topbar {
+  right: 0;
 }
 
 header {
@@ -1674,8 +1706,8 @@ header {
 }
 
 .image-select.style-default {
-  width: unset !important;
   display: flex;
+  width: max-content !important;
 }
 .image-select.style-default > select {
   display: none !important;
@@ -1764,6 +1796,23 @@ header {
   bottom: 0%;
   left: 50%;
   z-index: 2;
+}
+.image-select.style-default.style-box {
+  padding: 6px 11px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background-color: var(--White);
+}
+.image-select.style-default.style-box > .dropdown-toggle {
+  width: max-content;
+}
+.image-select.style-default.style-box .filter-option-inner-inner {
+  font-size: 16px;
+  line-height: 26px;
+}
+.image-select.style-default.style-box > .dropdown-menu {
+  margin-left: -11px !important;
+  width: 160px !important;
 }
 .image-select.type-currencies > .dropdown-menu {
   width: 120px !important;
@@ -2220,6 +2269,14 @@ header {
   }
   .tf-grid-layout.lg-col-7 {
     grid-template-columns: repeat(7, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .header-default .nav-icon {
+    gap: 12px;
+  }
+  .header-default .nav-icon .nav-icon-item {
+    font-size: 22px;
   }
 }
 /*-------------- RTL ----------------- */
