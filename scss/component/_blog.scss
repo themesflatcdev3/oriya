@@ -4,6 +4,7 @@
         overflow: hidden;
         margin-bottom: 24px;
         position: relative;
+        max-width: 410px;
         a {
             width: 100%;
             height: 100%;
@@ -48,6 +49,18 @@
     .article-title {
         margin-bottom: 8px;
     }
+    &.style-list {
+        @include d-flex();
+        align-items: center;
+        gap: 40px;
+        .article-thumb {
+            flex-shrink: 0;
+            margin-bottom: 0;
+        }
+        .article-description {
+            margin-bottom: 12px;
+        }
+    }
 }
 
 .wg-pagination {
@@ -56,7 +69,7 @@
     .pagination-item {
         width: 40px;
         height: 40px;
-        @include flex(center,center);
+        @include flex(center, center);
         border: 1px solid var(--line);
         border-radius: 5px;
         overflow: hidden;
@@ -71,3 +84,89 @@
     }
 }
 
+.blog-list-main {
+    .wrap-list {
+        @include d-flex();
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .sidebar-heading {
+        margin-bottom: 20px;
+    }
+    .sidebar-relatest-post {
+        .blog-article-item {
+            .meta {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    .relatest-post-item {
+        &:not(:last-child) {
+            padding-bottom: 19px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.relatest-post-item {
+    .image {
+        margin-bottom: 24px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .content{
+        display: grid;
+        gap: 12px;
+        flex-grow: 1;
+    }
+    .meta {
+        // margin-bottom: 12px;
+        .icon {
+            font-size: 16px;
+            line-height: 1;
+        }
+    }
+    .title {
+        a {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+        }
+    }
+    &:not(:last-child) {
+        padding-bottom: 19px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 20px;
+    }
+    &.style-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .content{
+            gap: 8px;
+        }
+        .image {
+            margin-bottom: 0;
+            width: 112px;
+            flex-shrink: 0;
+        }
+        .meta {
+            gap: 10px 17px;
+            p {
+                color: var(--main);
+            }
+            .meta-item:not(:last-child)::after {
+                right: -9px;
+            }
+        }
+    }
+}
