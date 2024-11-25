@@ -1,0 +1,130 @@
+.card-product-item {
+    .card-product-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        z-index: 20;
+        margin-bottom: 16px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .on-sale-wrap {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            left: 5px;
+            z-index: 5;
+            display: flex;
+            .on-sale-item {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                word-break: break-word;
+                padding: 0 8px;
+                min-width: 50px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 22px;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                position: relative;
+                background-color: var(--Critical);
+                color: var(--White);
+                border-radius: 144px;
+            }
+        }
+        .list-product-btn {
+            position: absolute;
+        }
+        .box-icon {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 3px;
+            background-color: var(--White);
+            color: var(--Onsurface);
+            position: relative;
+            z-index: 6;
+            border-radius: 50%;
+            @include flex(center, center);
+            .icon {
+                font-size: 20px;
+            }
+            svg {
+                width: 18px;
+                path {
+                    @include transition4;
+                }
+            }
+            &.active,
+            &:hover {
+                background-color: var(--Onsurface) !important;
+                color: var(--White) !important;
+                border-color: var(--Onsurface) !important;
+            }
+            &:hover {
+                .tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(-8px);
+                    transition-delay: 0.1s;
+                }
+                svg {
+                    path {
+                        stroke: var(--White);
+                    }
+                }
+            }
+        }
+    }
+    .card-product-info {
+        display: grid;
+        gap: 4px;
+        .price {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            span {
+                text-decoration: line-through;
+                color: var(--Secondary2);
+            }
+        }
+    }
+    .tooltip {
+        z-index: 202;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        position: absolute;
+        right: 100%;
+        border-radius: 2px;
+        white-space: nowrap;
+        background-color: var(--Onsurface);
+        color: var(--White);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 6px 8px 8px;
+        max-width: 250px;
+        width: max-content;
+        transition: opacity 0.3s ease, visibility 0.3s ease,
+            transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24),
+            -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        &::before {
+            content: "";
+            top: 50%;
+            left: unset;
+            transform: translateY(-50%) rotate(45deg);
+            right: -4px;
+            position: absolute;
+            background: var(--Onsurface);
+            width: 8px;
+            height: 8px;
+            z-index: 100;
+        }
+    }
+}

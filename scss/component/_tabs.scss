@@ -1,0 +1,93 @@
+.tab-banner {
+    .nav-tab-item {
+        .nav-tab-link {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--Line);
+            gap: 8px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                background-color: var(--main);
+                @include transition3();
+            }
+
+            .arr-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .text-more {
+                opacity: 0;
+                visibility: hidden;
+                @include transition3;
+            }
+            .icon {
+                font-size: 16px;
+            }
+            &:hover,
+            &.active {
+                .text-more {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        &:first-child {
+            .nav-tab-link {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.flat-animate-tab {
+    overflow: hidden;
+    height: 100%;
+    .tab-content {
+        position: relative;
+        height: 100%;
+    }
+    .tab-pane {
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+        transition-timing-function: ease-in;
+        transition-duration: 0.2s;
+        height: 100%;
+        &.active {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            z-index: 2;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            transition-delay: 0.3s;
+        }
+    }
+    .sec-btn {
+        margin-top: 20px;
+    }
+}

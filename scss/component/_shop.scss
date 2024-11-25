@@ -1,0 +1,26 @@
+.cart-item{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    .number{
+        @include flex(center,center);
+        height: 40px;
+        width: 40px;
+        border-radius: 999px;
+        background-color: var(--Surface);
+        flex-shrink: 0;
+        @include transition3();
+    }
+    .image-cart{
+        width: 80px;
+        height: 80px;
+        border-radius:4px ;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

@@ -42,6 +42,14 @@
             grid-template-columns: repeat(7, 1fr);
         }
     }
+    .card-product-item {
+        .card-product-wrapper {
+            .on-sale-wrap {
+                top: 13px;
+                left: 12px;
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -76,6 +84,27 @@
     .sw-dots:not(.swiper-pagination-lock) {
         margin-top: 40px;
     }
+    .tab-banner {
+        .nav-tab-item {
+            .nav-tab-link {
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+        }
+    }
+    .flat-with-text-lookbook {
+        .wrap-cart-item {
+            .cart-item:not(:last-child) {
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .card-product-item {
+        .tooltip {
+            display: block;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
@@ -87,6 +116,28 @@
         }
         .footer-newsletter {
             padding-left: 50px;
+        }
+    }
+    .tf-img-with-text {
+        .banner-left {
+            padding: 77.5px 80px;
+            .tab-banner {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .flat-with-text-lookbook {
+        .lookbook-content {
+            padding-left: 70px;
+            .box-title {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .card-product-item {
+        .list-product-btn {
+            top: 12px;
+            right: 12px;
         }
     }
 }
@@ -108,6 +159,17 @@
                 display: none;
             }
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    h5 {
+        font-size: 20px;
+        line-height: 26px;
     }
 }
 
@@ -133,6 +195,10 @@
     }
 }
 @media (max-width: 767px) {
+    h5 {
+        font-size: 18px;
+        line-height: 24px;
+    }
     .blog-article-item {
         .article-thumb {
             width: 100% !important;
@@ -194,6 +260,9 @@
                 width: 100%;
             }
         }
+    }
+    .tf-img-with-text {
+        grid-template-columns: 1fr;
     }
 }
 @media (max-width: 610px) {
