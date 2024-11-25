@@ -350,10 +350,10 @@ h6 {
     line-height: 16px;
 }
 
-.font-main{
+.font-main {
     font-family: $font-main;
 }
-.font-2{
+.font-2 {
     font-family: $font-2;
 }
 
@@ -449,8 +449,6 @@ a {
     }
 }
 
-
-
 // grid
 .grid-2 {
     @include grid(2, 1fr);
@@ -502,6 +500,9 @@ a {
 .gap-15 {
     gap: 15px !important;
 }
+.gap-16 {
+    gap: 16px !important;
+}
 
 // radius
 
@@ -548,8 +549,17 @@ a {
 .mb_10 {
     margin-bottom: 10px;
 }
+.mb_12 {
+    margin-bottom: 12px;
+}
+.mb_16 {
+    margin-bottom: 16px;
+}
 .mb_20 {
     margin-bottom: 20px;
+}
+.mb_24 {
+    margin-bottom: 24px;
 }
 .mb_40 {
     margin-bottom: 40px;

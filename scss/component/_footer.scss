@@ -30,7 +30,7 @@ footer {
     }
     .footer-menu {
         @include d-flex();
-        gap: 140px;
+        gap: 40px;
         .footer-menu-list {
             display: flex;
             flex-direction: column;
@@ -75,6 +75,8 @@ footer {
     .footer-bottom-wrap {
         @include flex(center, space-between);
         padding: 10px 0;
+        flex-wrap: wrap;
+        gap: 15px 30px;
     }
 }
 .tf-payment {
