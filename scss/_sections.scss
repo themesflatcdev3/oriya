@@ -1,6 +1,12 @@
-.main-content {
+.flat-spacing {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+
+
+.heading-section {
+    margin-bottom: 40px;
 }
 
 .page-title {
@@ -44,6 +50,12 @@
                     }
                 }
             }
+        }
+    }
+    &.style-2{
+        .image-wrap{
+            max-height: 500px;
+            
         }
     }
 }

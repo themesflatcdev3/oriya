@@ -1,0 +1,84 @@
+.sw-dots {
+    display: flex;
+    gap: 8px;
+    &.type-circle {
+        .swiper-pagination-bullet {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            opacity: 1;
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                content: '';
+                width: 8px;
+                height: 8px;
+                background-color:  transparent;
+                border-radius: 50%;
+                border: 1px solid var(--main);
+                opacity: 1;
+            }
+            &.swiper-pagination-bullet-active {
+                border: 1px solid var(--main);
+                &::after {
+                    background-color: var(--main);
+                }
+            }
+        }
+    }
+    &.white-circle{
+        .swiper-pagination-bullet{
+            &::after{
+                background-color: var(--white);
+                border-color: var(--white);
+            }
+            &.swiper-pagination-bullet-active {
+                border: 1px solid var(--white);
+                &::after{
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+    &.white-circle-line{
+        .swiper-pagination-bullet{
+            &::after{
+                border-color: var(--white);
+            }
+            &.swiper-pagination-bullet-active {
+                border: 1px solid var(--white);
+                &::after{
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+    // ------------------
+    &.type-square{
+        .swiper-pagination-bullet{
+            @include transition3;
+            width: 24px;
+            height: 4px;
+            border-radius: 99px;
+            background-color: var(--main);
+            opacity: 0.3;
+            &.swiper-pagination-bullet-active {
+                width: 40px;
+                opacity: 1;
+            }
+        }
+    }
+    &.white-square{
+        .swiper-pagination-bullet{
+            background-color: var(--white);
+        }
+    }
+    &:not(.swiper-pagination-lock) {
+        margin-top: 20px;
+    }
+    
+}
