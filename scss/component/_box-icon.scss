@@ -1,19 +1,46 @@
 .tf-social-icon {
     @include d-flex();
     gap: 12px;
-    li{
-        a{
-            @include flex(center,center);
+    li {
+        a {
+            @include flex(center, center);
             height: 40px;
             width: 40px;
             border-radius: 999px;
             border: 1px solid var(--Onsurface);
         }
-        &:hover{
-            a{
+        &:hover {
+            a {
                 background-color: var(--Onsurface);
                 color: var(--White);
             }
         }
+    }
+    &.style-2 {
+        background-color: var(--White);
+        flex-direction: column;
+        width: max-content;
+        padding: 8px;
+        li {
+            a {
+                height: 36px;
+                width: 36px;
+                border: 1px solid var(--line);
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.tf-box-icon {
+    .icon {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    title {
+        margin-bottom: 8px;
+    }
+    p {
+        color: var(--Secondary);
     }
 }

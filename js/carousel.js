@@ -720,6 +720,7 @@ var swiper = new Swiper(".sw-lookbook", {
     watchSlidesProgress: true,
     simulateTouch: false,
 });
+
 var swiper2 = new Swiper(".sw-lookbook2", {
     spaceBetween: 10,
     simulateTouch: false,
@@ -731,3 +732,58 @@ var swiper2 = new Swiper(".sw-lookbook2", {
         swiper: swiper,
     },
 });
+
+if ($(".tf-product-single").length > 0) {
+    var swiper = new Swiper(".tf-product-single", {
+        slidesPerView: 1,
+        navigation: {
+            clickable: true,
+            nextEl: ".sw-product-single-next",
+            prevEl: ".sw-product-single-prev",
+        },
+    });
+}
+
+if ($(".tf-sw-team").length > 0) {
+    var preview = $(".tf-sw-team").data("preview");
+    var tablet = $(".tf-sw-team").data("tablet");
+    var mobile = $(".tf-sw-team").data("mobile");
+    var spacingLg = $(".tf-sw-team").data("space-lg");
+    var spacingMd = $(".tf-sw-team").data("space-md");
+    var spacing = $(".tf-sw-team").data("space");
+    var perGroup = $(".tf-sw-team").data("pagination");
+    var perGroupMd = $(".tf-sw-team").data("pagination-md");
+    var perGroupLg = $(".tf-sw-team").data("pagination-lg");
+    var swiper = new Swiper(".tf-sw-team", {
+        slidesPerView: mobile,
+        spaceBetween: spacing,
+        observer: true,
+        observeParents: true,
+        speed: 1000,
+        pagination: {
+            el: ".sw-pagination-team",
+            clickable: true,
+        },
+        slidesPerGroup: perGroup,
+        navigation: {
+            clickable: true,
+            nextEl: ".nav-prev-team",
+            prevEl: ".nav-next-team",
+        },
+        breakpoints: {
+            0:{
+                slidesPerView: mobile,
+            },
+            575: {
+                slidesPerView: tablet,
+                spaceBetween: spacingMd,
+                slidesPerGroup: perGroupMd,
+            },
+            991: {
+                slidesPerView: preview,
+                spaceBetween: spacingLg,
+                slidesPerGroup: perGroupLg,
+            },
+        },
+    });
+}
