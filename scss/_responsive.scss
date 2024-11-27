@@ -100,14 +100,133 @@
             }
         }
     }
-    .card-product-item {
+    .card-product {
         .tooltip {
             display: block;
+        }
+        &.style-1 {
+            &:not(.style-list) {
+                .list-product-btn {
+                    .box-icon {
+                        width: 40px;
+                        height: 40px;
+                        min-width: 40px;
+                        transform: translateX(12px);
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    .wishlist {
+                        transition-delay: 0s;
+                    }
+                    .compare {
+                        transition-delay: 0.1s;
+                    }
+                    .quickview {
+                        transition-delay: 0.2s;
+                    }
+                }
+                .list-btn-main {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                .btn-main-product {
+                    transform: translateY(20px);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            &:hover:not(.style-list) {
+                .list-btn-main,
+                .list-product-btn {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
+                .list-product-btn {
+                    .box-icon {
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                        transform: translateX(0);
+                    }
+                }
+                .btn-main-product {
+                    transform: translate(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        &.style-list {
+            gap: 40px;
+            .list-product-btn {
+                .box-icon {
+                    border: 2px solid var(--line);
+                    width: 48px;
+                    height: 48px;
+                    min-width: 48px;
+                }
+            }
+        }
+    }
+    .testimonial-item {
+        .img-style {
+            position: relative;
+            .box-icon {
+                visibility: hidden;
+                opacity: 0;
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+            }
+        }
+        &:hover {
+            .img-style {
+                .box-icon {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .collection-position {
+        &.style-2 {
+            .content {
+                margin: 0 40px;
+            }
+        }
+    }
+    .cls-lookbook {
+        .dropdown-menu {
+            --bs-dropdown-min-width: 19rem;
         }
     }
 }
 
 @media (min-width: 1200px) {
+    .tf-grid-layout {
+        column-gap: 30px;
+        row-gap: 30px;
+        &.xl-col-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.xl-col-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &.xl-col-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &.xl-col-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        &.xl-col-6 {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        &.xl-col-7 {
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+
     .footer {
         .footer-menu {
             gap: 70px;
@@ -134,10 +253,44 @@
             }
         }
     }
-    .card-product-item {
+    .card-product {
         .list-product-btn {
             top: 12px;
             right: 12px;
+        }
+        .on-sale-wrap {
+            top: 12px !important;
+            left: 12px !important;
+        }
+    }
+    .tf-countdown-lg {
+        .countdown__item {
+            min-width: 60px;
+            min-height: 70px;
+        }
+    }
+    .gallery-item {
+        .box-icon {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            .box-icon {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    .cls-lookbook {
+        .dropdown-menu {
+            transform: translate(49px, 43px) !important;
         }
     }
 }
@@ -192,6 +345,10 @@
         > .inner {
             padding: 15px 15px 0;
         }
+    }
+    .loobook-product {
+        gap: 10px;
+        flex-direction: column;
     }
 }
 @media (max-width: 767px) {

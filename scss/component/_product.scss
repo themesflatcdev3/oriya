@@ -1,15 +1,45 @@
-.card-product-item {
+.card-product {
     .card-product-wrapper {
         position: relative;
         border-radius: 16px;
         overflow: hidden;
         z-index: 20;
         margin-bottom: 16px;
+        .image-wrap {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
         img {
+            display: block;
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
+            transition-duration: 700ms;
+        }
+        .img-hover {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+        }
+        &:hover {
+            .image-wrap {
+                .img-product {
+                    opacity: 0;
+                }
+                .img-hover {
+                    display: block;
+                    z-index: 1;
+                    opacity: 1;
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
+                }
+            }
+            .marquee-wrapper-product {
+                opacity: 0;
+            }
         }
         .on-sale-wrap {
             position: absolute;
@@ -36,10 +66,13 @@
                 border-radius: 144px;
             }
         }
-        .list-product-btn {
-            position: absolute;
-        }
+    }
+    .list-product-btn {
+        position: absolute;
+        display: grid;
+        gap: 8px;
         .box-icon {
+            cursor: pointer;
             width: 32px;
             height: 32px;
             min-width: 32px;
@@ -50,6 +83,7 @@
             z-index: 6;
             border-radius: 50%;
             @include flex(center, center);
+            @include transition3();
             .icon {
                 font-size: 20px;
             }
@@ -87,8 +121,7 @@
             display: flex;
             gap: 8px;
             align-items: center;
-            justify-content: center;
-            span {
+            .old-price {
                 text-decoration: line-through;
                 color: var(--Secondary2);
             }
@@ -127,4 +160,172 @@
             z-index: 100;
         }
     }
+    .list-btn-main {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        z-index: 5;
+        transition: 0.3s ease-out 0s;
+        display: flex;
+        align-items: center;
+    }
+    .btn-main-product {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 10px;
+        letter-spacing: 1px;
+        border: 1px solid transparent;
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        background-color: var(--White);
+        color: var(--Onsurface);
+        border-radius: 44px;
+        @include transition4;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+        &:hover {
+            background-color: var(--Onsurface);
+            color: var(--White);
+        }
+    }
+    &.style-1,
+    &.style-list {
+        .card-product-wrapper {
+            border-radius: 8px;
+        }
+    }
+    &.style-list {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        .image-wrap {
+            max-width: 360px;
+        }
+        .card-product-info {
+            flex: 1 1 auto;
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            max-width: 60%;
+        }
+        .list-product-btn {
+            display: flex;
+            position: unset;
+            justify-content: flex-start;
+            .box-icon {
+           
+                &:hover {
+                    .tooltip {
+                        transform: none;
+                    }
+                }
+            }
+            .disable {
+                background-color: var(--Surface);
+                border: none !important;
+                position: relative;
+                color: var(--Secondary2);
+                pointer-events: none;
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    border-bottom: 1.2px dashed #dddddd;
+                    transform: rotate(-45deg);
+                }
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+            &.size-box {
+                flex-wrap: wrap;
+                margin-bottom: 16px;
+            }
+        }
+        .btn-main-product {
+            border: 2px solid var(--line);
+            max-width: 272px;
+            width: 100%;
+            &:hover{
+                border-color: var(--Onsurface);
+            }
+        }
+        .tooltip {
+            top: -100%;
+            margin-top: 5px;
+            margin-right: 0;
+            transform: translateY(8px);
+            right: unset;
+            &::before {
+                top: 85%;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                right: unset;
+            }
+        }
+        .variant-wrap-list {
+            margin-top: 24px;
+            display: grid;
+            gap: 12px;
+        }
+    }
+}
+
+.list-color-product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    .list-color-item {
+        width: 24px;
+        height: 24px;
+        border: 1px solid transparent;
+        background-color: transparent;
+        @include transition4;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flex(center, center);
+        position: relative;
+        .swatch-value {
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            display: inline-block;
+            border-radius: 50%;
+            @include transition3;
+        }
+
+        img {
+            visibility: hidden;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+        }
+        &.line {
+            border: 1px solid var(--line);
+        }
+        &.active,
+        &:hover {
+            border-color: var(--Onsurface);
+            .swatch-value {
+                border-color: var(--White);
+            }
+        }
+    }
+}
+
+.grid-test-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }

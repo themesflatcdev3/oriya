@@ -393,6 +393,36 @@ video {
     background-color: var(--Onsurface) !important;
 }
 
+
+.bg-light-blue-2 {
+    background-color: #EBEAEF !important;
+}
+
+.bg-light-blue {
+    background-color: #D3D9EF !important;
+}
+
+.bg-light-orange {
+    background-color: #EEAE76 !important;
+}
+
+.bg-light-brown {
+    background-color: #B1AA98 !important;
+}
+
+.bg-light-grey {
+    background-color: #F0EFED !important;
+}
+
+.bg-light-pink {
+    background-color: #DFC6B8 !important;
+}
+
+.bg-dark-grey-2 {
+    background-color: #9E9B96 !important;
+}
+
+
 // color text
 .text_white {
     color: var(--White) !important;
@@ -403,6 +433,9 @@ video {
 
 .text_secondary {
     color: var(--Secondary) !important;
+}
+.tex_onsurface {
+    color: var(--Onsurface) !important;
 }
 
 label {
