@@ -33,13 +33,13 @@
     &.white-circle {
         .swiper-pagination-bullet {
             &::after {
-                background-color: var(--white);
-                border-color: var(--white);
+                background-color: var(--White);
+                border-color: var(--White);
             }
             &.swiper-pagination-bullet-active {
-                border: 1px solid var(--white);
+                border: 1px solid var(--White);
                 &::after {
-                    background-color: var(--white);
+                    background-color: var(--White);
                 }
             }
         }
@@ -47,12 +47,12 @@
     &.white-circle-line {
         .swiper-pagination-bullet {
             &::after {
-                border-color: var(--white);
+                border-color: var(--White);
             }
             &.swiper-pagination-bullet-active {
-                border: 1px solid var(--white);
+                border: 1px solid var(--White);
                 &::after {
-                    background-color: var(--white);
+                    background-color: var(--White);
                 }
             }
         }
@@ -86,6 +86,7 @@
     height: 52px;
     border-radius: 999px;
     background-color: var(--Onsurface);
+    @include transition3();
     &.swiper-button-next {
         &::before {
             content: "\e92e";
@@ -96,7 +97,8 @@
             content: "\e930";
         }
     }
-    &.swiper-button-disabled {
+    &.swiper-button-disabled,
+    &:hover {
         background-color: var(--White);
         opacity: 1;
         &::before {
@@ -104,6 +106,7 @@
         }
     }
     &::before {
+        @include transition3();
         font-family: $fontIcon;
         color: var(--White);
         font-size: 24px;

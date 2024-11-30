@@ -35,13 +35,136 @@ form {
 }
 
 .form-leave-comment {
-    >.wrap {
+    > .wrap {
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin-bottom: 24px;
     }
-    button {
-        border: 1px solid var(--main);
+}
+
+.form-login .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+    .forget-password {
+        text-decoration: underline;
     }
+    .tf-btn {
+        padding: 0 32px;
+    }
+}
+
+.form-has-password {
+    .toggle-password {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        cursor: pointer;
+        i {
+            font-size: 20px;
+            color: var(--Secondary-2);
+        }
+        &:not(.unshow) {
+            i::before {
+                content: "\e92b";
+            }
+        }
+    }
+}
+
+
+.tf-select {
+    position: relative;
+    select {
+        width: 100%;
+        padding: 7px 16px;
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        @include transition3;
+    }
+    &::after {
+        font-family: $fontIcon;
+        position: absolute;
+        content: "\e935";
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        z-index: -1;
+    }
+    &:hover{
+        select{
+            border-color: var(--Onsurface);
+        }
+    }
+}
+
+.tf-check {
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid var(--Secondary-2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    &:checked {
+        border-color: var(--Onsurface);
+        background-color: var(--Onsurface);
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    &::before {
+        font-family: $fontIcon;
+        content: "\e914";
+        position: absolute;
+        color: var(--White);
+        opacity: 0;
+        font-size: 12px;
+        transform: scale(0);
+        @include transition3;
+    }
+}
+
+
+.tf-check-rounded{
+    position: relative;
+    border: 1px solid var(--Secondary2);
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    height: 14px;
+    width: 14px;
+    @include flex(center,center);
+    -webkit-appearance: none;
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: var(--Onsurface);
+        opacity: 0;
+    }
+        &:checked {
+            border-color: var(--Onsurface);
+            &::before {
+                opacity: 1;
+            }
+        }
 }
