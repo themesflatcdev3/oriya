@@ -171,3 +171,67 @@
 .bg-color-light-blue {
     background: conic-gradient(#add8e6 0deg 360deg);
 }
+
+
+.tf-cart-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .tf-checkbox-wrapp {
+        min-width: 1.6rem;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        input {
+            cursor: pointer;
+            display: block;
+            width: 20px;
+            height: 20px;
+            transition: 0.2s ease-in-out;
+            background-color: var(--White);
+            opacity: 0;
+            &:checked + div {
+                background-color: var(--Onsurface);
+                i {
+                    transform: scale(1);
+                }
+            }
+        }
+        div {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            transition: 0.25s ease-in-out;
+            z-index: 5;
+            border-radius: 4px;
+            border: 1px solid var(--line);
+            background-color: var(--White);
+            color: var(--White);
+            pointer-events: none;
+            i {
+                font-size: 11px;
+                transform: scale(0);
+            }
+        }
+    }
+    label {
+        font-weight: 400;
+        cursor: pointer;
+        a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+    }
+    .wrap-content {
+        display: none;
+    }
+    &.check {
+        .wrap-content {
+            display: block;
+        }
+    }
+}

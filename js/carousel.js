@@ -51,6 +51,10 @@ if ($(".tf-sw-slideshow").length > 0) {
         tfSwSlideshow.data("speed") !== undefined
             ? tfSwSlideshow.data("speed")
             : 1000;
+
+    var perGroup = tfSwSlideshow.data("pagination") || 1;
+    var perGroupMd = tfSwSlideshow.data("pagination-md") || 1;
+    var perGroupLg = tfSwSlideshow.data("pagination-lg") || 1;
     var swiperSlider = {
         autoplay: {
             disableOnInteraction: false,
@@ -63,6 +67,7 @@ if ($(".tf-sw-slideshow").length > 0) {
         speed: speed,
         observer: true,
         observeParents: true,
+        slidesPerGroup: perGroup,
         pagination: {
             el: ".sw-pagination-slider",
             clickable: true,
@@ -78,21 +83,23 @@ if ($(".tf-sw-slideshow").length > 0) {
                 slidesPerView: tablet,
                 spaceBetween: spacing,
                 centeredSlides: false,
+                slidesPerGroup: perGroupMd,
             },
             1200: {
                 slidesPerView: preview,
                 spaceBetween: spacing,
                 centeredSlides: centered,
+                slidesPerGroup: perGroupLg,
             },
         },
     };
+
     if (effect === "fade") {
         swiperSlider.effect = "fade";
         swiperSlider.fadeEffect = {
             crossFade: true,
         };
     }
-
     var swiper = new Swiper(".tf-sw-slideshow", swiperSlider);
 }
 
@@ -771,7 +778,7 @@ if ($(".tf-sw-team").length > 0) {
             prevEl: ".nav-next-team",
         },
         breakpoints: {
-            0:{
+            0: {
                 slidesPerView: mobile,
             },
             575: {
