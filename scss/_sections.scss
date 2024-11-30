@@ -298,3 +298,48 @@
         }
     }
 }
+
+.about-us-main {
+    .heading-section {
+        display: grid;
+        gap: 16px;
+    }
+    .img-wrap {
+        margin-bottom: 40px;
+        border-radius: 28px;
+        overflow: hidden;
+    }
+    .content {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+    .icon {
+        font-size: 80px;
+    }
+    .title {
+        margin-bottom: 8px;
+    }
+}
+
+.about-us {
+    .img-style{
+        border-radius: 8px;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .box-about {
+        .benefit {
+            display: grid;
+            gap: 40px;
+        }
+    }
+
+}

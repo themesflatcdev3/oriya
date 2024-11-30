@@ -3938,6 +3938,26 @@ form .cols > * {
   font-weight: 700;
 }
 
+.group-bought {
+  margin-top: 40px;
+}
+.group-bought .heading {
+  margin-bottom: 20px;
+}
+.group-bought h5 {
+  margin-bottom: 12px;
+}
+.group-bought .text {
+  display: flex;
+  align-items: center;
+}
+.group-bought .text span {
+  margin: 0 5px;
+}
+.group-bought .text i {
+  color: var(--Critical);
+  font-size: 20px;
+}
 .group-bought .wrap-product {
   display: flex;
   gap: 12px;
@@ -3989,6 +4009,8 @@ form .cols > * {
   gap: 10px;
 }
 .product-bought .img-style {
+  overflow: hidden;
+  border-radius: 8px;
   width: 100px;
   height: 100px;
   flex-shrink: 0;
@@ -4568,6 +4590,7 @@ ul.list-tags.has-bg a {
   overflow: hidden;
 }
 .testimonial-item .img-style {
+  position: relative;
   max-width: 300px;
   width: 100%;
   flex-shrink: 0;
@@ -4755,6 +4778,7 @@ ul.list-tags.has-bg a {
 .flat-with-text-lookbook .tf-btn {
   width: 100%;
   gap: 28px;
+  box-shadow: unset;
 }
 .flat-with-text-lookbook .tf-btn > span {
   position: relative;
@@ -4840,6 +4864,68 @@ ul.list-tags.has-bg a {
 }
 /*------------ featured ---------------- */
 /*------------ accordion ---------------- */
+.page-faqs-wrap {
+  display: flex;
+}
+.page-faqs-wrap .list-faqs {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.page-faqs-wrap .faqs-title {
+  margin-bottom: 20px;
+}
+.page-faqs-wrap .accordion-product-wrap .accordion-product-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.accordion-product-item {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.accordion-product-item .accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-product-item .accordion-title i {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+.accordion-product-item .accordion-title:not(.collapsed) i {
+  transform: rotate(180deg);
+}
+.accordion-product-item .accordion-faqs-content {
+  padding-top: 8px;
+}
+
+.ask-question {
+  margin-top: 40px;
+  height: max-content;
+  flex-shrink: 0;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  margin-left: auto;
+}
+.ask-question .ask-question-wrap form .tf-select select {
+  padding: 9px 16px;
+  border-radius: 4px;
+}
+.ask-question .ask-question-wrap form textarea {
+  height: 86px;
+}
+.ask-question .ask-question-wrap form button {
+  height: 48px;
+  border: 0;
+}
+
 /*------------ zoom ---------------- */
 .tf-zoom-main {
   position: sticky;
@@ -5219,6 +5305,44 @@ ul.list-tags.has-bg a {
   padding: 10px 32px;
 }
 
+.about-us-main .heading-section {
+  display: grid;
+  gap: 16px;
+}
+.about-us-main .img-wrap {
+  margin-bottom: 40px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.about-us-main .content {
+  display: flex;
+  gap: 40px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 20px;
+}
+.benefit-item .icon {
+  font-size: 80px;
+}
+.benefit-item .title {
+  margin-bottom: 8px;
+}
+
+.about-us .img-style {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.about-us .img-style img {
+  object-fit: cover;
+  width: 100%;
+}
+.about-us .box-about .benefit {
+  display: grid;
+  gap: 40px;
+}
+
 /*-------------- Responsive ----------------- */
 @media (min-width: 576px) {
   .tf-grid-layout.sm-col-2 {
@@ -5279,6 +5403,10 @@ ul.list-tags.has-bg a {
   }
   .grid-cls-v2 .item3 {
     grid-area: item3;
+  }
+  .ask-question {
+    width: 380px;
+    margin-top: 0px;
   }
 }
 @media (min-width: 992px) {
@@ -5372,9 +5500,6 @@ ul.list-tags.has-bg a {
     height: 48px;
     min-width: 48px;
   }
-  .testimonial-item .img-style {
-    position: relative;
-  }
   .testimonial-item .img-style .box-icon {
     visibility: hidden;
     opacity: 0;
@@ -5457,6 +5582,9 @@ ul.list-tags.has-bg a {
   .product-bought {
     gap: 24px;
   }
+  .about-us .box-about {
+    padding-left: 90px;
+  }
 }
 @media (min-width: 1200px) {
   .tf-grid-layout {
@@ -5537,6 +5665,9 @@ ul.list-tags.has-bg a {
   .box-order .ship {
     gap: 70px;
   }
+  .about-us-main .content {
+    gap: 91px;
+  }
 }
 @media (min-width: 1300px) {
   .cls-lookbook .dropdown-menu {
@@ -5562,6 +5693,14 @@ ul.list-tags.has-bg a {
   h1 {
     font-size: 46px;
     line-height: 54px;
+  }
+}
+@media (max-width: 1199px) {
+  .fl-sidebar-cart {
+    margin-top: 30px;
+  }
+  .login-wrap {
+    gap: 60px;
   }
 }
 @media (max-width: 1100px) {
@@ -5623,6 +5762,9 @@ ul.list-tags.has-bg a {
   }
   .relatest-post-item.blog-article-item .article-thumb {
     max-width: 100%;
+  }
+  .box-about {
+    margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -5739,6 +5881,66 @@ ul.list-tags.has-bg a {
   }
   .grid-cls-v2 .collection-position .img-style {
     height: 400px;
+  }
+  .about-us-main .content {
+    flex-wrap: wrap;
+  }
+  .tf-table-page-cart thead {
+    display: none;
+  }
+  .tf-table-page-cart .tf-cart-item {
+    padding-left: 130px;
+    min-height: 140px;
+    display: block;
+    position: relative;
+  }
+  .tf-table-page-cart .tf-cart-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .tf-table-page-cart .tf-cart-item td {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .tf-table-page-cart .tf-cart-item td:not(:last-child) {
+    border-bottom: 1px dashed var(--line);
+  }
+  .tf-table-page-cart .tf-cart-item .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    width: 110px;
+    max-height: 110px;
+  }
+  .tf-table-page-cart .tf-cart-item td[data-cart-title]:before {
+    content: attr(data-cart-title);
+    color: var(--main);
+    text-align: start;
+    flex: 1 1 auto;
+  }
+  .group-bought .wrap-product {
+    flex-wrap: wrap;
+  }
+  .group-bought .wrap-product .product-bought {
+    width: 100%;
+  }
+  .login-wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .benefit-item .icon {
+    font-size: 60px;
+  }
+  .benefit-item .title {
+    font-size: 25px;
+    line-height: 33px;
   }
 }
 @media (max-width: 610px) {
