@@ -30,6 +30,19 @@
             }
         }
     }
+    &.type-1 {
+        li {
+            a {
+                background-color: var(--Surface);
+                border: 0;
+            }
+            &:hover {
+                a {
+                    background-color: var(--Onsurface);
+                }
+            }
+        }
+    }
 }
 
 .tf-box-icon {

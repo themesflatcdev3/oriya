@@ -907,11 +907,15 @@ header {
   -o-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 888;
-  background-color: var(--white);
+  background-color: var(--White);
 }
 
 .header-default .main-header {
-  padding: 25px 0 25px;
+  padding: 23px 0 23px;
+}
+.header-default .main-header.has-border-y {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
 }
 .header-default .nav-icon {
   display: flex;
@@ -992,6 +996,12 @@ header {
 }
 .header-default .mobile-menu .icon {
   font-size: 24px;
+}
+.header-default.header-absolute {
+  background-color: transparent;
+}
+.header-default.header-absolute .main-header {
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tf-list-categories {
@@ -2321,6 +2331,110 @@ form .cols > * {
   opacity: 1;
 }
 
+.tf-dropdown-sort {
+  min-width: 164px;
+  border-radius: 4px;
+  padding: 6px 11px;
+  border: 2px solid var(--line);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-dropdown-sort .icon {
+  font-size: 20px;
+}
+.tf-dropdown-sort .btn-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tf-dropdown-sort .dropdown-menu {
+  min-width: 164px;
+  border: 0;
+  padding: 15px 5px;
+  border-radius: 0;
+  max-height: 68vh;
+  isolation: isolate;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+}
+.tf-dropdown-sort .dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+.tf-dropdown-sort .dropdown-menu::-webkit-scrollbar-track {
+  background-color: var(--bg-scrollbar-track);
+}
+.tf-dropdown-sort .dropdown-menu::-webkit-scrollbar-thumb {
+  background: var(--bg-scrollbar-thumb);
+  border-radius: 4px;
+}
+.tf-dropdown-sort .select-item {
+  position: relative;
+  padding: 0 15px;
+  line-height: 30px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-dropdown-sort .select-item.active {
+  background-color: var(--line);
+  color: var(--main);
+  padding: 0 15px !important;
+  border: 0 !important;
+}
+.tf-dropdown-sort .select-item:hover {
+  background-color: var(--line);
+  color: var(--main);
+}
+.tf-dropdown-sort:hover {
+  border-color: var(--main);
+}
+.tf-dropdown-sort.full .dropdown-menu {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.tf-dropdown-sort.style-1 {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+}
+.tf-dropdown-sort.has-color .select-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.tf-dropdown-sort.has-color .box-color {
+  width: 20px;
+  height: 20px;
+}
+.tf-dropdown-sort.style-2 {
+  min-width: unset;
+  padding: 9px 11px;
+  border-radius: 12px;
+  background-color: var(--surface);
+}
+.tf-dropdown-sort.style-2 .btn-select {
+  gap: 16px;
+}
+.tf-dropdown-sort.style-2 .btn-select .text-sort-value {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
 /*------------ nice select ---------------- */
 .nice-select {
   -webkit-tap-highlight-color: transparent;
@@ -3037,6 +3151,13 @@ form .cols > * {
   width: 36px;
   border: 1px solid var(--line);
   font-size: 20px;
+}
+.tf-social-icon.type-1 li a {
+  background-color: var(--Surface);
+  border: 0;
+}
+.tf-social-icon.type-1 li:hover a {
+  background-color: var(--Onsurface);
 }
 
 .tf-box-icon .icon {
@@ -4192,6 +4313,104 @@ form .cols > * {
     opacity: 0;
   }
 }
+.tf-shop-control {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
+}
+.tf-shop-control .tf-control-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.tf-shop-control .tf-control-filter .shop-sale-text.active .icon {
+  color: var(--success);
+}
+.tf-shop-control .shop-sale-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.tf-shop-control .shop-sale-text .icon {
+  font-size: 24px;
+  color: var(--secondary-2);
+}
+.tf-shop-control .tf-control-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.tf-shop-control .tf-control-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.tf-shop-control .tf-control-layout .item {
+  cursor: pointer;
+}
+.tf-shop-control .tf-control-layout .tf-view-layout-switch svg circle,
+.tf-shop-control .tf-control-layout .tf-view-layout-switch svg rect {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-shop-control .tf-control-layout .tf-view-layout-switch.active svg circle,
+.tf-shop-control .tf-control-layout .tf-view-layout-switch.active svg rect {
+  fill: var(--main);
+}
+
+.wrapper-shop {
+  transition: all 0.3s ease-in-out;
+  animation: fadeShop 0.5s ease-in-out;
+}
+
+.wrapper-control-shop .tf-list-layout .card-product {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+.wrapper-control-shop .tf-list-layout .card-product.last-visible, .wrapper-control-shop .tf-list-layout .card-product:last-of-type {
+  padding-bottom: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+.wrapper-control-shop .tf-list-layout .load-more-btn,
+.wrapper-control-shop .tf-list-layout .wg-pagination {
+  margin-top: 30px;
+}
+.wrapper-control-shop .tf-grid-layout .wg-pagination {
+  margin-top: 0;
+}
+
+@keyframes fadeShop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.listLayout-wrapper #product-count-grid {
+  display: none;
+}
+.listLayout-wrapper #product-count-list {
+  display: block;
+}
+
+.gridLayout-wrapper #product-count-grid {
+  display: block;
+}
+.gridLayout-wrapper #product-count-list {
+  display: none;
+}
+
 /*------------ blog ---------------- */
 .blog-article-item .article-thumb {
   border-radius: 8px;

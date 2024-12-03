@@ -168,3 +168,111 @@ form {
             }
         }
 }
+
+// dropdown select
+.tf-dropdown-sort {
+    min-width: 164px;
+
+    border-radius: 4px;
+    padding: 6px 11px;
+    border: 2px solid var(--line);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    .icon{
+        font-size: 20px;
+    }
+    .btn-select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .dropdown-menu {
+        min-width: 164px;
+        border: 0;
+        padding: 15px 5px;
+        border-radius: 0;
+        max-height: 68vh;
+        isolation: isolate;
+        overscroll-behavior-y: contain;
+        overflow-y: auto;
+        box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: var(--bg-scrollbar-track);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--bg-scrollbar-thumb);
+            border-radius: 4px;
+        }
+    }
+    .select-item {
+        position: relative;
+        padding: 0 15px;
+        line-height: 30px;
+        width: 100%;
+        @include transition3;
+       
+        &.active {
+            background-color: var(--line);
+            color: var(--main);
+            padding: 0 15px !important;
+            border: 0 !important;
+        }
+        &:hover {
+            background-color: var(--line);
+            color: var(--main);
+        }
+    }
+    &:hover {
+        border-color: var(--main);
+    }
+    &.full {
+        .dropdown-menu {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+    &.style-1 {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 2px solid var(--line);
+    }
+    &.has-color {
+        .select-item {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .box-color {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &.style-2 {
+        min-width: unset;
+        padding: 9px 11px;
+        border-radius: 12px;
+        background-color: var(--surface);
+        
+        .btn-select {
+            gap: 16px;
+            .text-sort-value {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+}

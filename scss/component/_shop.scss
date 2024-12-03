@@ -591,3 +591,119 @@
         opacity: 0;
     }
 }
+
+
+
+
+
+
+
+.tf-shop-control {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    .tf-control-filter {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .shop-sale-text.active .icon {
+            color: var(--success);
+        }
+    }
+    .shop-sale-text {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        .icon {
+            font-size: 24px;
+            color: var(--secondary-2);
+        }
+    }
+    .tf-control-sorting {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+    .tf-control-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        .item {
+            cursor: pointer;
+        }
+        .tf-view-layout-switch {
+            svg {
+                circle,
+                rect {
+                    @include transition3;
+                }
+            }
+            &.active {
+                svg {
+                    circle,
+                    rect {
+                        fill: var(--main);
+                    }
+                }
+            }
+        }
+    }
+}
+.wrapper-shop {
+    transition: all 0.3s ease-in-out;
+    animation: fadeShop 0.5s ease-in-out;
+}
+.wrapper-control-shop {
+    .tf-list-layout {
+        .card-product {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--line);
+            &.last-visible,
+            &:last-of-type {
+                padding-bottom: 0;
+                border: 0;
+                margin-bottom: 0;
+            }
+        }
+        .load-more-btn,
+        .wg-pagination {
+            margin-top: 30px;
+        }
+    }
+    .tf-grid-layout {
+        .wg-pagination {
+            margin-top: 0;
+        }
+    }
+}
+
+@keyframes fadeShop {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.listLayout-wrapper {
+    #product-count-grid {
+        display: none;
+    }
+    #product-count-list {
+        display: block;
+    }
+}
+.gridLayout-wrapper {
+    #product-count-grid {
+        display: block;
+    }
+    #product-count-list {
+        display: none;
+    }
+}
