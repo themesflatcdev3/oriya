@@ -592,6 +592,9 @@ a {
 }
 
 // margin
+.mb_4 {
+    margin-bottom: 4px;
+}
 .mb_8 {
     margin-bottom: 8px;
 }
@@ -612,6 +615,9 @@ a {
 }
 .mb_28 {
     margin-bottom: 28px;
+}
+.mb_30 {
+    margin-bottom: 30px;
 }
 .mb_40 {
     margin-bottom: 40px;
@@ -679,6 +685,13 @@ a {
     display: none;
 }
 
+.slider-layout-right {
+    width: calc(100vw - (100vw - 1290px) / 2);
+    margin-right: unset;
+    max-width: 100%;
+    margin-left: auto;
+}
+
 // position
 .relative {
     position: relative;
@@ -691,9 +704,6 @@ a {
 .justify-center {
     justify-content: center;
 }
-
-
-
 
 .simpleParallax {
     height: 100%;
@@ -731,4 +741,8 @@ a {
         transform: translateY(-5px);
         background-color: var(--Primary);
     }
+}
+
+.overflow-none{
+    overflow: unset !important;
 }

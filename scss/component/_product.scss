@@ -172,10 +172,11 @@
     }
     .btn-main-product {
         flex-grow: 1;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 9px 10px;
+        padding: 0 10px;
         letter-spacing: 1px;
         border: 1px solid transparent;
         font-size: 14px;
@@ -185,10 +186,6 @@
         color: var(--Onsurface);
         border-radius: 44px;
         @include transition4;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        overflow: hidden;
         text-align: center;
         white-space: nowrap;
         &:hover {
@@ -206,8 +203,10 @@
         display: flex;
         gap: 15px;
         align-items: center;
-        .image-wrap {
+
+        .card-product-wrapper {
             max-width: 360px;
+            width: 40%;
         }
         .card-product-info {
             flex: 1 1 auto;
@@ -223,7 +222,7 @@
             position: unset;
             justify-content: flex-start;
             .box-icon {
-           
+                border: 2px solid var(--line);
                 &:hover {
                     .tooltip {
                         transform: none;
@@ -237,7 +236,7 @@
                 color: var(--Secondary2);
                 pointer-events: none;
                 &::after,
-                &::before {
+                 &::before {
                     content: "";
                     position: absolute;
                     width: 100%;
@@ -250,14 +249,14 @@
             }
             &.size-box {
                 flex-wrap: wrap;
-                margin-bottom: 16px;
             }
         }
         .btn-main-product {
             border: 2px solid var(--line);
             max-width: 272px;
             width: 100%;
-            &:hover{
+            height: 32px;
+            &:hover {
                 border-color: var(--Onsurface);
             }
         }

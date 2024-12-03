@@ -92,3 +92,26 @@
         }
     }
 }
+
+.section-testimonials {
+    background-color: var(--Surface);
+    .tf-sw-testimonial {
+        .swiper-slide {
+            @include transition3();
+            &:not(
+                    &.swiper-slide-active,
+                    &.swiper-slide-next,
+                    &.swiper-slide-prev
+                ) {
+                opacity: 0.4;
+            }
+        }
+    }
+    .wrap-button{
+       display: flex;
+       gap: 12px;
+    }
+    .sw-button {
+        position: unset;
+    }
+}

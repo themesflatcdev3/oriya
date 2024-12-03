@@ -115,3 +115,14 @@
         display: none;
     }
 }
+
+.tf-sw-products{
+    &.style-full{
+        .nav-next-products{
+            left: 12%;
+        }
+        .nav-prev-products{
+            right: 12%;
+        }
+    }
+}
