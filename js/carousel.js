@@ -563,9 +563,9 @@ if ($(".tf-sw-lookbook").length > 0) {
     var spacingLg = tfSwLb.data("space-lg");
     var spacingMd = tfSwLb.data("space-md");
     var spacing = tfSwLb.data("space");
-    var perGroup = tfSwLb.data("pagination");
-    var perGroupMd = tfSwLb.data("pagination-md");
-    var perGroupLg = tfSwLb.data("pagination-lg");
+    var perGroup = tfSwLb.data("pagination") || 1;
+    var perGroupMd = tfSwLb.data("pagination-md") || 1;
+    var perGroupLg = tfSwLb.data("pagination-lg") || 1;
     var mobileSm =
         tfSwLb.data("mobile-sm") !== undefined
             ? tfSwLb.data("mobile-sm")

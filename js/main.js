@@ -889,7 +889,7 @@
     /* totalPriceVariant
   ------------------------------------------------------------------------------------- */
     var totalPriceVariant = function () {
-        $(".tf-product-info-list,.tf-cart-item").each(function () {
+        $(".tf-product-info-list,.tf-cart-item,.tf-mini-cart-item").each(function () {
             var productItem = $(this);
             var basePrice =
                 parseFloat(

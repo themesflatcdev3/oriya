@@ -77,6 +77,10 @@
             background-color: var(--white);
         }
     }
+    &.position{
+        position: absolute;
+        z-index: 99;
+    }
     &:not(.swiper-pagination-lock) {
         margin-top: 20px;
     }
