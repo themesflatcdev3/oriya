@@ -5,6 +5,7 @@
     border-radius: 8px;
     overflow: hidden;
     .img-style {
+        position: relative;
         max-width: 300px;
         width: 100%;
         flex-shrink: 0;
@@ -89,5 +90,28 @@
                 font-size: 24px;
             }
         }
+    }
+}
+
+.section-testimonials {
+    background-color: var(--Surface);
+    .tf-sw-testimonial {
+        .swiper-slide {
+            @include transition3();
+            &:not(
+                    &.swiper-slide-active,
+                    &.swiper-slide-next,
+                    &.swiper-slide-prev
+                ) {
+                opacity: 0.4;
+            }
+        }
+    }
+    .wrap-button{
+       display: flex;
+       gap: 12px;
+    }
+    .sw-button {
+        position: unset;
     }
 }

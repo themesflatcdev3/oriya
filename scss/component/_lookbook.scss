@@ -103,6 +103,7 @@
     .tf-btn {
         width: 100%;
         gap: 28px;
+        box-shadow: unset;
         > span {
             position: relative;
             &::after {

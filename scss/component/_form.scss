@@ -140,7 +140,6 @@ form {
     }
 }
 
-
 .tf-check-rounded{
     position: relative;
     border: 1px solid var(--Secondary2);
@@ -274,5 +273,11 @@ form {
                 letter-spacing: 0.1em;
             }
         }
+    }
+}
+
+#contactform{
+    textarea{
+        height: 160px;
     }
 }
