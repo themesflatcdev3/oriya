@@ -49,6 +49,7 @@
     }
 }
 .hover-img {
+    .article-thumb,
     .img-style {
         overflow: hidden;
          img {
@@ -60,13 +61,13 @@
         }
     }
     &:hover {
+        .article-thumb,
         .img-style{
              img {
                 -webkit-transform: scale(1.06);
                 transform: scale(1.06);
             }
         }
-        
     }
 
     .img-style2 {

@@ -134,7 +134,9 @@
 .cls-lookbook {
     position: relative;
     > .img-style {
-        img{
+        border-radius: 16px;
+        overflow: hidden;
+        img {
             min-height: 450px;
             object-fit: cover;
         }
@@ -160,6 +162,25 @@
             padding: 0;
             transform: translate(-50%, -38px) !important;
         }
+    }
+    &.style-4 {
+        .lookbook-item {
+            &.position1 {
+                left: 39%;
+                bottom: 60%;
+            }
+            &.position2 {
+                left: 12%;
+                bottom: 65%;
+            }
+            &.position3 {
+                left: 70%;
+                bottom: 62%;
+            }
+        }
+    }
+    &.style-5{
+        
     }
 }
 

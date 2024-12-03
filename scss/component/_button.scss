@@ -14,6 +14,9 @@
     }
     &.btn-white {
         background-color: var(--White);
+        &.has-border {
+            border: 1px solid var(--Onsurface);
+        }
         &:hover {
             background-color: var(--Onsurface);
             color: var(--White);
@@ -24,6 +27,14 @@
         color: var(--White);
         &:hover {
             background-color: var(--Primary);
+        }
+    }
+
+    &.btn-primary {
+        background-color: var(--Primary);
+        color: var(--White);
+        &:hover {
+            background-color: var(--Onsurface);
         }
     }
     &:hover {
@@ -128,6 +139,7 @@
         &::after {
             background-color: var(--White);
         }
+       
         &:hover {
             background-position: left;
             &::before {

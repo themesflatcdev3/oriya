@@ -46,6 +46,16 @@
 .collection-position {
     position: relative;
     height: 100%;
+    .img-style {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     &:not(&.style-3, &.style-4) {
         .img-style {
             &::after {
@@ -63,24 +73,14 @@
             }
         }
     }
-    .img-style {
-        overflow: hidden;
-        position: relative;
-        height: 100%;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &:not(&.style-2, &.style-3, &.style-4) {
+    &:not(&.style-2, &.style-3, &.style-4, &.style-full) {
         .content {
             max-width: 360px;
             top: 50%;
             transform: translateY(-50%);
-            &.w-full{
+            &.w-full {
                 max-width: 100%;
-            }    
+            }
         }
     }
     .content {
@@ -144,7 +144,18 @@
             bottom: 16px;
             border-radius: 12px;
             @include flex(center, space-between);
+            flex-wrap: wrap;
+            gap: 10px;
             padding: 16px 20px;
+        }
+    }
+    &.style-full {
+        .img-style {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .content{
+            @include center();
         }
     }
     .img-style {
