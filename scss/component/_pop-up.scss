@@ -5,7 +5,7 @@
 
 .offcanvas-backdrop {
     background-color: var(--backdrop);
-    cursor: url("../images/item/cursor-close.svg"), auto;
+    cursor: url("../images/cursor-close.svg"), auto;
 
     &.show {
         opacity: 1;
@@ -36,7 +36,7 @@
 //     z-index: 1061 !important;
 // }
 .modal {
-    cursor: url("../images/item/cursor-close.svg"), auto;
+    cursor: url("../images/cursor-close.svg"), auto;
     &.show {
         .modal-dialog {
             transform: none;
@@ -233,5 +233,33 @@
         .wrap-content {
             display: block;
         }
+    }
+}
+
+// Filter Shop
+.canvas-wrapper {
+    padding: 0;
+    isolation: isolate;
+    height: 100%;
+    width: 100%;
+    max-height: none;
+    display: grid;
+    grid-auto-rows: auto minmax(0, 1fr) auto;
+    align-content: start;
+}
+.canvas-body {
+    background-color: var(--white);
+    padding: 15px 20px;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--bg-scrollbar-track);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--bg-scrollbar-thumb);
+        border-radius: 4px;
     }
 }

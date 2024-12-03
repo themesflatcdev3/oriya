@@ -421,6 +421,103 @@ video {
     background-color: #9e9b96 !important;
 }
 
+.bg-light-pink{
+    background-color: #DFC6B8 !important;
+}
+.bg-light-pink-2{
+    background-color: #F4C5BF !important;
+}
+.bg-light-pink-3{
+    background-color: #FDEBEB !important;
+}
+.bg-dark-pink{
+    background-color: #D10047 !important;
+}
+.bg-blue{
+    background-color: var(--blue) !important;
+}
+.bg-blue-2{
+    background-color: #0C74D6 !important;
+}
+.bg-blue-3{
+    background-color: #0766BF !important;
+}
+.bg-light-blue{
+    background-color: #D3D9EF !important;
+}
+.bg-light-blue-2{
+    background-color: #EBEAEF !important;
+}
+.bg-light-blue-3{
+    background-color: #EDF5F6 !important;
+}
+.bg-light-blue-4{
+    background-color: #EAF5FF !important;
+}
+.bg-light-blue-5{
+    background-color: #C9DFED !important;
+}
+.bg-dark-blue{
+    background-color: #1B4872 !important;
+}
+.bg-purple{
+    background-color: #2D3054 !important;
+}
+.bg-purple-2{
+    background-color: #6461BE !important;
+}
+.bg-purple-3{
+    background-color: #73465A !important;
+}
+.bg-orange{
+    background-color: #FF9747 !important;
+}
+.bg-orange-2{
+    background-color: #F1592A !important;
+}
+.bg-light-orange{
+    background-color: #EEAE76 !important;
+}
+.bg-grey{
+    background-color: #E0D3C5 !important;
+}
+.bg-grey-2{ 
+    background-color: #D7CFC4 !important;
+}
+.bg-dark-grey{
+    background-color: #B1AA98 !important;
+}
+.bg-dark-grey-2{
+    background-color: #9E9B96 !important;
+}
+
+.bg-light-grey{
+    background-color: #F0EFED !important;
+}
+.bg-light-green{
+    background-color: #B7B8A3 !important;
+}
+.bg-brown{
+    background-color: #D6BB9A !important;
+}
+.bg-red{
+    background-color: #DC2A35 !important;
+}
+.bg-red-2{
+    background-color: #D14244 !important;
+}
+.bg-beige{
+    background-color: #CCBBA7 !important;
+}
+
+.bg-beige-2{
+    background-color: #F6EFDD !important;
+}
+
+.bg-beige-1 {
+    background-color: #F6F1EE !important;
+}
+
 // color text
 .text_white {
     color: var(--White) !important;
@@ -515,6 +612,28 @@ a {
     row-gap: 30px;
     &.tf-col-2 {
         grid-template-columns: 1fr 1fr;
+    }
+    &.tf-col-3 {
+        grid-template-columns: repeat(3,1fr);
+    }
+    &.tf-col-4 {
+        grid-template-columns: repeat(4,1fr);
+    }
+    &.tf-col-5 {
+        grid-template-columns: repeat(5,1fr);
+    }
+    &.tf-col-6 {
+        grid-template-columns: repeat(6,1fr);
+    }
+    &.tf-col-7 {
+        grid-template-columns: repeat(7,1fr);
+    }
+    .wg-pagination{
+        grid-column: 1 / -1; 
+        width: 100%;
+    }
+    .wd-load{
+        grid-column: 1 / -1; 
     }
     &.gap30 {
         gap: 30px;

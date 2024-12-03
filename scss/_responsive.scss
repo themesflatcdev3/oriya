@@ -475,6 +475,10 @@
 }
 
 @media (max-width: 1199px) {
+    .tf-control-layout .sw-layout-5, 
+    .tf-control-layout .sw-layout-4 {
+        display: none;
+    }
     .fl-sidebar-cart {
         margin-top: 30px;
     }
@@ -573,6 +577,9 @@
     }
 }
 @media (max-width: 767px) {
+    .tf-control-layout .sw-layout-3 {
+        display: none;
+    }
     h5 {
         font-size: 18px;
         line-height: 24px;
