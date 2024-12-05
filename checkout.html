@@ -548,95 +548,339 @@
                 </div>
             </div>
         </header> <!-- /.header -->
+
         <!-- .page-title -->
-
-
-        <!-- main-content -->
-        <div class="main-content">
-
-            <!-- map -->
-            <div class="wrap-map">
-                <div id="map-contact" class="map-contact h520" data-map-zoom="16" data-map-scroll="true"></div>
+        <div class="page-title relative">
+            <div class="paralaximg" data-parallax="scroll" data-image-src="images/page-title/page-title-4.jpg">
             </div>
-            <!-- /map -->
-
-            <section class="flat-spacing">
+            <div class="content">
                 <div class="container">
-                    <div class="contact-us-content">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <h4 class="mb_30">New York</h4>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Phone:</h6>
-                                    <p class="text-body-default">+1 666 234 8888</p>
-                                </div>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Email:</h6>
-                                    <p class="text-body-default">themesflat@gmail.com</p>
-                                </div>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Address:</h6>
-                                    <p class="text-body-default">2163 Phillips Gap Rd, West Jefferson, North Carolina,
-                                        United States</p>
-                                </div>
-                                <div>
-                                    <h6 class="mb_8">Open Time:</h6>
-                                    <p class="text-body-default mb_4 open-time">
-                                        <span >Mon - Sat:</span>
-                                        7:30am - 8:00pm PST
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="title">Check Out</h3>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Homepage</a></li>
+                                <li>Check Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.page-title -->
 
-                                    </p>
-                                    <p class="text-body-default open-time">
-                                        <span >Sunday:</span>
-                                        9:00am - 5:00pm PST
-                                    </p>
+        <!-- Section checkout -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="flat-spacing tf-page-checkout">
+                            <div class="wrap">
+                                <div class="title-login">
+                                    <p>Already have an account?</p>
+                                    <a href="login.html" class="text-button link">Login here</a>
                                 </div>
+                                <form class="login-box">
+                                    <div class="grid-2">
+                                        <input type="text" placeholder="Your name/Email">
+                                        <input type="password" placeholder="Password">
+                                    </div>
+                                    <button class="tf-btn btn-onsurface" type="submit">
+                                        Login<i class="icon-arrow-up-right"></i>
+                                    </button>
+                                </form>
                             </div>
-                            <div class="col-lg-7 offset-lg-1">
-                                <h4>Get In Touch</h4>
-                                <p class="text_secondary mb_24">Use the form below to get in touch with the sales team</p>
-                                <form id="contactform" action="./contact/contact-process.php" method="post"
-                                    class="form-leave-comment">
-                                    <div class="wrap">
-                                        <div class="cols">
-                                            <fieldset class="">
-                                                <input class="" type="text" placeholder="Your Name*" name="name"
-                                                    id="name" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                            <fieldset class="">
-                                                <input class="" type="email" placeholder="Your Email*" name="email"
-                                                    id="email" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                        </div>
-                                        <div class="cols">
-                                            <fieldset class="">
-                                                <input class="" type="number" placeholder="Phone*" name="phone"
-                                                    id="phone" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                            <fieldset class="">
-                                                <input class="" type="number" placeholder="Order Numbers*" name="order-numbers"
-                                                    id="order-numbers" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                        </div>
-                                        <fieldset class="">
-                                            <textarea name="message" id="message" rows="4" placeholder="Your Message*"
-                                                tabindex="2" aria-required="true" required=""></textarea>
-                                        </fieldset>
+                            <div class="wrap">
+                                <h5 class="title">Information</h5>
+                                <form class="info-box">
+                                    <div class="grid-2">
+                                        <input type="text" placeholder="First Name*">
+                                        <input type="text" placeholder="Last Name*">
                                     </div>
-                                    
-                                    <div class="button-submit send-wrap">
-                                        <button class="tf-btn btn-onsurface" type="submit">
-                                            Send message <i class="icon-arrow-up-right"></i>
-                                        </button>
+                                    <div class="grid-2">
+                                        <input type="text" placeholder="Email Address*">
+                                        <input type="text" placeholder="Phone Number*">
                                     </div>
+                                    <div class="tf-select">
+                                        <select class="text-title" name="address[country]" data-default="">
+                                            <option selected value="Choose Country/Region" data-provinces="[]">
+                                                Choose Country/Region</option>
+                                            <option value="United States"
+                                                data-provinces="[['Alabama','Alabama'],['Alaska','Alaska'],['American Samoa','American Samoa'],['Arizona','Arizona'],['Arkansas','Arkansas'],['Armed Forces Americas','Armed Forces Americas'],['Armed Forces Europe','Armed Forces Europe'],['Armed Forces Pacific','Armed Forces Pacific'],['California','California'],['Colorado','Colorado'],['Connecticut','Connecticut'],['Delaware','Delaware'],['District of Columbia','Washington DC'],['Federated States of Micronesia','Micronesia'],['Florida','Florida'],['Georgia','Georgia'],['Guam','Guam'],['Hawaii','Hawaii'],['Idaho','Idaho'],['Illinois','Illinois'],['Indiana','Indiana'],['Iowa','Iowa'],['Kansas','Kansas'],['Kentucky','Kentucky'],['Louisiana','Louisiana'],['Maine','Maine'],['Marshall Islands','Marshall Islands'],['Maryland','Maryland'],['Massachusetts','Massachusetts'],['Michigan','Michigan'],['Minnesota','Minnesota'],['Mississippi','Mississippi'],['Missouri','Missouri'],['Montana','Montana'],['Nebraska','Nebraska'],['Nevada','Nevada'],['New Hampshire','New Hampshire'],['New Jersey','New Jersey'],['New Mexico','New Mexico'],['New York','New York'],['North Carolina','North Carolina'],['North Dakota','North Dakota'],['Northern Mariana Islands','Northern Mariana Islands'],['Ohio','Ohio'],['Oklahoma','Oklahoma'],['Oregon','Oregon'],['Palau','Palau'],['Pennsylvania','Pennsylvania'],['Puerto Rico','Puerto Rico'],['Rhode Island','Rhode Island'],['South Carolina','South Carolina'],['South Dakota','South Dakota'],['Tennessee','Tennessee'],['Texas','Texas'],['Utah','Utah'],['Vermont','Vermont'],['Virgin Islands','U.S. Virgin Islands'],['Virginia','Virginia'],['Washington','Washington'],['West Virginia','West Virginia'],['Wisconsin','Wisconsin'],['Wyoming','Wyoming']]">
+                                                United States</option>
+                                            <option value="Australia"
+                                                data-provinces="[['Australian Capital Territory','Australian Capital Territory'],['New South Wales','New South Wales'],['Northern Territory','Northern Territory'],['Queensland','Queensland'],['South Australia','South Australia'],['Tasmania','Tasmania'],['Victoria','Victoria'],['Western Australia','Western Australia']]">
+                                                Australia</option>
+                                            <option value="Austria" data-provinces="[]">Austria</option>
+                                            <option value="Belgium" data-provinces="[]">Belgium</option>
+                                            <option value="Canada"
+                                                data-provinces="[['Alberta','Alberta'],['British Columbia','British Columbia'],['Manitoba','Manitoba'],['New Brunswick','New Brunswick'],['Newfoundland and Labrador','Newfoundland and Labrador'],['Northwest Territories','Northwest Territories'],['Nova Scotia','Nova Scotia'],['Nunavut','Nunavut'],['Ontario','Ontario'],['Prince Edward Island','Prince Edward Island'],['Quebec','Quebec'],['Saskatchewan','Saskatchewan'],['Yukon','Yukon']]">
+                                                Canada</option>
+                                            <option value="Czech Republic" data-provinces="[]">Czechia</option>
+                                            <option value="Denmark" data-provinces="[]">Denmark</option>
+                                            <option value="Finland" data-provinces="[]">Finland</option>
+                                            <option value="France" data-provinces="[]">France</option>
+                                            <option value="Germany" data-provinces="[]">Germany</option>
+                                            <option value="Hong Kong"
+                                                data-provinces="[['Hong Kong Island','Hong Kong Island'],['Kowloon','Kowloon'],['New Territories','New Territories']]">
+                                                Hong Kong SAR</option>
+                                            <option value="Ireland"
+                                                data-provinces="[['Carlow','Carlow'],['Cavan','Cavan'],['Clare','Clare'],['Cork','Cork'],['Donegal','Donegal'],['Dublin','Dublin'],['Galway','Galway'],['Kerry','Kerry'],['Kildare','Kildare'],['Kilkenny','Kilkenny'],['Laois','Laois'],['Leitrim','Leitrim'],['Limerick','Limerick'],['Longford','Longford'],['Louth','Louth'],['Mayo','Mayo'],['Meath','Meath'],['Monaghan','Monaghan'],['Offaly','Offaly'],['Roscommon','Roscommon'],['Sligo','Sligo'],['Tipperary','Tipperary'],['Waterford','Waterford'],['Westmeath','Westmeath'],['Wexford','Wexford'],['Wicklow','Wicklow']]">
+                                                Ireland</option>
+                                            <option value="Israel" data-provinces="[]">Israel</option>
+                                            <option value="Italy"
+                                                data-provinces="[['Agrigento','Agrigento'],['Alessandria','Alessandria'],['Ancona','Ancona'],['Aosta','Aosta Valley'],['Arezzo','Arezzo'],['Ascoli Piceno','Ascoli Piceno'],['Asti','Asti'],['Avellino','Avellino'],['Bari','Bari'],['Barletta-Andria-Trani','Barletta-Andria-Trani'],['Belluno','Belluno'],['Benevento','Benevento'],['Bergamo','Bergamo'],['Biella','Biella'],['Bologna','Bologna'],['Bolzano','South Tyrol'],['Brescia','Brescia'],['Brindisi','Brindisi'],['Cagliari','Cagliari'],['Caltanissetta','Caltanissetta'],['Campobasso','Campobasso'],['Carbonia-Iglesias','Carbonia-Iglesias'],['Caserta','Caserta'],['Catania','Catania'],['Catanzaro','Catanzaro'],['Chieti','Chieti'],['Como','Como'],['Cosenza','Cosenza'],['Cremona','Cremona'],['Crotone','Crotone'],['Cuneo','Cuneo'],['Enna','Enna'],['Fermo','Fermo'],['Ferrara','Ferrara'],['Firenze','Florence'],['Foggia','Foggia'],['Forlì-Cesena','Forlì-Cesena'],['Frosinone','Frosinone'],['Genova','Genoa'],['Gorizia','Gorizia'],['Grosseto','Grosseto'],['Imperia','Imperia'],['Isernia','Isernia'],['L'Aquila','L’Aquila'],['La Spezia','La Spezia'],['Latina','Latina'],['Lecce','Lecce'],['Lecco','Lecco'],['Livorno','Livorno'],['Lodi','Lodi'],['Lucca','Lucca'],['Macerata','Macerata'],['Mantova','Mantua'],['Massa-Carrara','Massa and Carrara'],['Matera','Matera'],['Medio Campidano','Medio Campidano'],['Messina','Messina'],['Milano','Milan'],['Modena','Modena'],['Monza e Brianza','Monza and Brianza'],['Napoli','Naples'],['Novara','Novara'],['Nuoro','Nuoro'],['Ogliastra','Ogliastra'],['Olbia-Tempio','Olbia-Tempio'],['Oristano','Oristano'],['Padova','Padua'],['Palermo','Palermo'],['Parma','Parma'],['Pavia','Pavia'],['Perugia','Perugia'],['Pesaro e Urbino','Pesaro and Urbino'],['Pescara','Pescara'],['Piacenza','Piacenza'],['Pisa','Pisa'],['Pistoia','Pistoia'],['Pordenone','Pordenone'],['Potenza','Potenza'],['Prato','Prato'],['Ragusa','Ragusa'],['Ravenna','Ravenna'],['Reggio Calabria','Reggio Calabria'],['Reggio Emilia','Reggio Emilia'],['Rieti','Rieti'],['Rimini','Rimini'],['Roma','Rome'],['Rovigo','Rovigo'],['Salerno','Salerno'],['Sassari','Sassari'],['Savona','Savona'],['Siena','Siena'],['Siracusa','Syracuse'],['Sondrio','Sondrio'],['Taranto','Taranto'],['Teramo','Teramo'],['Terni','Terni'],['Torino','Turin'],['Trapani','Trapani'],['Trento','Trentino'],['Treviso','Treviso'],['Trieste','Trieste'],['Udine','Udine'],['Varese','Varese'],['Venezia','Venice'],['Verbano-Cusio-Ossola','Verbano-Cusio-Ossola'],['Vercelli','Vercelli'],['Verona','Verona'],['Vibo Valentia','Vibo Valentia'],['Vicenza','Vicenza'],['Viterbo','Viterbo']]">
+                                                Italy</option>
+                                            <option value="Japan"
+                                                data-provinces="[['Aichi','Aichi'],['Akita','Akita'],['Aomori','Aomori'],['Chiba','Chiba'],['Ehime','Ehime'],['Fukui','Fukui'],['Fukuoka','Fukuoka'],['Fukushima','Fukushima'],['Gifu','Gifu'],['Gunma','Gunma'],['Hiroshima','Hiroshima'],['Hokkaidō','Hokkaido'],['Hyōgo','Hyogo'],['Ibaraki','Ibaraki'],['Ishikawa','Ishikawa'],['Iwate','Iwate'],['Kagawa','Kagawa'],['Kagoshima','Kagoshima'],['Kanagawa','Kanagawa'],['Kumamoto','Kumamoto'],['Kyōto','Kyoto'],['Kōchi','Kochi'],['Mie','Mie'],['Miyagi','Miyagi'],['Miyazaki','Miyazaki'],['Nagano','Nagano'],['Nagasaki','Nagasaki'],['Nara','Nara'],['Niigata','Niigata'],['Okayama','Okayama'],['Okinawa','Okinawa'],['Saga','Saga'],['Saitama','Saitama'],['Shiga','Shiga'],['Shimane','Shimane'],['Shizuoka','Shizuoka'],['Tochigi','Tochigi'],['Tokushima','Tokushima'],['Tottori','Tottori'],['Toyama','Toyama'],['Tōkyō','Tokyo'],['Wakayama','Wakayama'],['Yamagata','Yamagata'],['Yamaguchi','Yamaguchi'],['Yamanashi','Yamanashi'],['Ōita','Oita'],['Ōsaka','Osaka']]">
+                                                Japan</option>
+                                            <option value="Malaysia"
+                                                data-provinces="[['Johor','Johor'],['Kedah','Kedah'],['Kelantan','Kelantan'],['Kuala Lumpur','Kuala Lumpur'],['Labuan','Labuan'],['Melaka','Malacca'],['Negeri Sembilan','Negeri Sembilan'],['Pahang','Pahang'],['Penang','Penang'],['Perak','Perak'],['Perlis','Perlis'],['Putrajaya','Putrajaya'],['Sabah','Sabah'],['Sarawak','Sarawak'],['Selangor','Selangor'],['Terengganu','Terengganu']]">
+                                                Malaysia</option>
+                                            <option value="Netherlands" data-provinces="[]">Netherlands</option>
+                                            <option value="New Zealand"
+                                                data-provinces="[['Auckland','Auckland'],['Bay of Plenty','Bay of Plenty'],['Canterbury','Canterbury'],['Chatham Islands','Chatham Islands'],['Gisborne','Gisborne'],['Hawke's Bay','Hawke’s Bay'],['Manawatu-Wanganui','Manawatū-Whanganui'],['Marlborough','Marlborough'],['Nelson','Nelson'],['Northland','Northland'],['Otago','Otago'],['Southland','Southland'],['Taranaki','Taranaki'],['Tasman','Tasman'],['Waikato','Waikato'],['Wellington','Wellington'],['West Coast','West Coast']]">
+                                                New Zealand</option>
+                                            <option value="Norway" data-provinces="[]">Norway</option>
+                                            <option value="Poland" data-provinces="[]">Poland</option>
+                                            <option value="Portugal"
+                                                data-provinces="[['Aveiro','Aveiro'],['Açores','Azores'],['Beja','Beja'],['Braga','Braga'],['Bragança','Bragança'],['Castelo Branco','Castelo Branco'],['Coimbra','Coimbra'],['Faro','Faro'],['Guarda','Guarda'],['Leiria','Leiria'],['Lisboa','Lisbon'],['Madeira','Madeira'],['Portalegre','Portalegre'],['Porto','Porto'],['Santarém','Santarém'],['Setúbal','Setúbal'],['Viana do Castelo','Viana do Castelo'],['Vila Real','Vila Real'],['Viseu','Viseu'],['Évora','Évora']]">
+                                                Portugal</option>
+                                            <option value="Singapore" data-provinces="[]">Singapore</option>
+                                            <option value="South Korea"
+                                                data-provinces="[['Busan','Busan'],['Chungbuk','North Chungcheong'],['Chungnam','South Chungcheong'],['Daegu','Daegu'],['Daejeon','Daejeon'],['Gangwon','Gangwon'],['Gwangju','Gwangju City'],['Gyeongbuk','North Gyeongsang'],['Gyeonggi','Gyeonggi'],['Gyeongnam','South Gyeongsang'],['Incheon','Incheon'],['Jeju','Jeju'],['Jeonbuk','North Jeolla'],['Jeonnam','South Jeolla'],['Sejong','Sejong'],['Seoul','Seoul'],['Ulsan','Ulsan']]">
+                                                South Korea</option>
+                                            <option value="Spain"
+                                                data-provinces="[['A Coruña','A Coruña'],['Albacete','Albacete'],['Alicante','Alicante'],['Almería','Almería'],['Asturias','Asturias Province'],['Badajoz','Badajoz'],['Balears','Balears Province'],['Barcelona','Barcelona'],['Burgos','Burgos'],['Cantabria','Cantabria Province'],['Castellón','Castellón'],['Ceuta','Ceuta'],['Ciudad Real','Ciudad Real'],['Cuenca','Cuenca'],['Cáceres','Cáceres'],['Cádiz','Cádiz'],['Córdoba','Córdoba'],['Girona','Girona'],['Granada','Granada'],['Guadalajara','Guadalajara'],['Guipúzcoa','Gipuzkoa'],['Huelva','Huelva'],['Huesca','Huesca'],['Jaén','Jaén'],['La Rioja','La Rioja Province'],['Las Palmas','Las Palmas'],['León','León'],['Lleida','Lleida'],['Lugo','Lugo'],['Madrid','Madrid Province'],['Melilla','Melilla'],['Murcia','Murcia'],['Málaga','Málaga'],['Navarra','Navarra'],['Ourense','Ourense'],['Palencia','Palencia'],['Pontevedra','Pontevedra'],['Salamanca','Salamanca'],['Santa Cruz de Tenerife','Santa Cruz de Tenerife'],['Segovia','Segovia'],['Sevilla','Seville'],['Soria','Soria'],['Tarragona','Tarragona'],['Teruel','Teruel'],['Toledo','Toledo'],['Valencia','Valencia'],['Valladolid','Valladolid'],['Vizcaya','Biscay'],['Zamora','Zamora'],['Zaragoza','Zaragoza'],['Álava','Álava'],['Ávila','Ávila']]">
+                                                Spain</option>
+                                            <option value="Sweden" data-provinces="[]">Sweden</option>
+                                            <option value="Switzerland" data-provinces="[]">Switzerland</option>
+                                            <option value="United Arab Emirates"
+                                                data-provinces="[['Abu Dhabi','Abu Dhabi'],['Ajman','Ajman'],['Dubai','Dubai'],['Fujairah','Fujairah'],['Ras al-Khaimah','Ras al-Khaimah'],['Sharjah','Sharjah'],['Umm al-Quwain','Umm al-Quwain']]">
+                                                United Arab Emirates</option>
+                                            <option value="United Kingdom"
+                                                data-provinces="[['British Forces','British Forces'],['England','England'],['Northern Ireland','Northern Ireland'],['Scotland','Scotland'],['Wales','Wales']]">
+                                                United Kingdom</option>
+                                            <option value="Vietnam" data-provinces="[]">Vietnam</option>
+                                        </select>
+                                    </div>
+                                    <div class="grid-2">
+                                        <input type="text" placeholder="Town/City*">
+                                        <input type="text" placeholder="Street,...">
+                                    </div>
+                                    <div class="grid-2">
+                                        <div class="tf-select">
+                                            <select class="text-title" data-default="">
+                                                <option selected value="Choose State">Choose State</option>
+                                                <option value="California">California</option>
+                                                <option value="Alabama">Alabam</option>
+                                                <option value="Alaska">Alaska</option>
+                                                <option value="Arizona">Arizona</option>
+                                                <option value="Arkansas">Arkansas</option>
+                                                <option value="Florida">Florida</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Hawaii">Hawaii</option>
+                                                <option value="Washington">Washington</option>
+                                                <option value="Texas">Texas</option>
+                                                <option value="Iowa">Iowa</option>
+                                                <option value="Nevada">Nevada</option>
+                                                <option value="Illinois">Illinois</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" placeholder="Postal Code*">
+                                    </div>
+                                    <textarea placeholder="Write note..."></textarea>
+                                </form>
+                            </div>
+                            <div class="wrap">
+                                <h5 class="title">Choose payment Option:</h5>
+                                <form class="form-payment">
+                                    <div class="payment-box" id="payment-box">
+                                        <div class="payment-item payment-choose-card active">
+                                            <label for="credit-card-method" class="payment-header"
+                                                data-bs-toggle="collapse" data-bs-target="#credit-card-payment"
+                                                aria-controls="credit-card-payment">
+                                                <input type="radio" name="payment-method" class="tf-check-rounded"
+                                                    id="credit-card-method" checked>
+                                                <span class="text-title">Credit Card</span>
+                                            </label>
+                                            <div id="credit-card-payment" class="collapse show"
+                                                data-bs-parent="#payment-box">
+                                                <div class="payment-body">
+                                                    <p class="text-secondary">Make your payment directly into our
+                                                        bank account. Your order will not be shipped until the funds
+                                                        have cleared in our account.</p>
+                                                    <div class="input-payment-box">
+                                                        <input type="text" placeholder="Name On Card*">
+                                                        <div class="ip-card">
+                                                            <input type="text" placeholder="Card Numbers*">
+                                                            <div class="list-card">
+                                                                <img src="images/payment/payment-7.png" width="48"
+                                                                    height="16" alt="card">
+                                                                <img src="images/payment/payment-8.png" width="21"
+                                                                    height="16" alt="card">
+                                                                <img src="images/payment/payment-9.png" width="22"
+                                                                    height="16" alt="card">
+                                                                <img src="images/payment/payment-10.png" width="24"
+                                                                    height="16" alt="card">
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid-2">
+                                                            <input type="date">
+                                                            <input type="text" placeholder="CVV*">
+                                                        </div>
+                                                    </div>
+                                                    <div class="check-save">
+                                                        <input type="checkbox" class="tf-check" id="check-card" checked>
+                                                        <label for="check-card">Save Card Details</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="payment-item">
+                                            <label for="delivery-method" class="payment-header collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#delivery-payment"
+                                                aria-controls="delivery-payment">
+                                                <input type="radio" name="payment-method" class="tf-check-rounded"
+                                                    id="delivery-method">
+                                                <span class="text-title">Cash on delivery</span>
+                                            </label>
+                                            <div id="delivery-payment" class="collapse" data-bs-parent="#payment-box">
+                                            </div>
+                                        </div>
+                                        <div class="payment-item">
+                                            <label for="apple-method" class="payment-header collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#apple-payment"
+                                                aria-controls="apple-payment">
+                                                <input type="radio" name="payment-method" class="tf-check-rounded"
+                                                    id="apple-method">
+                                                <span class="text-title apple-pay-title">
+                                                    <img src="images/payment/applePay.png" alt="apple">Apple Pay
+                                                </span>
+                                            </label>
+                                            <div id="apple-payment" class="collapse" data-bs-parent="#payment-box">
+                                            </div>
+                                        </div>
+                                        <div class="payment-item paypal-item">
+                                            <label for="paypal-method" class="payment-header collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#paypal-method-payment"
+                                                aria-controls="paypal-method-payment">
+                                                <input type="radio" name="payment-method" class="tf-check-rounded"
+                                                    id="paypal-method">
+                                                <span class="paypal-title">
+                                                    <img src="images/payment/paypal.png" alt="apple">
+                                                </span>
+                                            </label>
+                                            <div id="paypal-method-payment" class="collapse"
+                                                data-bs-parent="#payment-box"></div>
+                                        </div>
+                                    </div>
+                                    <button class="tf-btn btn-onsurface">Payment<i
+                                            class="icon-arrow-up-right"></i></button>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-1">
+                        <div class="line-separation"></div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="flat-spacing flat-sidebar-checkout">
+                            <div class="sidebar-checkout-content">
+                                <h5 class="title">Shopping Cart</h5>
+                                <div class="list-product">
+                                    <div class="item-product">
+                                        <a href="product-detail.html" class="img-product">
+                                            <img src="images/shop/product-6.jpg" alt="img-product">
+                                        </a>
+                                        <div class="content-box">
+                                            <div class="info">
+                                                <a href="product-detail.html" class="name-product link text-title">Open
+                                                    Box -
+                                                    Adjustable...</a>
+                                                <div class="variant text-caption-1 ">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                            <div class="total-price text-button">
+                                                <span class="count">1</span>
+                                                X<span class="price">$60.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product">
+                                        <a href="product-detail.html" class="img-product">
+                                            <img src="images/shop/product-4.jpg" alt="img-product">
+                                        </a>
+                                        <div class="content-box">
+                                            <div class="info">
+                                                <a href="product-detail.html"
+                                                    class="name-product link text-title">Ergonomic Chair Pro</a>
+                                                <div class="variant text-caption-1">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                            <div class="total-price text-button">
+                                                <span class="count">1</span>
+                                                X<span class="price">$60.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product">
+                                        <a href="product-detail.html" class="img-product">
+                                            <img src="images/shop/product-1.jpg" alt="img-product">
+                                        </a>
+                                        <div class="content-box">
+                                            <div class="info">
+                                                <a href="product-detail.html"
+                                                    class="name-product link text-title">Double Standing Desk
+                                                </a>
+                                                <div class="variant text-caption-1">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                            <div class="total-price text-button">
+                                                <span class="count">1</span>
+                                                X<span class="price">$60.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec-discount">
+                                    <div class="ip-discount-code">
+                                        <input type="text" placeholder="Add voucher discount">
+                                        <button class="tf-btn  btn-onsurface">
+                                            Apply Code
+                                        </button>
+                                    </div>
+                                    <p class="text-body-default">Discount code is only used for orders with a total
+                                        value of products over
+                                        $500.00</p>
+                                </div>
+                                <div class="sec-total-price">
+                                    <div class="top">
+                                        <div class="item d-flex align-items-center justify-content-between text-button">
+                                            <span>Shipping</span>
+                                            <span>Free</span>
+                                        </div>
+                                        <div class="item d-flex align-items-center justify-content-between text-button">
+                                            <span>Discounts</span>
+                                            <span>-$80.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <h5 class="d-flex justify-content-between">
+                                            <span>Total</span>
+                                            <span class="total-price-checkout">$186,99</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-        </div><!-- main-content -->
+            </div>
+        </section>
+        <!-- /Section checkout -->
 
         <!-- .footer -->
         <footer id="footer" class="footer">
@@ -779,6 +1023,13 @@
                             <div class="footer-bottom-wrap">
                                 <div class="left">
                                     <p class="text-caption-1">Copyright ©2024 Oriya. All Rights Reserved.</p>
+                                    <div class="tf-currencies">
+                                        <select class="image-select center style-default style-box type-currencies">
+                                            <option selected data-thumbnail="images/country/us.svg">English (USD)
+                                            </option>
+                                            <option data-thumbnail="images/country/vn.svg">Vietnam (VND)</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="tf-payment">
                                     <ul>
@@ -818,12 +1069,13 @@
             <div class="mb-body">
                 <ul class="nav-ul-mb" id="wrapper-menu-navigation">
                     <li class="nav-mb-item active">
-                        <a href="#dropdown-menu-one" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-one">
+                        <a href="#dropdown-menu-one" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-one">
                             <span>Home</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-one" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="index.html" class="sub-nav-link">Homepage 01</a></li>
                                 <li><a href="home-2.html" class="sub-nav-link">Homepage 02</a></li>
                                 <li><a href="home-3.html" class="sub-nav-link">Homepage 03</a></li>
@@ -833,12 +1085,13 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-two" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-two">
+                        <a href="#dropdown-menu-two" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-two">
                             <span>Shop</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-two" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="shop-default.html" class="sub-nav-link">Shop Default</a></li>
                                 <li><a href="shop-grid.html" class="sub-nav-link">Shop Grid</a></li>
                                 <li><a href="login.html" class="sub-nav-link">Login/Register</a></li>
@@ -847,12 +1100,13 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-three" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-three">
+                        <a href="#dropdown-menu-three" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-three">
                             <span>Products</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-three" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="product-detail.html" class="sub-nav-link">Products Details 1</a></li>
                                 <li><a href="product-detail-2.html" class="sub-nav-link">Products Details 2</a></li>
                                 <li><a href="product-detail-3.html" class="sub-nav-link">Products Details 3</a></li>
@@ -860,7 +1114,8 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-four" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-four">
+                        <a href="#dropdown-menu-four" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-four">
                             <span>Blog</span>
                             <span class="btn-open-sub"></span>
                         </a>
@@ -873,7 +1128,8 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-five" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-five">
+                        <a href="#dropdown-menu-five" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-five">
                             <span>Page</span>
                             <span class="btn-open-sub"></span>
                         </a>
@@ -890,23 +1146,35 @@
                 <div class="mb-other-content">
                     <div class="group-icon">
                         <a href="wish-list.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Wishlist 
+                            Wishlist
                         </a>
                         <a href="search-result.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             Search
                         </a>
                         <a href="login.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>  
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             Login
                         </a>
 
@@ -937,7 +1205,7 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
     </div>
     <!-- /mobile menu -->
 
@@ -945,15 +1213,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="js/lazysize.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuSiPhoDaOJ7aqtJVtQhYhLzwwJ7rQlmA"></script>
-    <script type="text/javascript" src="js/map-contact.js"></script>
-    <script type="text/javascript" src="js/marker.js"></script>
-    <script type="text/javascript" src="js/infobox.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/multiple-modal.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
