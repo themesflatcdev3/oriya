@@ -76,10 +76,10 @@ form {
     }
 }
 
-
 .tf-select {
     position: relative;
     select {
+        cursor: pointer;
         width: 100%;
         padding: 7px 16px;
         border: 2px solid var(--line);
@@ -92,15 +92,15 @@ form {
     &::after {
         font-family: $fontIcon;
         position: absolute;
-        content: "\e935";
+        content: "\e936";
         right: 16px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 20px;
         z-index: -1;
     }
-    &:hover{
-        select{
+    &:hover {
+        select {
             border-color: var(--Onsurface);
         }
     }
@@ -140,7 +140,7 @@ form {
     }
 }
 
-.tf-check-rounded{
+.tf-check-rounded {
     position: relative;
     border: 1px solid var(--Secondary2);
     border-radius: 50%;
@@ -149,7 +149,7 @@ form {
     outline: 0;
     height: 14px;
     width: 14px;
-    @include flex(center,center);
+    @include flex(center, center);
     -webkit-appearance: none;
     &::before {
         content: "";
@@ -160,12 +160,69 @@ form {
         background-color: var(--Onsurface);
         opacity: 0;
     }
-        &:checked {
-            border-color: var(--Onsurface);
-            &::before {
-                opacity: 1;
-            }
+    &:checked {
+        border-color: var(--Onsurface);
+        &::before {
+            opacity: 1;
         }
+    }
+}
+.form-write-review {
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+    textarea {
+        height: 100px;
+    }
+}
+
+.list-rating-check {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    gap: 10px;
+    position: relative;
+}
+
+.list-rating-check:not(:checked) > input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.list-rating-check:not(:checked) > label {
+    font-size: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 40px;
+    color: var(--line);
+}
+
+.list-rating-check:not(:checked) > label:before {
+    font-family: $fontIcon;
+    content: "\e908";
+}
+
+.list-rating-check > input:checked ~ label {
+    color: var(--Yellow);
+}
+
+.list-rating-check:not(:checked) > label:hover,
+.list-rating-check:not(:checked) > label:hover ~ label {
+    color: var(--Yellow);
+}
+
+.list-rating-check > input:checked + label:hover,
+.list-rating-check > input:checked + label:hover ~ label,
+.list-rating-check > input:checked ~ label:hover,
+.list-rating-check > input:checked ~ label:hover ~ label,
+.list-rating-check > label:hover ~ input:checked ~ label {
+    color: var(--Yellow);
 }
 
 // dropdown select
@@ -180,7 +237,7 @@ form {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    .icon{
+    .icon {
         font-size: 20px;
     }
     .btn-select {
@@ -219,7 +276,7 @@ form {
         line-height: 30px;
         width: 100%;
         @include transition3;
-       
+
         &.active {
             background-color: var(--line);
             color: var(--main);
@@ -262,7 +319,7 @@ form {
         padding: 9px 11px;
         border-radius: 12px;
         background-color: var(--surface);
-        
+
         .btn-select {
             gap: 16px;
             .text-sort-value {
@@ -275,8 +332,68 @@ form {
     }
 }
 
-#contactform{
-    textarea{
+#contactform {
+    textarea {
         height: 160px;
+    }
+}
+
+.form-bundle-product {
+    padding: 23px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    .tf-bundle-product-total-submit {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .tf-bundle-product-btn {
+        padding: 14px 48px;
+    }
+    &.type-cols {
+        .tf-bundle-products-wrap {
+            display: flex;
+            gap: 16px 24px;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: var(--Secondary2);
+            }
+            &::-webkit-scrollbar-track {
+                background: var(--line);
+            }
+        }
+        .tf-bundle-product-item {
+            width: 173px;
+            flex-shrink: 0;
+            flex-direction: column;
+            .tf-product-bundle-infos {
+                gap: 8px;
+            }
+            .tf-product-bundle-image {
+                width: 100%;
+                height: 173px;
+            }
+        }
+    }
+    &.type-product-grouped {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        gap: 20px;
+        .tf-bundle-product-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--line);
+        }
+    }
+    .tf-btn {
+        max-width: 256px;
+        width: 100%;
     }
 }
