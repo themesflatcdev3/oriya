@@ -118,6 +118,9 @@
     &::after {
         display: none;
     }
+    &.has-border {
+        border: 1px solid var(--line);
+    }
 }
 
 .tf-sw-products{
@@ -127,6 +130,29 @@
         }
         .nav-prev-products{
             right: 12%;
+        }
+    }
+}
+
+.sw-button-over{
+    position: relative;
+    .swiper-button-prev{
+        left: -75px;
+    }
+    .swiper-button-next{
+        right: -75px;
+    }
+}
+
+.sw-button-bottom-right {
+    .wrap-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        gap: 12px;
+        .sw-button {
+            position: unset;
         }
     }
 }

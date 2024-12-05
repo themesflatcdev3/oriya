@@ -227,7 +227,6 @@
 
 .image-select {
     &.style-default {
-        // width: unset !important;
         display: flex;
         width: max-content !important;
         > select {
@@ -235,7 +234,7 @@
         }
         > .dropdown-toggle {
             padding: 0;
-            padding-right: 20px;
+            padding-right: 25px;
             background-color: transparent !important;
             border: 0 !important;
             outline: none !important;
@@ -246,7 +245,7 @@
                 right: 0;
                 content: '\e936';
                 font-family: 'icomoon';
-                font-size: 12px;
+                font-size: 16px;
                 color: var(--main);
             }
         }

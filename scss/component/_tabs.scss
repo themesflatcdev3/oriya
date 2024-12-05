@@ -92,6 +92,36 @@
     }
 }
 
+.tab-product{
+    gap: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;  
+    display: flex;
+    .nav-tab-item {
+        a {
+            display: flex;
+            width: 100%;
+            white-space: nowrap;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            text-transform: capitalize;
+            @include transition3;
+            color: var(--Secondary);
+            &:hover,
+            &.active {
+                color: var(--Onsurface);
+                border-bottom-color: var(--Onsurface);
+
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+}
+
 .widget-tabs {
     .widget-menu-tab {
         .item-title {

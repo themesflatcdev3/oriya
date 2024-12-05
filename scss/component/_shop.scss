@@ -1127,7 +1127,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
     .canvas-header {
         @include flex(center, space-between);
         padding: 10px 20px;
-        background-color: var(--surface);
+        background-color: var(--White);
         gap: 8px;
         .icon-close-popup {
             font-size: 16px;
@@ -1144,9 +1144,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
     }
     .canvas-body {
         padding: 20px;
+        background-color: var(--White);
     }
     .canvas-bottom {
         padding: 0 0 20px 20px;
+        background-color: var(--White);
     }
 }
 .widget-facet {
@@ -1308,7 +1310,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
     position: relative;
 }
 .sidebar-filter {
-    background-color: var(--white);
+    background-color: var(--White);
     @include transition3;
 }
 .breadcrumbs-default {

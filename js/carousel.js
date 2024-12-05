@@ -566,6 +566,8 @@ if ($(".tf-sw-lookbook").length > 0) {
     var perGroup = tfSwLb.data("pagination") || 1;
     var perGroupMd = tfSwLb.data("pagination-md") || 1;
     var perGroupLg = tfSwLb.data("pagination-lg") || 1;
+    var loop = tfSwLb.data("loop");
+
     var mobileSm =
         tfSwLb.data("mobile-sm") !== undefined
             ? tfSwLb.data("mobile-sm")
@@ -576,6 +578,8 @@ if ($(".tf-sw-lookbook").length > 0) {
         observer: true,
         observeParents: true,
         speed: 1000,
+        loop: loop,
+        centeredSlides: true,
         pagination: {
             el: ".sw-pagination-lookbook",
             clickable: true,

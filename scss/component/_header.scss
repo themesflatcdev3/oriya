@@ -53,7 +53,7 @@ header {
 
 .header-default {
     .main-header {
-        padding: 23px 0 23px;
+        padding: 22px 0 22px;
         &.has-border-y {
             border-bottom: 1px solid var(--line);
             border-top: 1px solid var(--line);
@@ -147,9 +147,15 @@ header {
     }
     &.header-absolute {
         background-color: transparent;
+        margin-bottom: -88px;
         .main-header {
+            padding: 13px 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+    }
+    &.absolute-2 {
+        padding: 40px 40px 0 40px;
+        margin-bottom: -126px;
     }
 }
 
@@ -183,13 +189,16 @@ header {
         padding: 8px 0px;
     }
     .categories-item{
-        padding: 9px 20px;
+        padding: 9px 20px !important; 
+        border: 0 !important;
+        box-shadow: none !important;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
         .icon{
-            font-size: 20px;
+            font-size: 20px !important;
+            margin-bottom: 0 !important;
             @include transition3;
         }
         .inner-left{

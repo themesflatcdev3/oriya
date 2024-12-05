@@ -169,6 +169,50 @@
     background: conic-gradient(#add8e6 0deg 360deg);
 }
 
+.bg-color-beige {
+    background: conic-gradient(#c8ad7f 0deg 360deg);
+}
+.bg-color-black {
+    background: conic-gradient(#000000 0deg 360deg);
+}
+.bg-color-blue {
+    background: conic-gradient(#a8bcd4 0deg 360deg);
+}
+.bg-color-white {
+    background: conic-gradient(#ffffff 0deg 360deg);
+}
+.bg-color-pink {
+    background: conic-gradient(#fcc6de 0deg 360deg);
+}
+.bg-color-brown {
+    background: conic-gradient(#977945 0deg 360deg);
+}
+.bg-color-light-purple {
+    background: conic-gradient(#d966d9 0deg 360deg);
+}
+.bg-color-light-green {
+    background: conic-gradient(#caffd6 0deg 360deg);
+}
+.bg-color-orange {
+    background: conic-gradient(#ffa500 0deg 360deg);
+}
+.bg-color-light-blue {
+    background: conic-gradient(#add8e6 0deg 360deg);
+}
+.bg-color-gray {
+    background-color: rgba(177, 170, 152, 1);
+}
+
+.bg-color-beige1 {
+    background: rgba(223, 198, 184, 1);
+}
+.bg-color-grey {
+    background-color: rgba(158, 155, 150, 1);
+}
+.bg-color-red {
+    background-color: #dc2a35;
+}
+
 .tf-cart-checkbox {
     display: flex;
     align-items: center;
@@ -244,7 +288,7 @@
     align-content: start;
 }
 .canvas-body {
-    background-color: var(--white);
+    background-color: var(--White);
     padding: 15px 20px;
     overscroll-behavior-y: contain;
     overflow-y: auto;
@@ -266,7 +310,7 @@
     .icon-close-popup {
         @include transition3;
         &:hover {
-            color: var(--primary);
+            color: var(--Primary);
             transform: rotate(90deg);
         }
     }
@@ -981,48 +1025,4 @@
             @include flex(center, center);
         }
     }
-}
-
-.bg-color-beige {
-    background: conic-gradient(#c8ad7f 0deg 360deg);
-}
-.bg-color-black {
-    background: conic-gradient(#000000 0deg 360deg);
-}
-.bg-color-blue {
-    background: conic-gradient(#a8bcd4 0deg 360deg);
-}
-.bg-color-white {
-    background: conic-gradient(#ffffff 0deg 360deg);
-}
-.bg-color-pink {
-    background: conic-gradient(#fcc6de 0deg 360deg);
-}
-.bg-color-brown {
-    background: conic-gradient(#977945 0deg 360deg);
-}
-.bg-color-light-purple {
-    background: conic-gradient(#d966d9 0deg 360deg);
-}
-.bg-color-light-green {
-    background: conic-gradient(#caffd6 0deg 360deg);
-}
-.bg-color-orange {
-    background: conic-gradient(#ffa500 0deg 360deg);
-}
-.bg-color-light-blue {
-    background: conic-gradient(#add8e6 0deg 360deg);
-}
-.bg-color-gray {
-    background-color: rgba(177, 170, 152, 1);
-}
-
-.bg-color-beige1 {
-    background: rgba(223, 198, 184, 1);
-}
-.bg-color-grey {
-    background-color: rgba(158, 155, 150, 1);
-}
-.bg-color-red {
-    background-color: #dc2a35;
 }
