@@ -548,95 +548,510 @@
                 </div>
             </div>
         </header> <!-- /.header -->
+
         <!-- .page-title -->
-
-
-        <!-- main-content -->
-        <div class="main-content">
-
-            <!-- map -->
-            <div class="wrap-map">
-                <div id="map-contact" class="map-contact h520" data-map-zoom="16" data-map-scroll="true"></div>
+        <div class="page-title relative">
+            <div class="paralaximg" data-parallax="scroll" data-image-src="images/page-title/page-title-3.jpg">
             </div>
-            <!-- /map -->
-
-            <section class="flat-spacing">
+            <div class="content">
                 <div class="container">
-                    <div class="contact-us-content">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <h4 class="mb_30">New York</h4>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Phone:</h6>
-                                    <p class="text-body-default">+1 666 234 8888</p>
-                                </div>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Email:</h6>
-                                    <p class="text-body-default">themesflat@gmail.com</p>
-                                </div>
-                                <div class="mb_20">
-                                    <h6 class="mb_8">Address:</h6>
-                                    <p class="text-body-default">2163 Phillips Gap Rd, West Jefferson, North Carolina,
-                                        United States</p>
-                                </div>
-                                <div>
-                                    <h6 class="mb_8">Open Time:</h6>
-                                    <p class="text-body-default mb_4 open-time">
-                                        <span >Mon - Sat:</span>
-                                        7:30am - 8:00pm PST
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="title">Shopping Cart</h3>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Homepage</a></li>
+                                <li>Shopping Cart</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.page-title -->
 
-                                    </p>
-                                    <p class="text-body-default open-time">
-                                        <span >Sunday:</span>
-                                        9:00am - 5:00pm PST
-                                    </p>
+        <!-- section-cart -->
+        <section class="flat-spacing pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="tf-cart-sold">
+                            <div class="notification-sold bg-surface">
+                                <img class="icon" src="images/logo/icon-fire.png" alt="img">
+                                <div class="count-text">
+                                    Your cart will expire in <div class="js-countdown time-count" data-timer="600"
+                                        data-labels=":,:,:,"></div>
+                                    minutes! Please checkout now before your items sell out!
                                 </div>
                             </div>
-                            <div class="col-lg-7 offset-lg-1">
-                                <h4>Get In Touch</h4>
-                                <p class="text_secondary mb_24">Use the form below to get in touch with the sales team</p>
-                                <form id="contactform" action="./contact/contact-process.php" method="post"
-                                    class="form-leave-comment">
-                                    <div class="wrap">
-                                        <div class="cols">
-                                            <fieldset class="">
-                                                <input class="" type="text" placeholder="Your Name*" name="name"
-                                                    id="name" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                            <fieldset class="">
-                                                <input class="" type="email" placeholder="Your Email*" name="email"
-                                                    id="email" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
+                            <div class="notification-progress">
+                                <div class="text">
+                                    Buy <span class="text_primary">$70.00</span>
+                                    more to get <span class=" text_primary">FREESHIPPING</span>
+                                </div>
+                                <div class="progress-cart">
+                                    <div class="value" style="width: 0%;" data-progress="70">
+                                        <span class="round"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form>
+                            <table class="tf-table-page-cart">
+                                <thead>
+                                    <tr>
+                                        <th>Products</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tf-cart-item file-delete">
+                                        <td class="tf-cart-item_product">
+                                            <a href="product-detail.html" class="img-box">
+                                                <img src="images/shop/product-4.jpg" alt="product">
+                                            </a>
+                                            <div class="cart-info">
+                                                <a href="product-detail.html" class="cart-title link">Open Box -
+                                                    Adjustable...</a>
+                                                <div class="variant text-caption-1">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Price" class="tf-cart-item_price text-center">
+                                            <div class="cart-price text-button price-on-sale">$60.00</div>
+                                        </td>
+                                        <td data-cart-title="Quantity" class="tf-cart-item_quantity">
+                                            <div class="wg-quantity mx-md-auto">
+                                                <span class="btn-quantity btn-decrease">-</span>
+                                                <input type="text" class="quantity-product" name="number" value="1">
+                                                <span class="btn-quantity btn-increase">+</span>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Total" class="tf-cart-item_total text-center">
+                                            <div class="cart-total text-button total-price">$60.00</div>
+                                        </td>
+                                        <td data-cart-title="Remove" class="remove-cart">
+                                            <span class="remove icon icon-close"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="tf-cart-item file-delete">
+                                        <td class="tf-cart-item_product">
+                                            <a href="product-detail.html" class="img-box">
+                                                <img src="images/shop/product-6.jpg" alt="product">
+                                            </a>
+                                            <div class="cart-info">
+                                                <a href="product-detail.html" class="cart-title link">Ergonomic
+                                                    Chair Pro</a>
+                                                <div class="variant text-caption-1">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Price" class="tf-cart-item_price text-center">
+                                            <div class="cart-price text-button price-on-sale">$40.00</div>
+                                        </td>
+                                        <td data-cart-title="Quantity" class="tf-cart-item_quantity">
+                                            <div class="wg-quantity mx-md-auto">
+                                                <span class="btn-quantity btn-decrease">-</span>
+                                                <input type="text" class="quantity-product" name="number" value="1">
+                                                <span class="btn-quantity btn-increase">+</span>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Total" class="tf-cart-item_total text-center">
+                                            <div class="cart-total text-button total-price">$40.00</div>
+                                        </td>
+                                        <td data-cart-title="Remove" class="remove-cart">
+                                            <span class="remove icon icon-close"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="tf-cart-item file-delete">
+                                        <td class="tf-cart-item_product">
+                                            <a href="product-detail.html" class="img-box">
+                                                <img src="images/shop/product-1.jpg" alt="product">
+                                            </a>
+                                            <div class="cart-info">
+                                                <a href="product-detail.html" class="cart-title link">Double
+                                                    Standing Desk</a>
+                                                <div class="variant text-caption-1">
+                                                    Gray, Size C
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Price" class="tf-cart-item_price text-center">
+                                            <div class="cart-price">
+                                                <span class="old-price">$80.00</span>
+                                                <span class="text-button new-price price-on-sale">$129.00</span>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Quantity" class="tf-cart-item_quantity">
+                                            <div class="wg-quantity mx-md-auto">
+                                                <span class="btn-quantity btn-decrease">-</span>
+                                                <input type="text" class="quantity-product" name="number" value="1">
+                                                <span class="btn-quantity btn-increase">+</span>
+                                            </div>
+                                        </td>
+                                        <td data-cart-title="Total" class="tf-cart-item_total text-center">
+                                            <div class="cart-total text-button total-price">$129.00</div>
+                                        </td>
+                                        <td data-cart-title="Remove" class="remove-cart">
+                                            <span class="remove icon icon-close"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="ip-discount-code">
+                                <input type="text" placeholder="Add voucher discount">
+                                <button class="tf-btn btn-onsurface">
+                                    Apply Code
+                                </button>
+                            </div>
+                            <div class="group-bought">
+                                <div class="heading">
+                                    <h5>Customers also bought with "Ergonomic Chair Pro”</h5>
+                                    <p class="text"><i class="icon-percent"></i>You will get <span
+                                            class="text_primary">10% OFF</span> on each product</p>
+                                </div>
+                                <div class="wrap-product">
+                                    <div class="product-bought">
+                                        <div class="img-style">
+                                            <img src="images/shop/product-1.jpg" alt="">
                                         </div>
-                                        <div class="cols">
-                                            <fieldset class="">
-                                                <input class="" type="number" placeholder="Phone*" name="phone"
-                                                    id="phone" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
-                                            <fieldset class="">
-                                                <input class="" type="number" placeholder="Order Numbers*" name="order-numbers"
-                                                    id="order-numbers" tabindex="2" value="" aria-required="true" required="">
-                                            </fieldset>
+                                        <div class="content">
+                                            <div class="text-title">
+                                                <a href="#" class="link">Open Box - Adjustable Laptop Stand</a>
+                                            </div>
+                                            <div class="wrap-price">
+                                                <div class="price text-button ">
+                                                    $60.00
+                                                </div>
+                                                <a href="#" class="link text-button btn-add ">Add</a>
+                                            </div>
                                         </div>
-                                        <fieldset class="">
-                                            <textarea name="message" id="message" rows="4" placeholder="Your Message*"
-                                                tabindex="2" aria-required="true" required=""></textarea>
+                                    </div>
+                                    <div class="product-bought">
+                                        <div class="img-style">
+                                            <img src="images/shop/product-3.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="text-title">
+                                                <a href="#" class="link"> Ergonomic Chair Pro</a>
+                                            </div>
+                                            <div class="wrap-price">
+                                                <div class="price text-button ">
+                                                    $60.00
+                                                </div>
+                                                <a href="#" class="link text-button btn-add ">Add</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="fl-sidebar-cart">
+                            <div class="box-order bg-surface">
+                                <h5 class="title">Order Summary</h5>
+                                <div class="subtotal text-button d-flex justify-content-between align-items-center">
+                                    <span>Subtotal</span>
+                                    <span class="total">-$80.00</span>
+                                </div>
+                                <div class="discount text-button d-flex justify-content-between align-items-center">
+                                    <span>Discounts</span>
+                                    <span class="total">-$80.00</span>
+                                </div>
+                                <div class="ship">
+                                    <span class="text-button">Shipping</span>
+                                    <div class="flex-grow-1">
+                                        <fieldset class="ship-item">
+                                            <input type="radio" name="ship-check" class="tf-check-rounded" id="free"
+                                                checked>
+                                            <label for="free">
+                                                <span>Free Shipping</span>
+                                                <span class="price">$0.00</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="ship-item">
+                                            <input type="radio" name="ship-check" class="tf-check-rounded" id="local">
+                                            <label for="local">
+                                                <span>Local:</span>
+                                                <span class="price">$35.00</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="ship-item">
+                                            <input type="radio" name="ship-check" class="tf-check-rounded" id="rate">
+                                            <label for="rate">
+                                                <span>Flat Rate:</span>
+                                                <span class="price">$35.00</span>
+                                            </label>
                                         </fieldset>
                                     </div>
-                                    
-                                    <div class="button-submit send-wrap">
-                                        <button class="tf-btn btn-onsurface" type="submit">
-                                            Send message <i class="icon-arrow-up-right"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                </div>
+                                <h5 class="total-order d-flex justify-content-between align-items-center">
+                                    <span>Total</span>
+                                    <span class="total">$186,99</span>
+                                </h5>
+                                <div class="box-progress-checkout">
+                                    <fieldset class="check-agree">
+                                        <input type="checkbox" id="check-agree" class="tf-check-rounded">
+                                        <label for="check-agree">
+                                            I agree with the <a href="term-of-use.html" class="link">terms and
+                                                conditions</a>
+                                        </label>
+                                    </fieldset>
+                                    <a href="checkout.html" class="tf-btn btn-onsurface ">Process To Checkout<i
+                                            class="icon-arrow-up-right"></i></a>
+                                    <p class="text-button text-center">Or continue shopping</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section> <!-- section-cart -->
 
-        </div><!-- main-content -->
+        <!-- Ralated Products -->
+        <section class="flat-spacing ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="mb_40">You may be interested in…
+                        </h4>
+                        <div dir="ltr" class="swiper tf-sw-latest" data-preview="4" data-tablet="3" data-mobile="2"
+                            data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
+                            data-pagination-md="1" data-pagination-lg="1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card-product style-1">
+                                        <div class="card-product-wrapper">
+                                            <a href="product-detail.html" class="image-wrap">
+                                                <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
+                                                    src="images/shop/product-1.jpg" alt="image-product">
+                                                <img class="lazyload img-hover" data-src="images/shop/product-1.1.jpg"
+                                                    src="images/shop/product-1.1.jpg" alt="image-product">
+                                            </a>
+                                            <div class="list-product-btn">
+                                                <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                                    <span class="icon icon-heart"></span>
+                                                    <span class="tooltip">Wishlist</span>
+                                                </a>
+                                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                                    class="box-icon compare btn-icon-action">
+                                                    <span class="icon icon-compare"></span>
+                                                    <span class="tooltip">Compare</span>
+                                                </a>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    class="box-icon quickview tf-btn-loading">
+                                                    <span class="icon icon-eye"></span>
+                                                    <span class="tooltip">Quick View</span>
+                                                </a>
+                                            </div>
+                                            <div class="list-btn-main">
+                                                <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Add
+                                                    To
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-product-info ">
+                                            <a href="product-detail.html" class="title link line-clamp-1">Ergonomic
+                                                Chair Pro</a>
+                                            <div class="price text-body-default "><span
+                                                    class="text-caption-1 old-price">$98.00</span>$79.99</div>
+                                            <ul class="list-color-product">
+                                                <li class="list-color-item color-swatch active">
+                                                    <span class="d-none text-capitalize color-filter">Light Blue</span>
+                                                    <span class="swatch-value bg-light-blue"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-1.2.jpg"
+                                                        src="images/shop/product-1.2.jpg" alt="image-product">
+                                                </li>
+                                                <li class="list-color-item color-swatch">
+                                                    <span class="d-none text-capitalize color-filter">Light Blue</span>
+                                                    <span class="swatch-value bg-light-blue-2"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-1.3.jpg"
+                                                        src="images/shop/product-1.3.jpg" alt="image-product">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-product style-1">
+                                        <div class="card-product-wrapper">
+                                            <a href="product-detail.html" class="image-wrap">
+                                                <img class="lazyload img-product" data-src="images/shop/product-2.jpg"
+                                                    src="images/shop/product-2.jpg" alt="image-product">
+                                                <img class="lazyload img-hover" data-src="images/shop/product-2.1.jpg"
+                                                    src="images/shop/product-2.1.jpg" alt="image-product">
+                                            </a>
+                                            <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
+                                            </div>
+                                            <div class="list-product-btn">
+                                                <a href="wishlist.html" class="box-icon wishlist btn-icon-action">
+                                                    <span class="icon icon-heart"></span>
+                                                    <span class="tooltip">Wishlist</span>
+                                                </a>
+                                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                                    class="box-icon compare btn-icon-action">
+                                                    <span class="icon icon-compare"></span>
+                                                    <span class="tooltip">Compare</span>
+                                                </a>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    class="box-icon quickview tf-btn-loading">
+                                                    <span class="icon icon-eye"></span>
+                                                    <span class="tooltip">Quick View</span>
+                                                </a>
+                                            </div>
+                                            <div class="list-btn-main">
+                                                <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Add
+                                                    To
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-product-info ">
+                                            <a href="product-detail.html" class="title link line-clamp-1">Open Box -
+                                                Adjustable Laptop Stand</a>
+                                            <div class="price text-body-default "><span
+                                                    class="text-caption-1 old-price">$98.00</span>$79.99</div>
+                                            <ul class="list-color-product">
+                                                <li class="list-color-item color-swatch active">
+                                                    <span class="d-none text-capitalize color-filter">Light Blue</span>
+                                                    <span class="swatch-value bg-light-blue"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-2.jpg"
+                                                        src="images/shop/product-2.jpg" alt="image-product">
+                                                </li>
+                                                <li class="list-color-item color-swatch">
+                                                    <span class="d-none text-capitalize color-filter">Light Blue</span>
+                                                    <span class="swatch-value bg-light-blue-2"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-2.2.jpg"
+                                                        src="images/shop/product-2.2.jpg" alt="image-product">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-product style-1">
+                                        <div class="card-product-wrapper">
+                                            <a href="product-detail.html" class="image-wrap">
+                                                <img class="lazyload img-product" data-src="images/shop/product-3.jpg"
+                                                    src="images/shop/product-3.jpg" alt="image-product">
+                                                <img class="lazyload img-hover" data-src="images/shop/product-3.1.jpg"
+                                                    src="images/shop/product-3.1.jpg" alt="image-product">
+                                            </a>
+                                            <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
+                                            </div>
+                                            <div class="list-product-btn">
+                                                <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                                    <span class="icon icon-heart"></span>
+                                                    <span class="tooltip">Wishlist</span>
+                                                </a>
+                                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                                    class="box-icon compare btn-icon-action">
+                                                    <span class="icon icon-compare"></span>
+                                                    <span class="tooltip">Compare</span>
+                                                </a>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    class="box-icon quickview tf-btn-loading">
+                                                    <span class="icon icon-eye"></span>
+                                                    <span class="tooltip">Quick View</span>
+                                                </a>
+                                            </div>
+                                            <div class="list-btn-main">
+                                                <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Add
+                                                    To
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-product-info ">
+                                            <a href="product-detail.html" class="title link line-clamp-1">Laptop
+                                                Stand</a>
+                                            <div class="price text-body-default "><span
+                                                    class="text-caption-1 old-price">$98.00</span>$89.99</div>
+                                            <ul class="list-color-product">
+                                                <li class="list-color-item color-swatch active">
+                                                    <span class="d-none text-capitalize color-filter">Light
+                                                        Orange</span>
+                                                    <span class="swatch-value bg-light-orange"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-3.2.jpg"
+                                                        src="images/shop/product-3.2.jpg" alt="image-product">
+                                                </li>
+                                                <li class="list-color-item color-swatch">
+                                                    <span class="d-none text-capitalize color-filter">Light Grey</span>
+                                                    <span class="swatch-value bg-light-grey"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-3.3.jpg"
+                                                        src="images/shop/product-3.3.jpg" alt="image-product">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-product style-1">
+                                        <div class="card-product-wrapper">
+                                            <a href="product-detail.html" class="image-wrap">
+                                                <img class="lazyload img-product" data-src="images/shop/product-4.jpg"
+                                                    src="images/shop/product-4.jpg" alt="image-product">
+                                                <img class="lazyload img-hover" data-src="images/shop/product-4.1.jpg"
+                                                    src="images/shop/product-4.1.jpg" alt="image-product">
+                                            </a>
+                                            <div class="list-product-btn">
+                                                <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                                    <span class="icon icon-heart"></span>
+                                                    <span class="tooltip">Wishlist</span>
+                                                </a>
+                                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                                    class="box-icon compare btn-icon-action">
+                                                    <span class="icon icon-compare"></span>
+                                                    <span class="tooltip">Compare</span>
+                                                </a>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    class="box-icon quickview tf-btn-loading">
+                                                    <span class="icon icon-eye"></span>
+                                                    <span class="tooltip">Quick View</span>
+                                                </a>
+                                            </div>
+                                            <div class="list-btn-main">
+                                                <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Add
+                                                    To
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-product-info ">
+                                            <a href="product-detail.html" class="title link line-clamp-1">Double
+                                                Standing Desk</a>
+                                            <div class="price text-body-default ">$69.99</div>
+                                            <ul class="list-color-product">
+                                                <li class="list-color-item color-swatch active">
+                                                    <span class="d-none text-capitalize color-filter">Light Brown</span>
+                                                    <span class="swatch-value bg-light-brown"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-4.2.jpg"
+                                                        src="images/shop/product-4.2.jpg" alt="image-product">
+                                                </li>
+                                                <li class="list-color-item color-swatch">
+                                                    <span class="d-none text-capitalize color-filter">Light Bink</span>
+                                                    <span class="swatch-value bg-light-pink"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-4.3.jpg"
+                                                        src="images/shop/product-4.3.jpg" alt="image-product">
+                                                </li>
+                                                <li class="list-color-item color-swatch">
+                                                    <span class="d-none text-capitalize color-filter">Light Grey</span>
+                                                    <span class="swatch-value bg-dark-grey-2"></span>
+                                                    <img class="lazyload" data-src="images/shop/product-4.4.jpg"
+                                                        src="images/shop/product-4.4.jpg" alt="image-product">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sw-pagination-latest sw-dots type-circle justify-content-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Ralated Products -->
 
         <!-- .footer -->
         <footer id="footer" class="footer">
@@ -779,6 +1194,13 @@
                             <div class="footer-bottom-wrap">
                                 <div class="left">
                                     <p class="text-caption-1">Copyright ©2024 Oriya. All Rights Reserved.</p>
+                                    <div class="tf-currencies">
+                                        <select class="image-select center style-default style-box type-currencies">
+                                            <option selected data-thumbnail="images/country/us.svg">English (USD)
+                                            </option>
+                                            <option data-thumbnail="images/country/vn.svg">Vietnam (VND)</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="tf-payment">
                                     <ul>
@@ -818,12 +1240,13 @@
             <div class="mb-body">
                 <ul class="nav-ul-mb" id="wrapper-menu-navigation">
                     <li class="nav-mb-item active">
-                        <a href="#dropdown-menu-one" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-one">
+                        <a href="#dropdown-menu-one" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-one">
                             <span>Home</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-one" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="index.html" class="sub-nav-link">Homepage 01</a></li>
                                 <li><a href="home-2.html" class="sub-nav-link">Homepage 02</a></li>
                                 <li><a href="home-3.html" class="sub-nav-link">Homepage 03</a></li>
@@ -833,12 +1256,13 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-two" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-two">
+                        <a href="#dropdown-menu-two" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-two">
                             <span>Shop</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-two" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="shop-default.html" class="sub-nav-link">Shop Default</a></li>
                                 <li><a href="shop-grid.html" class="sub-nav-link">Shop Grid</a></li>
                                 <li><a href="login.html" class="sub-nav-link">Login/Register</a></li>
@@ -847,12 +1271,13 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-three" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-three">
+                        <a href="#dropdown-menu-three" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-three">
                             <span>Products</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-three" class="collapse">
-                            <ul class="sub-nav-menu" >
+                            <ul class="sub-nav-menu">
                                 <li><a href="product-detail.html" class="sub-nav-link">Products Details 1</a></li>
                                 <li><a href="product-detail-2.html" class="sub-nav-link">Products Details 2</a></li>
                                 <li><a href="product-detail-3.html" class="sub-nav-link">Products Details 3</a></li>
@@ -860,7 +1285,8 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-four" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-four">
+                        <a href="#dropdown-menu-four" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-four">
                             <span>Blog</span>
                             <span class="btn-open-sub"></span>
                         </a>
@@ -873,7 +1299,8 @@
                         </div>
                     </li>
                     <li class="nav-mb-item">
-                        <a href="#dropdown-menu-five" class="collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-five">
+                        <a href="#dropdown-menu-five" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                            aria-expanded="true" aria-controls="dropdown-menu-five">
                             <span>Page</span>
                             <span class="btn-open-sub"></span>
                         </a>
@@ -890,23 +1317,35 @@
                 <div class="mb-other-content">
                     <div class="group-icon">
                         <a href="wish-list.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Wishlist 
+                            Wishlist
                         </a>
                         <a href="search-result.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             Search
                         </a>
                         <a href="login.html" class="site-nav-icon">
-                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>  
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             Login
                         </a>
 
@@ -937,7 +1376,7 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
     </div>
     <!-- /mobile menu -->
 
@@ -945,15 +1384,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="js/lazysize.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuSiPhoDaOJ7aqtJVtQhYhLzwwJ7rQlmA"></script>
-    <script type="text/javascript" src="js/map-contact.js"></script>
-    <script type="text/javascript" src="js/marker.js"></script>
-    <script type="text/javascript" src="js/infobox.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/multiple-modal.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

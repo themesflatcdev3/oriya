@@ -674,11 +674,17 @@ a {
 .gap-16 {
     gap: 16px !important;
 }
+.gap-20 {
+    gap: 20px !important;
+}
 
 // radius
 
 .radius-3 {
     border-radius: 3px !important;
+}
+.radius-4 {
+    border-radius: 4px !important;
 }
 .radius-5 {
     border-radius: 5px !important;
@@ -744,6 +750,9 @@ a {
 .mb_30 {
     margin-bottom: 30px;
 }
+.mb_32 {
+    margin-bottom: 32px;
+}
 .mb_40 {
     margin-bottom: 40px;
 }
@@ -800,10 +809,6 @@ a {
 .tf-grid-layout-v2 {
     display: grid;
     gap: 15px;
-}
-
-.sticky-top {
-    z-index: 50;
 }
 
 .tf-md-hidden {
@@ -875,4 +880,13 @@ a {
 .w-full {
     width: 100% !important;
     max-width: 100%;
+}
+
+.sticky-top {
+    z-index: 50;
+    top: 15px;
+}
+
+.border-top{
+    border-top: 1px solid var(--line);
 }
