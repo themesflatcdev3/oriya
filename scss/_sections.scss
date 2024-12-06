@@ -8,6 +8,21 @@
     padding-bottom: 100px;
 }
 
+.flat-spacing-3 {
+    padding-top: 80px;
+    padding-bottom: 58px;
+}
+
+.flat-spacing-4 {
+    padding-top: 100px;
+    padding-bottom: 97px;
+}
+
+.flat-spacing-5 {
+    padding-top: 100px;
+    padding-bottom: 103px;
+}
+
 .heading-section {
     margin-bottom: 40px;
     display: flex;
@@ -317,6 +332,9 @@
             margin-bottom: 20px;
             @include transition3();
         }
+        .title {
+            margin-bottom: 4px;
+        }
         &:hover {
             .icon {
                 color: var(--Primary);
@@ -338,6 +356,25 @@
     }
 
     &.style-3 {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 2px;
+            left: auto;
+            right: 0;
+            bottom: 4px;
+            background-color: var(--Primary);
+            @include transition3();
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+                right: auto;
+                left: 0;
+            }
+        }
     }
 }
 
@@ -352,7 +389,8 @@
 }
 
 .flat-img-with-text-5 {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -431,7 +469,6 @@
         }
     }
 }
-
 
 .location-item {
     .img-style {
@@ -705,4 +742,10 @@ ul.list-text {
 .wrap-box-icon {
     padding-top: 80px;
     border-top: 1px solid var(--line);
+}
+
+.section-tTop-sellers{
+    .sw-button{
+        top: calc(40% - 4px);
+    }
 }
