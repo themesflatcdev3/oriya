@@ -37,9 +37,6 @@
                     transform: scale(1.05);
                 }
             }
-            .marquee-wrapper-product {
-                opacity: 0;
-            }
         }
         .on-sale-wrap {
             position: absolute;
@@ -53,8 +50,7 @@
                 justify-content: center;
                 align-items: center;
                 word-break: break-word;
-                padding: 0 8px;
-                min-width: 50px;
+                width: 48px;
                 font-size: 14px;
                 text-align: center;
                 line-height: 22px;
@@ -285,6 +281,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    padding: 3px 0;
     .list-color-item {
         width: 24px;
         height: 24px;
@@ -866,10 +863,10 @@
     gap: 20px;
 }
 
-.slider-scroll{
-    .wrapper-gallery-scroll{
+.slider-scroll {
+    .wrapper-gallery-scroll {
         width: 100%;
-        .item{
+        .item {
             border-radius: 12px;
             overflow: hidden;
         }

@@ -110,7 +110,7 @@
                 position: absolute;
                 content: "|";
                 width: 8px;
-                right: -14px;
+                right: -18px;
             }
         }
         .discount {
@@ -129,6 +129,14 @@
         border-radius: 16px;
         overflow: hidden;
     }
+    .sw-button{
+        &.swiper-button-next{
+            right: 21px;
+        }
+        &.swiper-button-prev{
+            left: 21px;
+        }
+    }
 }
 
 .cls-lookbook {
@@ -136,7 +144,9 @@
     > .img-style {
         border-radius: 16px;
         overflow: hidden;
+        width: 100%;
         img {
+            width: 100%;
             min-height: 450px;
             object-fit: cover;
         }
@@ -152,8 +162,8 @@
             bottom: 68%;
         }
         &.position3 {
-            left: 70%;
-            bottom: 35%;
+            left: 74%;
+            bottom: 34%;    
         }
         .dropdown-menu {
             border: none;
