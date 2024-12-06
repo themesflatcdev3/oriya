@@ -292,7 +292,10 @@
         }
     }
     .flat-img-with-text-5 {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+        .collection-position {
+            height: 640px;
+        }
     }
     .flat-img-with-text-6 {
         grid-template-columns: 1fr 1fr 1fr;
@@ -441,8 +444,8 @@
             right: 12px;
         }
         .on-sale-wrap {
-            top: 12px !important;
-            left: 12px !important;
+            top: 13px !important;
+            left: 13px !important;
         }
     }
     .tf-countdown-lg {
@@ -469,7 +472,7 @@
     }
     .tf-silideshow {
         &.style-3 {
-            padding: 40px 40px 0 40px;
+            padding: 40px 32px 0 32px;
         }
     }
     .flat-img-with-text-4 {
@@ -488,12 +491,16 @@
         .tf-sw-iconbox {
             margin-top: 60px;
             padding-top: 60px;
-   
         }
     }
     .wrap-box-location {
         &.swiper-wrapper {
             gap: 60px;
+        }
+    }
+    .testimonial-item{
+        &.style-3 {
+            padding-right: 30px;
         }
     }
 }
@@ -533,9 +540,9 @@
     }
 }
 @media (max-width: 1440px) {
-    .sw-button-over{
+    .sw-button-over {
         .swiper-button-prev,
-        .swiper-button-next{
+        .swiper-button-next {
             display: none;
         }
     }
@@ -574,7 +581,7 @@
         position: fixed;
         bottom: 0;
         z-index: 3000;
-        display: flex ;
+        display: flex;
         flex-direction: column;
         background-clip: padding-box;
         outline: 0;
@@ -815,6 +822,9 @@
         }
         &.style-2,
         &.style-3 {
+            .wrap-slider {
+                height: 450px;
+            }
             .box-content {
                 padding: 0 15px;
             }
@@ -1076,6 +1086,22 @@
             .left {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+        }
+    }
+    .tf-silideshow {
+        &.style-3,
+        &.style-2 {
+            .box-content {
+                gap: 15px;
+                .box-title {
+                    gap: 4px;
+                }
+            }
+        }
+        &.style-2 {
+            .box-content {
+                top: 57%;
             }
         }
     }

@@ -724,6 +724,9 @@ a {
 .pb_0 {
     padding-bottom: 0px !important;
 }
+.pb_23 {
+    padding-bottom: 23px !important;
+}
 .pr_0 {
     padding-right: 0px !important;
 }
@@ -745,7 +748,7 @@ a {
     margin-bottom: 16px;
 }
 .mb_20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px ;
 }
 .mb_24 {
     margin-bottom: 24px;
@@ -863,7 +866,7 @@ a {
 }
 
 .slider-layout-right {
-    width: calc(100vw - (100vw - 1290px) / 2);
+    width: calc(100vw - (100vw - 1300px) / 2);
     margin-right: unset;
     max-width: 100%;
     margin-left: auto;

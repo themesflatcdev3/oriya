@@ -1,6 +1,9 @@
 .sw-dots {
     display: flex;
-    gap: 8px;
+    gap: 4px;
+    .swiper-pagination-bullet {
+        margin: 0 !important;
+    }
     &.type-circle {
         .swiper-pagination-bullet {
             position: relative;
@@ -77,7 +80,7 @@
             background-color: var(--white);
         }
     }
-    &.position{
+    &.position {
         position: absolute;
         z-index: 99;
     }
@@ -91,6 +94,8 @@
     border-radius: 999px;
     background-color: var(--Onsurface);
     @include transition3();
+    top: calc(50% + -4px);
+    font-size: 28px;
     &.swiper-button-next {
         &::before {
             content: "\e92e";
@@ -123,23 +128,23 @@
     }
 }
 
-.tf-sw-products{
-    &.style-full{
-        .nav-next-products{
+.tf-sw-products {
+    &.style-full {
+        .nav-next-products {
             left: 12%;
         }
-        .nav-prev-products{
+        .nav-prev-products {
             right: 12%;
         }
     }
 }
 
-.sw-button-over{
+.sw-button-over {
     position: relative;
-    .swiper-button-prev{
+    .swiper-button-prev {
         left: -75px;
     }
-    .swiper-button-next{
+    .swiper-button-next {
         right: -75px;
     }
 }
@@ -154,5 +159,18 @@
         .sw-button {
             position: unset;
         }
+    }
+}
+
+.tf-sw-lookbook {
+    .sw-dots {
+        bottom: 21px;
+    }
+}
+
+.tf-sw-testimonial {
+    .wrap-button {
+        bottom: 3px;
+        right: 48px;
     }
 }
