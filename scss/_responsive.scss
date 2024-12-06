@@ -548,6 +548,28 @@
 }
 
 @media (max-width: 1199px) {
+    .header-default {
+        &.header-absolute {
+            margin-bottom: -61px;
+            .has-border-y {
+                border: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding:10px 0;
+            }
+            &.header-style-2 {
+                margin-bottom: -128px;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        &.header-style-3 {
+            .main-header {
+                padding: 10px 0;
+            }
+        }
+    }
     .sidebar-filter {
         position: fixed;
         bottom: 0;

@@ -148,14 +148,37 @@ header {
     &.header-absolute {
         background-color: transparent;
         margin-bottom: -88px;
+    }
+    &.header-style-3 {
         .main-header {
-            padding: 13px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0;
+        }
+        .box-nav-ul .menu-item {
+            padding: 33px 0;
         }
     }
-    &.absolute-2 {
-        padding: 40px 40px 0 40px;
-        margin-bottom: -126px;
+    &.header-style-2 {
+        margin: 40px 40px 0 40px;
+        margin-bottom: -128px;
+        &.header-bg {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    &.header-style-1 {
+        &.header-bg {
+            background-color: var(--Onsurface);
+            .main-header{
+                padding: 10px 0;
+            }
+        }
+        .main-header {
+            padding: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            .menu-item {
+                padding: 32px 0;
+            }
+        }
     }
 }
 
@@ -280,7 +303,7 @@ header {
         &.active,
         &:hover{
             &::after{
-                width: 100%;
+                width: calc(100% - 20px);
                 left: 0;
                 right: auto;
             } 
@@ -388,14 +411,48 @@ header {
             text-align: center;
             @include transition3;
             &:hover {
-                color: var(--primary);
+                color: var(--Primary);
             }
         }
+        &.active,
         &:hover {
             border-color: var(--main);
         }
     }
-
+    &.mega-menu-1 {
+        background-color: transparent;
+        padding: 0;
+        .menu-heading {
+            margin-bottom: 8px;
+        }
+        .menu-link-text {
+            padding: 7px 0;
+            &.active {
+                color: var(--Primary) !important;
+            }
+        }
+        .row-demo-1 {
+            display: flex;
+            gap: 30px;
+            padding: 36px 40px;
+            box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+            border-radius: 0 0 20px 20px ;
+            background-color: var(--White);
+            .mega-menu-list {
+                display: flex;
+                justify-content: space-between;
+                width: 64.46%;
+            }
+            .collection-position {
+                width: 33%;
+                height: 300px;
+                .cls-heading {
+                    gap: 4px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
     .collection-item {
         .collection-title {
             background-color: #f2f2f2;
