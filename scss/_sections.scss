@@ -32,6 +32,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         .left {
             display: flex;
             gap: 12px;

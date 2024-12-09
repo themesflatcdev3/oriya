@@ -16,7 +16,7 @@ if ($(".thumbs-slider").length > 0) {
         0: {
           direction: "horizontal",
         },
-        1200: {
+        767: {
           direction: "vertical",
           direction: direction,
         },
