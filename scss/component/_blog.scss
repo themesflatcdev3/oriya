@@ -22,7 +22,7 @@
         @include d-flex();
         align-items: center;
         .article-thumb {
-            width: 83%;
+            width: 90%;
             margin-bottom: 0;
         }
         .article-description {
@@ -208,8 +208,8 @@ ul.list-tags {
         > .tf-social-icon {
             position: absolute;
             flex-direction: column;
-            left: -42px;
-            top: 210px;
+            left: -55px;
+            top: 204px;
             h6 {
                 margin-bottom: 8px;
             }
@@ -217,16 +217,17 @@ ul.list-tags {
         .heading {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 13px;
         }
     }
     .related-post {
         position: relative;
         display: flex;
         gap: 40px;
-        padding: 24px 0 32px;
+        padding: 24px 0 21px;
         border-top: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
+        margin-top: 20px;
         &::after {
             position: absolute;
             content: "";
@@ -256,6 +257,7 @@ ul.list-tags {
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 5px;
+        margin-top: 7px;
         .meta {
             margin-bottom: 0;
             gap: 33px;
@@ -265,7 +267,7 @@ ul.list-tags {
             li {
                 @include d-flex();
                 align-items: center;
-                gap: 4px;
+                gap: 9px;
                 &:not(:last-child)::after {
                     position: absolute;
                     content: "";
@@ -277,17 +279,23 @@ ul.list-tags {
             }
             &.info {
                 li {
-                    gap: 8px;
+                    gap: 2px;
                 }
             }
         }
+    }
+    .reply-comment{
+        margin-top:20px;
+    }
+    textarea{
+        height: 160px;
     }
 }
 
 .quote {
     border-top: 4px solid var(--Onsurface);
     .wrap-content {
-        padding-top: 32px;
+        padding-top: 28px;
         @include d-flex();
         gap: 28px;
     }
@@ -329,3 +337,4 @@ ul.list-tags {
     border-radius: 50%;
     background-color: var(--Success);
 }
+
