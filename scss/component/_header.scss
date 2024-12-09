@@ -12,29 +12,44 @@
         gap: 29px;
     }
 
-    .wrapper-slider-topbar{
+    .wrapper-slider-topbar {
         position: relative;
         .tf-sw-top_bar {
             margin-left: 20px;
             margin-right: 20px;
         }
     }
-    .navigation-topbar{
+    .navigation-topbar {
         position: absolute;
         width: 20px;
         height: 20px;
-        @include flex(center,center);
+        @include flex(center, center);
         top: 50%;
         transform: translateY(-50%);
-        .icon{
+        .icon {
             font-size: 20px;
             color: var(--White);
         }
-        &.nav-next-topbar{
+        &.nav-next-topbar {
             left: 0;
         }
-        &.nav-prev-topbar{
+        &.nav-prev-topbar {
             right: 0;
+        }
+    }
+    &.style-2 {
+        padding: 8px 0 7px;
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+        .tf-social-icon {
+            gap: 8px;
+            li a {
+                width: 28px;
+                height: 28px;
+            }
         }
     }
 }
@@ -85,16 +100,16 @@ header {
     }
     .header-bottom {
         border-top: 1px solid var(--line);
-        .box-left{
+        .box-left {
             display: flex;
             align-items: center;
         }
-        .box-right{
+        .box-right {
             display: flex;
             gap: 8px;
             align-items: center;
             justify-content: flex-end;
-            .icon{
+            .icon {
                 font-size: 24px;
             }
             .number-phone {
@@ -103,15 +118,15 @@ header {
             }
         }
     }
-    .sub-categories2{
+    .sub-categories2 {
         position: relative;
-        .list-categories-inner{
+        .list-categories-inner {
             left: 101%;
             margin: 0;
             top: 0;
             min-width: 250px;
 
-            &::before{
+            &::before {
                 height: 100%;
                 position: absolute;
                 width: 15px;
@@ -120,12 +135,12 @@ header {
                 bottom: 0;
                 content: "";
             }
-            &::after{
+            &::after {
                 content: none !important;
             }
         }
-        &:hover{
-            .list-categories-inner{
+        &:hover {
+            .list-categories-inner {
                 opacity: 1;
                 visibility: visible;
                 transform: none;
@@ -133,15 +148,14 @@ header {
             }
         }
     }
-    .main-header{
-        .wrapper-header{
+    .main-header {
+        .wrapper-header {
             min-height: auto;
         }
-
     }
-    .mobile-menu{
+    .mobile-menu {
         display: inline-flex;
-        .icon{
+        .icon {
             font-size: 24px;
         }
     }
@@ -168,7 +182,7 @@ header {
     &.header-style-1 {
         &.header-bg {
             background-color: var(--Onsurface);
-            .main-header{
+            .main-header {
                 padding: 10px 0;
             }
         }
@@ -182,18 +196,18 @@ header {
     }
 }
 
-.tf-list-categories{
+.tf-list-categories {
     position: relative;
-    .categories-title{            
+    .categories-title {
         color: var(--Onsurface);
         display: flex;
         gap: 8px;
         align-items: center;
-        .icon{
+        .icon {
             font-size: 20px;
         }
     }
-    .list-categories-inner{
+    .list-categories-inner {
         left: -20px;
         border-radius: 8px;
         position: absolute;
@@ -211,36 +225,36 @@ header {
         pointer-events: none;
         padding: 8px 0px;
     }
-    .categories-item{
-        padding: 9px 20px !important; 
+    .categories-item {
+        padding: 9px 20px !important;
         border: 0 !important;
         box-shadow: none !important;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        .icon{
+        .icon {
             font-size: 20px !important;
             margin-bottom: 0 !important;
             @include transition3;
         }
-        .inner-left{
+        .inner-left {
             display: flex;
             align-items: center;
             flex-grow: 1;
         }
-        &:hover{
+        &:hover {
             color: var(--Primary);
-            .icon{
+            .icon {
                 color: var(--Primary);
             }
         }
     }
-    .box-cate-bottom{
+    .box-cate-bottom {
         position: relative;
         padding-top: 9.5px;
         margin-top: 9.5px;
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             height: 1px;
@@ -250,8 +264,8 @@ header {
             right: 20px;
         }
     }
-    &:hover{
-        >.list-categories-inner{
+    &:hover {
+        > .list-categories-inner {
             opacity: 1;
             visibility: visible;
             transform: none;
@@ -301,12 +315,12 @@ header {
             background: var(--Primary);
         }
         &.active,
-        &:hover{
-            &::after{
+        &:hover {
+            &::after {
                 width: calc(100% - 20px);
                 left: 0;
                 right: auto;
-            } 
+            }
         }
     }
     .sub-menu {
@@ -355,7 +369,8 @@ header {
                 left: auto;
                 right: 0;
                 z-index: 1;
-                -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+                -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)
+                    0s;
                 -o-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
                 transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
                 background: var(--Onsurface);
@@ -363,11 +378,11 @@ header {
             &.active,
             &:hover {
                 color: var(--Onsurface);
-                &::after{
+                &::after {
                     width: 100%;
                     left: 0;
                     right: auto;
-                } 
+                }
             }
         }
     }
@@ -436,7 +451,7 @@ header {
             gap: 30px;
             padding: 36px 40px;
             box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
-            border-radius: 0 0 20px 20px ;
+            border-radius: 0 0 20px 20px;
             background-color: var(--White);
             .mega-menu-list {
                 display: flex;
@@ -548,19 +563,19 @@ header {
         .icon {
             font-size: 14px;
         }
-        svg path{
+        svg path {
             @include transition3;
         }
         &:hover {
             color: var(--White);
             background-color: var(--Onsurface);
             border-color: var(--Onsurface);
-            svg path{
+            svg path {
                 stroke: var(--White);
             }
         }
     }
-    
+
     .mb-other-content {
         .group-icon {
             margin-top: 10px;
@@ -568,7 +583,6 @@ header {
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 28px;
-            
         }
         .text-need {
             font-weight: 500;
@@ -607,19 +621,21 @@ header {
             }
         }
         &.active {
-            .mb-menu-link{
+            .mb-menu-link {
                 color: var(--Primary);
-                .btn-open-sub{
-                    &::after,&::before{
+                .btn-open-sub {
+                    &::after,
+                    &::before {
                         background-color: var(--Primary);
                     }
                 }
             }
-            
-            .sub-nav-link.active{
+
+            .sub-nav-link.active {
                 color: var(--Primary);
-                .btn-open-sub{
-                    &::after,&::before{
+                .btn-open-sub {
+                    &::after,
+                    &::before {
                         background-color: var(--Primary);
                     }
                 }
@@ -686,5 +702,4 @@ header {
             }
         }
     }
-    
 }

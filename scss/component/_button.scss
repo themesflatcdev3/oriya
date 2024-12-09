@@ -123,7 +123,7 @@
     align-items: center;
     max-width: max-content;
     gap: 8px;
-    i{
+    i {
         @include transition5;
         font-size: 20px;
     }
@@ -134,7 +134,7 @@
                 width: 100%;
             }
         }
-        i{
+        i {
             color: var(--Primary);
         }
     }
@@ -154,6 +154,11 @@
                 background-color: var(--White);
             }
         }
+        i {
+            font-size: 24px;
+            color: var(--White);
+            @include transition5;
+        }
 
         &:hover {
             span {
@@ -161,6 +166,9 @@
                 &::before {
                     width: 100%;
                 }
+            }
+            i {
+                color: var(--Primary);
             }
         }
     }

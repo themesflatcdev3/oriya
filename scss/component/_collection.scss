@@ -16,7 +16,7 @@
     border-radius: 16px;
     overflow: hidden;
     .content-left {
-        padding: 40px 0;
+        padding: 40px 0 ;
     }
     .tf-countdown-lg {
         position: absolute;
@@ -93,7 +93,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-bottom: 21px;
+            margin-bottom: 28px;
         }
     }
     &.style-2,
@@ -118,8 +118,8 @@
             }
         }
     }
-    &.style-2{
-        &.spacing-1{
+    &.style-2 {
+        &.spacing-1 {
             .content {
                 margin: 0 28px;
                 bottom: 29px;
@@ -129,11 +129,10 @@
                 }
             }
         }
-        &.spacing-2{
+        &.spacing-2 {
             .content {
                 margin: 0 30px;
                 bottom: 29px;
-              
             }
         }
     }
