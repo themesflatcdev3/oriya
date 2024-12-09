@@ -203,6 +203,7 @@
         .card-product-wrapper {
             max-width: 360px;
             width: 40%;
+            margin-bottom: 0;
         }
         .card-product-info {
             flex: 1 1 auto;
@@ -210,15 +211,18 @@
             display: flex;
             flex-direction: column;
             justify-content: start;
-
             max-width: 60%;
         }
         .list-product-btn {
             display: flex;
             position: unset;
             justify-content: flex-start;
+            gap: 12px;
             .box-icon {
                 border: 2px solid var(--line);
+                .icon {
+                    font-size: 24px;
+                }
                 &:hover {
                     .tooltip {
                         transform: none;
@@ -252,6 +256,7 @@
             max-width: 272px;
             width: 100%;
             height: 32px;
+            text-transform: unset;
             &:hover {
                 border-color: var(--Onsurface);
             }
@@ -270,9 +275,12 @@
             }
         }
         .variant-wrap-list {
-            margin-top: 24px;
+            margin-top: 28px;
             display: grid;
-            gap: 12px;
+            gap: 28px;
+        }
+        .list-color-product {
+            padding: 0;
         }
     }
 }
@@ -330,6 +338,11 @@
         padding-bottom: 20px;
         border-bottom: 1px solid var(--line);
         margin-bottom: 20px;
+    }
+    .tf-product-tag {
+        padding: 0 8px;
+        border: 1px solid var(--Onsurface);
+        border-radius: 4px;
     }
     .tf-product-info-name {
         margin-bottom: 20px;
@@ -418,7 +431,7 @@
         border-bottom: 1px solid var(--line);
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 11px;
         .tf-product-info-extra-link {
             display: flex;
             gap: 15px 34px;
@@ -499,6 +512,7 @@
         gap: 16px;
         flex-wrap: wrap;
         .tf-payment {
+            display: flex;
             gap: 12px;
         }
         a img {
@@ -534,12 +548,13 @@
 }
 
 .tf-product-upsell {
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     border-bottom: 1px solid var(--line);
     .tf-product-upsell-slod {
         .tf-product-process-wrap {
             width: 100%;
             max-width: 380px;
+            margin-top: 5px;
             .progress {
                 height: 8px;
                 background-color: var(--line);
@@ -567,7 +582,7 @@
     display: flex;
     align-items: center;
     .price-on-sale {
-        margin-right: 8px;
+        margin-right: 6px;
     }
     .compare-at-price {
         font-size: 16px;
@@ -578,11 +593,13 @@
         margin-right: 16px;
     }
     .badges-on-sale {
+        font-size: 14px;
         padding: 0 8px;
+        line-height: 22px;
         background-color: var(--Critical);
         border-radius: 999px;
         color: var(--White);
-        letter-spacing: 0.1em;
+        height: 22px;
     }
     &.type-small {
         .price-on-sale {
@@ -603,7 +620,7 @@
     }
     &.type-1 {
         .price-on-sale {
-            margin-right: 25px;
+            margin-right: 27px;
         }
         .compare-at-price {
             margin-right: 12px;
@@ -640,7 +657,7 @@
     }
     .variant-picker-values {
         display: flex;
-        gap: 10px 20px;
+        gap: 10px 9px;
         align-items: center;
         flex-wrap: wrap;
         &.gap12 {
@@ -708,7 +725,7 @@
                 height: 48px;
                 border: 2px solid var(--line);
                 border-radius: 40px;
-                padding: 0 20px;
+                padding: 0 18px;
                 &:hover {
                     border-color: var(--Onsurface);
                 }
@@ -921,8 +938,7 @@
 
 .tf-bundle-product-item {
     display: flex;
-    gap: 16px;
-    align-items: center;
+    gap: 12px;
     .tf-product-bundle-image {
         flex-shrink: 0;
         width: 173px;
@@ -950,13 +966,20 @@
         flex-shrink: 0;
         width: 21px;
         height: 21px;
-        margin: 3.5px;
+        margin: 3.5px auto;
         border-width: 2px;
         border-radius: 2px;
         &::before {
             font-size: 12px;
         }
     }
+    .tf-select{
+        max-width: 140px;
+        select{
+            height: 40px;
+        }
+    }
+   
 }
 
 .thumbs-bottom {

@@ -62,13 +62,14 @@
         border-radius: 8px;
         .grid-2 {
             gap: 15px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         input {
             border-radius: 4px;
+            height: 48px;
         }
         .tf-btn {
-            padding: 10px 32px;
+            padding: 10px 30px;
         }
     }
     .info-box {
@@ -76,6 +77,10 @@
         gap: 15px;
         .grid-2 {
             gap: 16px;
+        }
+        input {
+
+            height: 48px;
         }
     }
     .tf-select {
@@ -111,10 +116,10 @@
             }
         }
         .payment-body {
-            padding: 20px;
+            padding: 20px 19px 20px;
             padding-top: 0;
             display: grid;
-            gap: 15px;
+            gap: 18px;
             .check-save {
                 display: flex;
                 gap: 8px;
@@ -122,7 +127,10 @@
             }
             .input-payment-box {
                 display: grid;
-                gap: 15px;
+                gap: 21px;
+               input{
+                height: 48px;
+               }
             }
             .grid-2 {
                 gap: 16px;
@@ -164,7 +172,7 @@
             border-color: transparent;
             background-color: var(--Surface);
             .payment-header {
-                padding-top: 20px;
+                padding-top: 17px;
                 padding-bottom: 8px;
             }
         }
@@ -177,14 +185,14 @@
 }
 .form-payment {
     .tf-btn {
-        margin-top: 30px;
+        margin-top: 39px;
         padding: 10px 32px;
         width: 100%;
     }
 }
 
 .sidebar-checkout-content {
-    padding-top: 10px;
+    padding-top: 9px;
     .sec-discount,
     .list-product,
     .title {
@@ -192,7 +200,7 @@
     }
     .list-product {
         .item-product {
-            padding-bottom: 20px;
+            padding-bottom: 19px;
             margin-bottom: 20px;
             border-bottom: 1px solid var(--line);
             &:last-child {
@@ -240,8 +248,8 @@
             .item:not(:last-child) {
                 margin-bottom: 16px;
             }
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 19px;
+            padding-bottom: 19px;
             border-bottom: 1px solid var(--line);
             border-top: 1px solid var(--line);
             margin-bottom: 20px;
@@ -276,7 +284,7 @@
 
 // cart
 .tf-cart-sold {
-    margin-bottom: 36px;
+    margin-bottom: 53px;
     .notification-sold {
         margin-bottom: 20px;
         padding: 10px 20px;
@@ -299,7 +307,7 @@
     }
     .notification-progress {
         .text {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .progress-cart {
             width: 100%;
@@ -339,12 +347,12 @@
 }
 
 .group-bought {
-    margin-top: 40px;
+    margin-top: 41px;
     .heading {
         margin-bottom: 20px;
     }
     h5 {
-        margin-bottom: 12px;
+        margin-bottom: 13px;
     }
     .text {
         display: flex;
@@ -355,14 +363,18 @@
         i {
             color: var(--Critical);
             font-size: 20px;
+            margin-right: 9px;
         }
     }
     .wrap-product {
         display: flex;
-        gap: 12px;
+        gap: 20px;
         .product-bought {
             width: calc(50% - 6px);
         }
+    }
+    .price{
+        margin-bottom: 10px;
     }
 }
 
@@ -554,7 +566,7 @@
     .subtotal,
     .discount,
     .ship {
-        margin-bottom: 20px;
+        margin-bottom: 19px;
         padding-bottom: 20px;
         border-bottom: 1px solid var(--line);
     }
@@ -611,10 +623,6 @@
         opacity: 0;
     }
 }
-
-
-
-
 
 // Price range
 .noUi-target,
@@ -912,15 +920,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
     border: solid 2px var(--line);
     border-radius: 4px;
     text-transform: capitalize;
-    padding: 6px 15px;
-    font-weight: 400;
+    padding: 5px 14px 5px 11px;
     background-color: var(--White);
     max-width: 100%;
     text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     .icon {
-        font-size: 20px;
+        font-size: 16px;
     }
     .icon-close {
         font-size: 14px;
@@ -942,11 +949,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 .tf-shop-control {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     .tf-control-filter {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 20px;
         .shop-sale-text.active .icon {
             color: var(--Success);
         }
@@ -992,6 +999,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
             }
         }
     }
+    .wg-pagination {
+        margin-top: 11px;
+    }
 }
 .wrapper-shop {
     transition: all 0.3s ease-in-out;
@@ -1000,8 +1010,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 .wrapper-control-shop {
     .tf-list-layout {
         .card-product {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
             border-bottom: 1px solid var(--line);
             &.last-visible,
             &:last-of-type {
@@ -1135,7 +1145,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
             height: 32px;
             @include flex(center, center);
         }
-        h5{
+        h5 {
             flex-grow: 1;
             display: flex;
             align-items: center;

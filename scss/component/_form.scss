@@ -39,15 +39,26 @@ form {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-bottom: 24px;
+        margin-bottom: 17px;
+    }
+    input{
+        height: 48px;
+    }
+    .tf-btn{
+        padding: 0 32px;
     }
 }
 
-.form-login .wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 28px;
+.form-login {
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 28px;
+        input {
+            height: 46px;
+        }
+    }
     .forget-password {
         text-decoration: underline;
     }
@@ -343,7 +354,7 @@ form {
     border-radius: 12px;
     border: 1px solid var(--line);
     display: flex;
-    gap: 16px;
+    gap: 19px;
     flex-direction: column;
     .tf-bundle-product-total-submit {
         display: flex;
@@ -395,5 +406,10 @@ form {
     .tf-btn {
         max-width: 256px;
         width: 100%;
+    }
+    .badges-on-sale {
+        padding: 0 8px !important;
+        font-size: 14px !important;
+        line-height: 22px !important;
     }
 }
