@@ -288,7 +288,7 @@
                 display: flex;
             }
             .list-product-btn {
-                .quickview{
+                .quickview {
                     display: none;
                 }
             }
@@ -652,6 +652,13 @@
         &.style-2 {
             .accordion-content {
                 padding: 28px;
+            }
+        }
+    }
+    .modal-quick-view {
+        .wrap {
+            .header {
+                margin-bottom: 124px;
             }
         }
     }
@@ -1025,6 +1032,7 @@
             }
         }
         &.style-4 {
+            padding-bottom: 20px ;
             .wrap-slider {
                 grid-template-columns: 1fr;
                 height: unset;

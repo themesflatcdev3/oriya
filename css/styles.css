@@ -884,6 +884,14 @@ a:focus, a:hover {
   padding-right: 0px !important;
 }
 
+.mt_4 {
+  margin-top: 4px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
 .mt_60 {
   margin-top: 60px;
 }
@@ -2157,6 +2165,35 @@ footer .footer-bottom-wrap .left {
   border: 1px solid var(--line);
   border-radius: 8px;
 }
+.widget-tabs.style-2 .widget-menu-tab {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+}
+.widget-tabs.style-2 .widget-menu-tab .item-title {
+  padding: 7px 0;
+  min-width: max-content;
+}
+.widget-tabs.style-2 .widget-menu-tab .item-title::after {
+  position: absolute;
+  content: "";
+  background-color: var(--Critical);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  bottom: 0px;
+  left: 0;
+  width: 0;
+  height: 2px;
+}
+.widget-tabs.style-2 .widget-menu-tab .item-title.active::after {
+  width: 100%;
+}
 
 .tab-description {
   display: flex;
@@ -2418,7 +2455,7 @@ footer .footer-bottom-wrap .left {
 }
 .tf-silideshow.style-4 .wrap-slider {
   display: grid;
-  grid-template-columns: 960px 960px;
+  grid-template-columns: 1fr 1fr;
 }
 .tf-silideshow.style-4 .content-left {
   position: relative;
@@ -4704,6 +4741,9 @@ form .cols > * {
   border-radius: 8px;
 }
 
+.modal-quick-view .wrap .header {
+  margin-bottom: 40px;
+}
 .modal-quick-view .modal-content {
   max-width: min(856px, 90vw) !important;
   cursor: default !important;
@@ -6053,7 +6093,7 @@ form .cols > * {
   border: 2px solid var(--line);
   font-size: 24px;
 }
-.tf-product-info-list .tf-product-info-by-btn .box-icon:hover {
+.tf-product-info-list .tf-product-info-by-btn .box-icon:hover, .tf-product-info-list .tf-product-info-by-btn .box-icon.active {
   background-color: var(--Onsurface);
   color: var(--White);
   border-color: var(--Onsurface);
@@ -9784,6 +9824,99 @@ ul.list-text.type-number {
   display: none;
 }
 
+.wd-form-order {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.wd-form-order .order-head {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  gap: 12px;
+}
+.wd-form-order .order-head .img-product {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.wd-form-order .order-head .img-product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.wd-form-order .widget-order-tab {
+  margin-top: 30px;
+}
+
+.badge {
+  padding: 5px 10px;
+  font-weight: 500;
+  background-color: var(--Critical);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 22px;
+  min-height: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.widget-timeline .timeline {
+  list-style: none;
+  position: relative;
+}
+.widget-timeline .timeline::before {
+  top: 20px;
+  bottom: 48px;
+  position: absolute;
+  content: " ";
+  width: 2px;
+  left: 10px;
+  border-right: 1px dashed var(--Secondary2);
+}
+.widget-timeline .timeline > li {
+  margin-bottom: 15px;
+  position: relative;
+}
+.widget-timeline .timeline > li .timeline-box {
+  padding: 10px 10px 10px 15px;
+  position: relative;
+  display: block;
+  margin-left: 40px;
+}
+.widget-timeline .timeline > li .timeline-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 22px;
+  padding: 4px;
+  background-color: var(--White);
+  border: 1.5px solid var(--Secondary2);
+}
+.widget-timeline .timeline > li .timeline-badge::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  display: block;
+  background: var(--Secondary2);
+}
+.widget-timeline .timeline > li .timeline-badge.success {
+  border-color: var(--Success);
+}
+.widget-timeline .timeline > li .timeline-badge.success::after {
+  background: var(--Success);
+}
+
 /*-------------- Responsive ----------------- */
 @media (min-width: 576px) {
   .tf-grid-layout.sm-col-2 {
@@ -10327,6 +10460,9 @@ ul.list-text.type-number {
   .accordion-product-item.style-2 .accordion-content {
     padding: 28px;
   }
+  .modal-quick-view .wrap .header {
+    margin-bottom: 124px;
+  }
 }
 @media (min-width: 1300px) {
   .cls-lookbook .dropdown-menu {
@@ -10628,6 +10764,9 @@ ul.list-text.type-number {
   }
   .tf-silideshow.style-2 .box-content, .tf-silideshow.style-3 .box-content {
     padding: 0 15px;
+  }
+  .tf-silideshow.style-4 {
+    padding-bottom: 20px;
   }
   .tf-silideshow.style-4 .wrap-slider {
     grid-template-columns: 1fr;

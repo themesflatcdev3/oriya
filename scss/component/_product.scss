@@ -475,7 +475,7 @@
             border-radius: 50%;
             border: 2px solid var(--line);
             font-size: 24px;
-            &:hover {
+            &:hover,&.active {
                 background-color: var(--Onsurface);
                 color: var(--White);
                 border-color: var(--Onsurface);
@@ -595,6 +595,7 @@
     .tf-btn {
         padding: 0 15px;
         flex-wrap: wrap;
+
     }
     .tf-product-info-oppen {
         a {
