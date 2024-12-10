@@ -134,7 +134,7 @@
         background-color: var(--Surface);
         .wrap-slider {
             display: grid;
-            grid-template-columns: 960px 960px;
+            grid-template-columns: 1fr 1fr;
         }
         .content-left {
             position: relative;

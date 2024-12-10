@@ -202,6 +202,35 @@
             border-radius: 8px;
         }
     }
+    &.style-2 {
+        .widget-menu-tab {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+            border-bottom: 1px solid var(--line);
+            .item-title {
+                padding: 7px 0;
+                min-width: max-content;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: var(--Critical);
+                    @include transition3;
+                    bottom: 0px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                }
+                &.active {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .tab-description {
