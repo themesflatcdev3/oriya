@@ -163,22 +163,6 @@ header {
         background-color: transparent;
         margin-bottom: -88px;
     }
-    &.header-style-3 {
-        .main-header {
-            padding: 0;
-        }
-        .box-nav-ul .menu-item {
-            padding: 33px 0;
-        }
-    }
-    &.header-style-2 {
-        margin: 40px 40px 0 40px;
-        margin-bottom: -128px;
-        &.header-bg {
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
     &.header-style-1 {
         &.header-bg {
             background-color: var(--Onsurface);
@@ -192,6 +176,26 @@ header {
             .menu-item {
                 padding: 32px 0;
             }
+        }
+    }
+    &.header-style-2 {
+        margin: 40px 34px 0 34px;
+        margin-bottom: -128px;
+        &.header-bg {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .main-header {
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+    &.header-style-3 {
+        .main-header {
+            padding: 0;
+        }
+        .box-nav-ul .menu-item {
+            padding: 33px 0;
         }
     }
 }

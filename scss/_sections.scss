@@ -46,6 +46,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         .left {
             display: flex;
             gap: 12px;
@@ -977,4 +978,33 @@ ul.list-text {
             }
         }
     }
+}
+
+.wd-form-address{
+    margin: 20px 0px 40px;
+    border-radius: 10px;
+    padding: 20px 15px;
+    border: 1px solid var(--line);
+    .title{
+        font-size: 28px;
+        line-height: 33.6px;
+        margin: 20px 0px;
+    }
+    .box-field{
+        margin-bottom: 15px;
+    }
+    .tf-select select{
+        border-radius: 8px;
+        height: 46px;
+    }
+}
+
+.list-account-address {
+    display: grid;
+    gap: 40px 30px;
+}
+
+.show-form-address,
+.edit-form-address{
+    display: none;
 }

@@ -563,7 +563,7 @@
                     width: 8px;
                 }
                 &::-webkit-scrollbar-thumb {
-                    background: var(--Secondary-2);
+                    background: var(--Secondary2);
                 }
                 &::-webkit-scrollbar-track {
                     background: var(--line);
@@ -1273,4 +1273,104 @@
 }
 .bg-color-red {
     background-color: #dc2a35;
+}
+
+.modal-search {
+    .icon-close-popup {
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--surface);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .modal-dialog {
+        max-width: 1100px;
+    }
+    .modal-content {
+        margin-right: 15px;
+        margin-left: 15px;
+        border: 0;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .tf-loading {
+        border-radius: 4px;
+        border: 1px solid var(--main);
+        margin-left: auto;
+        margin-right: auto;
+        width: 163px;
+        height: 52px;
+        justify-content: center;
+        &::before {
+            border-color: var(--white);
+        }
+    }
+    .tf-grid-layout {
+        overflow-y: auto;
+        padding-right: 34px;
+        margin-right: -40px;
+        min-height: 100px;
+        transition: height 0.3s ease; 
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+        }
+    }
+}
+
+.modal-size-guide {
+    .modal-dialog {
+        max-width: 1157px;
+    }
+    .modal-content {
+        border: 0;
+        padding: 40px;
+        .header {
+            width: max-content;
+            margin-bottom: 32px;
+            .icon-close-popup {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 16px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--surface);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+        .wrap {
+            min-height: 325px;
+        }
+    }
+}
+
+.tab-sizeguide-table {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    width: 100%;
+    th {
+        border: 1px solid var(--line);
+        padding: 10px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+    td {
+        border: 1px solid var(--line);
+        border-width: 0 1px 1px 0;
+        padding: 10px;
+        line-height: 20px;
+    }
 }

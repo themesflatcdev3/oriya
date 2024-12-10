@@ -531,6 +531,9 @@
         $(".tf-add-cart-success .tf-add-cart-close").click(function () {
             $(".tf-add-cart-success").removeClass("active");
         });
+        $(".show-compare").click(function () {
+            $("#compare").modal("show");
+        });
         $(".show-size-guide").click(function () {
             $("#size-guide").modal("show");
         });
@@ -557,37 +560,37 @@
 
     /* header sticky
   -------------------------------------------------------------------------*/
-    // var headerSticky = function () {
-    //     let lastScrollTop = 0;
-    //     let delta = 5;
-    //     let navbarHeight = $("header").outerHeight();
-    //     let didScroll = false;
+    var headerSticky = function () {
+        let lastScrollTop = 0;
+        let delta = 5;
+        let navbarHeight = $("header").outerHeight();
+        let didScroll = false;
 
-    //     $(window).scroll(function () {
-    //         didScroll = true;
-    //     });
+        $(window).scroll(function () {
+            didScroll = true;
+        });
 
-    //     setInterval(function () {
-    //         if (didScroll) {
-    //             let st = $(window).scrollTop();
-    //             navbarHeight = $("header").outerHeight();
+        setInterval(function () {
+            if (didScroll) {
+                let st = $(window).scrollTop();
+                navbarHeight = $("header").outerHeight();
 
-    //             if (st > navbarHeight) {
-    //                 if (st > lastScrollTop + delta) {
-    //                     $("header").css("top", `-${navbarHeight}px`);
-    //                 } else if (st < lastScrollTop - delta) {
-    //                     $("header").css("top", "0");
-    //                     $("header").addClass("header-bg");
-    //                 }
-    //             } else {
-    //                 $("header").css("top", "unset");
-    //                 $("header").removeClass("header-bg");
-    //             }
-    //             lastScrollTop = st;
-    //             didScroll = false;
-    //         }
-    //     }, 250);
-    // };
+                if (st > navbarHeight) {
+                    if (st > lastScrollTop + delta) {
+                        $("header").css("top", `-${navbarHeight}px`);
+                    } else if (st < lastScrollTop - delta) {
+                        $("header").css("top", "0");
+                        $("header").addClass("header-bg");
+                    }
+                } else {
+                    $("header").css("top", "unset");
+                    $("header").removeClass("header-bg");
+                }
+                lastScrollTop = st;
+                didScroll = false;
+            }
+        }, 250);
+    };
 
     /* img group
   -------------------------------------------------------------------------*/
@@ -998,91 +1001,77 @@
     };
 
     var scrollQuickView = function () {
+  
         var scrollContainer = $(".modal-quick-view .wrapper-scroll-quickview");
         var activescrollBtn = null;
-        var offsetTolerance = 100;
-
+        var offsetTolerance = 100; 
+      
         function getTargetScroll(target, isHorizontal) {
-            if (isHorizontal) {
-                return (
-                    target.offset().left -
-                    scrollContainer.offset().left +
-                    scrollContainer.scrollLeft()
-                );
-            } else {
-                return (
-                    target.offset().top -
-                    scrollContainer.offset().top +
-                    scrollContainer.scrollTop()
-                );
-            }
-        }
-
-        function isHorizontalMode() {
-            return window.innerWidth < 767;
-        }
-
-        $(".btn-scroll-quickview").on("click", function () {
-            console.log("Button clicked!");
-
-            var scroll = $(this).data("scroll-quickview");
-            var target = $(
-                `.item-scroll-quickview[data-scroll-quickview='${scroll}']`
+          if (isHorizontal) {
+            return (
+              target.offset().left - scrollContainer.offset().left + scrollContainer.scrollLeft()
             );
-
-            if (target.length > 0) {
-                var isHorizontal = isHorizontalMode();
-                var targetScroll = getTargetScroll(target, isHorizontal);
-
-                console.log(
-                    "Scrolling to:",
-                    targetScroll,
-                    "Mode:",
-                    isHorizontal ? "Horizontal" : "Vertical"
-                );
-
-                if (isHorizontal) {
-                    scrollContainer.animate({ scrollLeft: targetScroll }, 600);
-                } else {
-                    scrollContainer.animate({ scrollTop: targetScroll }, 600);
-                }
-
-                $(".btn-scroll-quickview").removeClass("active");
-                $(this).addClass("active");
-                activescrollBtn = $(this);
+          } else {
+            return (
+              target.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop()
+            );
+          }
+        }
+      
+        function isHorizontalMode() {
+          return window.innerWidth < 767; 
+        }
+      
+        $(".btn-scroll-quickview").on("click", function () {
+      
+          var scroll = $(this).data("scroll-quickview");
+          var target = $(
+            `.item-scroll-quickview[data-scroll-quickview='${scroll}']`
+          );
+      
+          if (target.length > 0) {
+            var isHorizontal = isHorizontalMode(); 
+            var targetScroll = getTargetScroll(target, isHorizontal);
+      
+      
+            if (isHorizontal) {
+              scrollContainer.animate({ scrollLeft: targetScroll }, 600);
             } else {
-                console.error("Target not found for scroll:", scroll);
+              scrollContainer.animate({ scrollTop: targetScroll }, 600);
             }
+      
+            $(".btn-scroll-quickview").removeClass("active");
+            $(this).addClass("active");
+            activescrollBtn = $(this);
+          } else {
+            console.error("Target not found for scroll:", scroll);
+          }
         });
-
-        scrollContainer.on("scroll", function () {
-            var isHorizontal = isHorizontalMode();
-
-            $(".item-scroll-quickview").each(function () {
-                var targetStart =
-                    getTargetScroll($(this), isHorizontal) - offsetTolerance;
-                var targetEnd =
-                    targetStart +
-                    (isHorizontal
-                        ? $(this).outerWidth()
-                        : $(this).outerHeight()) +
-                    offsetTolerance;
-
-                var currentScroll = isHorizontal
-                    ? scrollContainer.scrollLeft()
-                    : scrollContainer.scrollTop();
-
-                if (currentScroll >= targetStart && currentScroll < targetEnd) {
-                    var scroll = $(this).data("scroll-quickview");
-
-                    $(".btn-scroll-quickview").removeClass("active");
-                    $(
-                        `.btn-scroll-quickview[data-scroll-quickview='${scroll}']`
-                    ).addClass("active");
-                }
-            });
+      
+        scrollContainer.on("scroll", function () {  
+          var isHorizontal = isHorizontalMode(); 
+      
+          $(".item-scroll-quickview").each(function () {
+            var targetStart = getTargetScroll($(this), isHorizontal) - offsetTolerance;
+            var targetEnd = targetStart + (isHorizontal ? $(this).outerWidth() : $(this).outerHeight()) + offsetTolerance;
+      
+            var currentScroll = isHorizontal
+              ? scrollContainer.scrollLeft()
+              : scrollContainer.scrollTop();
+      
+            if (currentScroll >= targetStart && currentScroll < targetEnd) {
+              var scroll = $(this).data("scroll-quickview");
+      
+              $(".btn-scroll-quickview").removeClass("active");
+              $(`.btn-scroll-quickview[data-scroll-quickview='${scroll}']`).addClass(
+                "active"
+              );
+            }
+          });
         });
-    };
+    
+    
+      };
 
     /* hoverPin
   -------------------------------------------------------------------------*/
@@ -1316,7 +1305,7 @@
         stagger_wrap();
         clickModalSecond();
         scrollProgress();
-        // headerSticky();
+        headerSticky();
         img_group();
         filterTab();
         autoPopup();
