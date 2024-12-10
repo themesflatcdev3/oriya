@@ -777,6 +777,11 @@
 }
 
 .modal-quick-view {
+    .wrap {
+        .header {
+            margin-bottom: 40px;
+        }
+    }
     .modal-content {
         max-width: min(856px, 90vw) !important;
         cursor: default !important;
@@ -848,7 +853,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-          
         }
     }
 }
@@ -1316,7 +1320,7 @@
         padding-right: 34px;
         margin-right: -40px;
         min-height: 100px;
-        transition: height 0.3s ease; 
+        transition: height 0.3s ease;
         &::-webkit-scrollbar {
             width: 6px;
         }
