@@ -1287,6 +1287,36 @@
         });
     };
 
+    /* Hover Image Cursor
+    -------------------------------------------------------------------------*/
+    var hoverImgCursor = function (){
+        let offsetX = 20; 
+        let offsetY = 20; 
+        $(".hover-cursor-img").on("mousemove", function (e) {
+        let hoverImage = $(this).find(".hover-image");
+        hoverImage.css({
+            top: e.clientY + offsetY + "px",
+            left: e.clientX + offsetX + "px",
+        });
+        });
+
+        $(".hover-cursor-img").on("mouseenter", function () {
+        let hoverImage = $(this).find(".hover-image");
+        hoverImage.css({
+            transform: "scale(1)",
+            opacity: 1,
+        });
+        });
+
+        $(".hover-cursor-img").on("mouseleave", function () {
+        let hoverImage = $(this).find(".hover-image");
+        hoverImage.css({
+            transform: "scale(0)", 
+            opacity: 0, 
+        });
+        });
+    }
+
     // Dom Ready
     $(function () {
         selectImages();
@@ -1333,6 +1363,7 @@
         new WOW().init();
         paralaximg();
         efectparalax();
+        hoverImgCursor();
         preloader();
     });
 })(jQuery);

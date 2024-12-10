@@ -453,6 +453,22 @@
 }
 
 @media (min-width: 1200px) {
+    .hover-cursor-img{
+        position: relative;
+        .hover-image {
+            position: fixed;
+            transform: scale(0); 
+            pointer-events: none;
+            opacity: 0; 
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+            z-index: 1000;
+            display: block; 
+            img {
+                max-width: 150px; 
+                box-shadow: var(--shadow1);
+              }
+          }
+    }
     .dropdown-filter {
         max-width: 100%;
         position: absolute;
@@ -672,6 +688,10 @@
     .tf-silideshow {
         .wrap-slider {
             height: 700px;
+        }
+        &.style-4 .wrap-slider {
+            display: grid ;
+            grid-template-columns: 50% 50% !important;
         }
     }
 }
