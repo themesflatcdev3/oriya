@@ -747,6 +747,35 @@
     }
 }
 
+.canvas-sidebar {
+    max-width: min(90vw, 360px);
+    .canvas-header {
+        @include flex(center, space-between);
+        padding: 0px 15px;
+        background-color: var(--Surface);
+        min-height: 40px;
+        .icon-close-popup {
+            font-size: 16px;
+        }
+    }
+    .canvas-body {
+        padding: 15px;
+        .sidebar-account {
+            padding: 32px 15px;
+            border-radius: 12px;
+            .account-avatar {
+                margin-bottom: 16px;
+            }
+            .my-account-nav {
+                .my-account-nav-item {
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
 .modal-quick-view {
     .modal-content {
         max-width: min(856px, 90vw) !important;
