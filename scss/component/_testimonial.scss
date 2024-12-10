@@ -36,7 +36,7 @@
         }
     }
     .content {
-        padding: 22px 23px 24px;
+        padding: 22px 23px 21px;
     }
     .content-top {
         display: grid;
@@ -75,8 +75,8 @@
         border: none;
         .box-icon {
             .icon {
-                font-size: 44px;
-                margin-bottom: 24px;
+                font-size: 51px;
+                margin-bottom: 20px;
             }
         }
         .box-author {
@@ -113,9 +113,9 @@
             }
         }
     }
-    .wrap-button{
-       display: flex;
-       gap: 12px;
+    .wrap-button {
+        display: flex;
+        gap: 12px;
     }
     .sw-button {
         position: unset;

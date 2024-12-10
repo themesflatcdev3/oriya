@@ -12,13 +12,13 @@
     .accordion-product-wrap {
         .accordion-product-item {
             &:not(:last-child) {
-                margin-bottom: 16px;
+                margin-bottom: 15px;
             }
         }
     }
 }
 .accordion-product-item {
-    padding: 20px;
+    padding: 22px 20px 17px; 
     border-radius: 12px;
     border: 1px solid var(--line);
     .accordion-title {
@@ -35,11 +35,11 @@
         }
     }
     .accordion-faqs-content {
-        padding-top: 8px;
+        padding-top: 10px;
     }
     &.style-2 {
         border-radius: unset;
-        padding: 20px 0;
+        padding: 20px 0 19px;
         border: none;
         &:not(:last-child) {
             border-bottom: 1px solid var(--main);
@@ -58,7 +58,7 @@
         }
         .accordion-content {
             margin-top: 20px;
-            padding: 28px;
+            padding: 15px;
             border-radius: 8px;
             border: 1px solid var(--line);
             gap: 20px

@@ -82,15 +82,10 @@
         width: 380px;
         margin-top: 0px;
     }
-    .card-product {
-        &.style-list {
-            .list-product-btn.size-box {
-                margin-bottom: 16px;
-            }
-        }
-    }
+
     .slider-scroll,
-    .thumbs-slider {
+    .thumbs-slider,
+    .frequently-bought-together-2 {
         max-width: 615px;
     }
     .tf-product-info-list {
@@ -101,7 +96,7 @@
 
 @media (min-width: 992px) {
     .tab-product {
-        margin-bottom: 40px;
+        margin-bottom: 28px;
         gap: 40px;
     }
     .tf-grid-layout-md,
@@ -296,6 +291,12 @@
         .collection-position {
             height: 640px;
         }
+        &.style-2 {
+            padding: 0 5px;
+            .collection-position {
+                height: unset;
+            }
+        }
     }
     .flat-img-with-text-6 {
         grid-template-columns: 1fr 1fr 1fr;
@@ -325,7 +326,7 @@
         th {
             font-size: 20px;
             padding-left: 20px;
-            padding-right: 20px;
+            padding-right: 40px;
             text-align: center;
             &:last-child {
                 padding-right: 0;
@@ -336,7 +337,7 @@
             }
         }
         td {
-            padding: 28px 20px;
+            padding:27px 22px;
         }
     }
     .box-order {
@@ -357,6 +358,13 @@
     .wrap-box-location {
         &.swiper-wrapper {
             gap: 30px;
+        }
+    }
+    .card-product {
+        &.style-list {
+            .card-product-wrapper {
+                width: 94%;
+            }
         }
     }
 }
@@ -409,6 +417,11 @@
         }
         &.xl-col-7 {
             grid-template-columns: repeat(7, 1fr);
+        }
+    }
+    .blog-grid-main{
+        .tf-grid-layout{
+            row-gap: 48px;
         }
     }
 
@@ -486,7 +499,7 @@
     }
     .about-us-main {
         .main-content {
-            gap: 91px;
+            gap: 76px;
         }
         .tf-sw-iconbox {
             margin-top: 60px;
@@ -498,9 +511,46 @@
             gap: 60px;
         }
     }
-    .testimonial-item{
+    .testimonial-item {
         &.style-3 {
             padding-right: 30px;
+        }
+    }
+    .tf-img-with-text-3 {
+        .content-left {
+            padding: 40px 0 40px 31px;
+        }
+    }
+    .flat-img-with-text-6 {
+        .collection-position {
+            .img-style {
+                height: 632px;
+            }
+        }
+    }
+    .sidebar-filter {
+        &.canvas-filter {
+            .canvas-body {
+                padding: 0;
+            }
+        }
+    }
+    .tab-reviews {
+        &.style-2 {
+            .tab-reviews-heading {
+                flex-wrap: nowrap;
+                gap: 30px;
+            }
+            .rating-score {
+                max-width: 264px;
+            }
+        }
+    }
+    .accordion-product-item {
+        &.style-2 {
+            .accordion-content {
+                padding: 28px;
+            }
         }
     }
 }
@@ -550,6 +600,9 @@
             display: none;
         }
     }
+    .terms-of-use-wrap {
+        gap: 60px;
+    }
 }
 @media (max-width: 1350px) {
     h1 {
@@ -573,7 +626,7 @@
             .has-border-y {
                 border: 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                padding:10px 0;
+                padding: 10px 0;
             }
             &.header-style-2 {
                 margin-bottom: -128px;
@@ -733,6 +786,17 @@
             }
             .widget-content-inner {
                 padding: 30px 15px;
+            }
+        }
+    }
+    .terms-of-use-wrap {
+        gap: 30px;
+        .left {
+            width: 300px;
+        }
+        .right {
+            .heading {
+                margin-bottom: 32px;
             }
         }
     }
@@ -1070,6 +1134,13 @@
             }
         }
     }
+    .terms-of-use-wrap {
+        flex-direction: column;
+    }
+    .terms-of-use-wrap .left {
+        width: 100%;
+        position: unset;
+    }
 }
 @media (max-width: 610px) {
     footer {
@@ -1155,6 +1226,14 @@
         .tf-btn {
             font-size: 15px;
             line-height: 23px;
+        }
+    }
+    .tf-img-with-text-3 {
+        .sw-product-single-prev {
+            left: 0;
+        }
+        .sw-product-single-next {
+            right: 0;
         }
     }
 }

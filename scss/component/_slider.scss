@@ -134,7 +134,7 @@
         background-color: var(--Surface);
         .wrap-slider {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 960px 960px;
         }
         .content-left {
             position: relative;
@@ -145,7 +145,13 @@
             max-width: 440px;
             left: 32%;
         }
+        .slider-nav-sw {
+            .swiper {
+                border-radius: 0px;
+            }
+        }
     }
+   
 }
 
 .slider-effect-fade {

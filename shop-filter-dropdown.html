@@ -563,7 +563,7 @@
                         </div>
                     </div>
                     <ul class="tf-control-layout">
-                        <li class="tf-view-layout-switch sw-layout-list list-layout active" data-value-layout="list">
+                        <li class="tf-view-layout-switch sw-layout-list list-layout " data-value-layout="list">
                             <div class="item">
                                 <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
@@ -573,7 +573,7 @@
                                 </svg>     
                             </div>
                         </li>
-                        <li class="tf-view-layout-switch sw-layout-2" data-value-layout="tf-col-2">
+                        <li class="tf-view-layout-switch sw-layout-2 " data-value-layout="tf-col-2">
                             <div class="item">
                                 <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="6" cy="6" r="2.5" stroke="#181818"/>
@@ -595,7 +595,7 @@
                                 </svg>                                    
                             </div>
                         </li>
-                        <li class="tf-view-layout-switch sw-layout-4" data-value-layout="tf-col-4">
+                        <li class="tf-view-layout-switch sw-layout-4 active" data-value-layout="tf-col-4">
                             <div class="item">
                                 <svg class="icon" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
@@ -642,18 +642,47 @@
                                 <h5><span class="icon icon-filter"></span>Filters</h5>
                                 <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
                             </div>
-                            <div class="canvas-body">
+                            <div class="canvas-body mb_40">
                                 <div class="widget-facet facet-categories">
                                     <h6 class="facet-title">Product Categories</h6>
                                     <ul class="facet-content">
-                                        <li><a href="#" class="link">Bags <span class="count-cate">(112)</span></a></li>
-                                        <li><a href="#" class="link">Booking <span class="count-cate">(32)</span> </a></li>
-                                        <li><a href="#" class="link">Clothing <span class="count-cate">(42)</span></a></li>
-                                        <li><a href="#" class="link active">Women <span class="count-cate">(65)</span></a></li>
-                                        <li><a href="#" class="link">Men <span class="count-cate">(13)</span></a></li>
-                                        <li><a href="#" class="link">Shoes <span class="count-cate">(52)</span></a></li>
+                                        <li><a href="#" class="link">Desks Wood <span class="count-cate">(112)</span></a></li>
+                                        <li><a href="#" class="link">Office Chairs <span class="count-cate">(32)</span> </a></li>
+                                        <li><a href="#" class="link">Storage Office <span class="count-cate">(42)</span></a></li>
+                                        <li><a href="#" class="link active">Decor Office <span class="count-cate">(65)</span></a></li>
+                                        <li><a href="#" class="link">Lighting <span class="count-cate">(13)</span></a></li>
+                                        <li><a href="#" class="link">Accessories <span class="count-cate">(52)</span></a></li>
                                         <li><a href="#" class="link">Uncategorized <span class="count-cate">(14)</span></a></li>
                                     </ul>
+                                </div>
+                                <div class="widget-facet facet-fieldset">
+                                    <h6 class="facet-title">Material</h6>
+                                    <div class="box-fieldset-item">
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="nike">
+                                            <label for="nike">Wood <span class="count-brand">(112)</span></label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="LV">
+                                            <label for="LV">Fabric<span class="count-brand">(2)</span></label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="hermes">
+                                            <label for="hermes">Ceramic <span class="count-brand">(42)</span></label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="gucci">
+                                            <label for="gucci">Cotton <span class="count-brand">(13)</span></label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="zalando">
+                                            <label for="zalando">Metal <span class="count-brand">(54)</span></label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="brand" class="tf-check" id="adidas">
+                                            <label for="adidas">Silk <span class="count-brand">(93)</span></label>
+                                        </fieldset>
+                                    </div>
                                 </div>
                                 <div class="widget-facet facet-price">
                                     <h6 class="facet-title">Price</h6>
@@ -667,19 +696,6 @@
                                             <span class="title-price">Max price</span>
                                             <div class="price-val" id="price-max-value" data-currency="$"></div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="widget-facet facet-size">
-                                    <h6 class="facet-title">Size</h6>
-                                    <div class="facet-size-box size-box">
-                                        <span class="size-item size-check">XS</span>
-                                        <span class="size-item size-check">S</span>
-                                        <span class="size-item size-check">M</span>
-                                        <span class="size-item size-check">L</span>
-                                        <span class="size-item size-check">XL</span>
-                                        <span class="size-item size-check">2XL</span>
-                                        <span class="size-item size-check">3XL</span>
-                                        <span class="size-item size-check free-size">Free Size</span>
                                     </div>
                                 </div>
                                 <div class="widget-facet facet-color">
@@ -710,38 +726,11 @@
                                         </fieldset>
                                     </div>
                                 </div>
-                                <div class="widget-facet facet-fieldset">
-                                    <h6 class="facet-title">Brands</h6>
-                                    <div class="box-fieldset-item">
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="nike">
-                                            <label for="nike">Nike <span class="count-brand">(112)</span></label>
-                                        </fieldset>
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="LV">
-                                            <label for="LV">Louis Vuitton <span class="count-brand">(2)</span></label>
-                                        </fieldset>
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="hermes">
-                                            <label for="hermes">Hermes <span class="count-brand">(42)</span></label>
-                                        </fieldset>
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="gucci">
-                                            <label for="gucci">Gucci <span class="count-brand">(13)</span></label>
-                                        </fieldset>
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="zalando">
-                                            <label for="zalando">Zalando <span class="count-brand">(54)</span></label>
-                                        </fieldset>
-                                        <fieldset class="fieldset-item">
-                                            <input type="checkbox" name="brand" class="tf-check" id="adidas">
-                                            <label for="adidas">Adidas <span class="count-brand">(93)</span></label>
-                                        </fieldset>
-                                    </div>
-                                </div>
+                               
                             </div>
-                            <div class="canvas-bottom">
+                            <div class="canvas-bottom p-0 d-flex gap-12">
                                 <button id="reset-filter" class="tf-btn btn-border btn-reset">Clear All Filters</button>
+                                <button class="tf-btn btn-onsurface">Show 10 Products</button>
                             </div>
                         </div>
                     </div>
@@ -891,33 +880,36 @@
                                     homage to the timeless design traditions that have defined Danish design for
                                     generations.</p>
                                 <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active">
-                                            <span class="d-none text-capitalize color-filter">Light Brown</span>
-                                            <span class="swatch-value bg-light-brown"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.2.jpg"
-                                                src="images/shop/product-8.2.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Light Bink</span>
-                                            <span class="swatch-value bg-light-pink"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.3.jpg"
-                                                src="images/shop/product-8.3.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Light Grey</span>
-                                            <span class="swatch-value bg-dark-grey-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.4.jpg"
-                                                src="images/shop/product-8.4.jpg" alt="image-product">
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
+                                    <div class="wrap">
+                                        <ul class="list-color-product mb_16">
+                                            <li class="list-color-item color-swatch active">
+                                                <span class="d-none text-capitalize color-filter">Light Brown</span>
+                                                <span class="swatch-value bg-light-brown"></span>
+                                                <img class="lazyload" data-src="images/shop/product-8.2.jpg"
+                                                    src="images/shop/product-8.2.jpg" alt="image-product">
+                                            </li>
+                                            <li class="list-color-item color-swatch">
+                                                <span class="d-none text-capitalize color-filter">Light Bink</span>
+                                                <span class="swatch-value bg-light-pink"></span>
+                                                <img class="lazyload" data-src="images/shop/product-8.3.jpg"
+                                                    src="images/shop/product-8.3.jpg" alt="image-product">
+                                            </li>
+                                            <li class="list-color-item color-swatch">
+                                                <span class="d-none text-capitalize color-filter">Light Grey</span>
+                                                <span class="swatch-value bg-dark-grey-2"></span>
+                                                <img class="lazyload" data-src="images/shop/product-8.4.jpg"
+                                                    src="images/shop/product-8.4.jpg" alt="image-product">
+                                            </li>
+                                        </ul>
+                                        <div class="size-box list-product-btn">
+                                            <span class="size-item box-icon">S</span>
+                                            <span class="size-item box-icon">M</span>
+                                            <span class="size-item box-icon">L</span>
+                                            <span class="size-item box-icon">XL</span>
+                                            <span class="size-item box-icon disable">XXL</span>
+                                        </div>
                                     </div>
+                                   
                                     <div class="list-product-btn">
                                         <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                             cart</a>
