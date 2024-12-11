@@ -1336,9 +1336,6 @@ header {
 .header-default.header-style-1.header-bg {
   background-color: var(--Onsurface);
 }
-.header-default.header-style-1.header-bg .main-header {
-  padding: 10px 0;
-}
 .header-default.header-style-1 .main-header {
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1462,7 +1459,7 @@ header {
   pointer-events: all;
   opacity: 1;
   visibility: visible;
-  transform: translateX(0px) translateY(0px);
+  transform: translateX(0px) translateY(-1px);
 }
 .box-nav-ul .item-link {
   display: flex;
