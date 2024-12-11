@@ -2041,7 +2041,7 @@
     <!-- Filter -->
     <div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
         <div class="canvas-wrapper">
-            <div class="canvas-header d-flex d-xl-none">
+            <div class="canvas-header">
                 <h5><span class="icon icon-filter"></span>Filters</h5>
                 <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
             </div>
@@ -2049,43 +2049,14 @@
                 <div class="widget-facet facet-categories">
                     <h6 class="facet-title">Product Categories</h6>
                     <ul class="facet-content">
-                        <li><a href="#" class="link">Desks Wood <span class="count-cate">(112)</span></a></li>
-                        <li><a href="#" class="link">Office Chairs <span class="count-cate">(32)</span> </a></li>
-                        <li><a href="#" class="link">Storage Office <span class="count-cate">(42)</span></a></li>
-                        <li><a href="#" class="link active">Decor Office <span class="count-cate">(65)</span></a></li>
-                        <li><a href="#" class="link">Lighting <span class="count-cate">(13)</span></a></li>
-                        <li><a href="#" class="link">Accessories <span class="count-cate">(52)</span></a></li>
+                        <li><a href="#" class="link">Bags <span class="count-cate">(112)</span></a></li>
+                        <li><a href="#" class="link">Booking <span class="count-cate">(32)</span> </a></li>
+                        <li><a href="#" class="link">Clothing <span class="count-cate">(42)</span></a></li>
+                        <li><a href="#" class="link active">Women <span class="count-cate">(65)</span></a></li>
+                        <li><a href="#" class="link">Men <span class="count-cate">(13)</span></a></li>
+                        <li><a href="#" class="link">Shoes <span class="count-cate">(52)</span></a></li>
                         <li><a href="#" class="link">Uncategorized <span class="count-cate">(14)</span></a></li>
                     </ul>
-                </div>
-                <div class="widget-facet facet-fieldset">
-                    <h6 class="facet-title">Material</h6>
-                    <div class="box-fieldset-item">
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="nike">
-                            <label for="nike">Wood <span class="count-brand">(112)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="LV">
-                            <label for="LV">Fabric<span class="count-brand">(2)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="hermes">
-                            <label for="hermes">Ceramic <span class="count-brand">(42)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="gucci">
-                            <label for="gucci">Cotton <span class="count-brand">(13)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="zalando">
-                            <label for="zalando">Metal <span class="count-brand">(54)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="adidas">
-                            <label for="adidas">Silk <span class="count-brand">(93)</span></label>
-                        </fieldset>
-                    </div>
                 </div>
                 <div class="widget-facet facet-price">
                     <h6 class="facet-title">Price</h6>
@@ -2099,6 +2070,19 @@
                             <span class="title-price">Max price</span>
                             <div class="price-val" id="price-max-value" data-currency="$"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="widget-facet facet-size">
+                    <h6 class="facet-title">Size</h6>
+                    <div class="facet-size-box size-box">
+                        <span class="size-item size-check">XS</span>
+                        <span class="size-item size-check">S</span>
+                        <span class="size-item size-check">M</span>
+                        <span class="size-item size-check">L</span>
+                        <span class="size-item size-check">XL</span>
+                        <span class="size-item size-check">2XL</span>
+                        <span class="size-item size-check">3XL</span>
+                        <span class="size-item size-check free-size">Free Size</span>
                     </div>
                 </div>
                 <div class="widget-facet facet-color">
@@ -2129,9 +2113,37 @@
                         </fieldset>
                     </div>
                 </div>
-
+                <div class="widget-facet facet-fieldset">
+                    <h6 class="facet-title">Brands</h6>
+                    <div class="box-fieldset-item">
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="nike">
+                            <label for="nike">Nike <span class="count-brand">(112)</span></label>
+                        </fieldset>
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="LV">
+                            <label for="LV">Louis Vuitton <span class="count-brand">(2)</span></label>
+                        </fieldset>
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="hermes">
+                            <label for="hermes">Hermes <span class="count-brand">(42)</span></label>
+                        </fieldset>
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="gucci">
+                            <label for="gucci">Gucci <span class="count-brand">(13)</span></label>
+                        </fieldset>
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="zalando">
+                            <label for="zalando">Zalando <span class="count-brand">(54)</span></label>
+                        </fieldset>
+                        <fieldset class="fieldset-item">
+                            <input type="checkbox" name="brand" class="tf-check" id="adidas">
+                            <label for="adidas">Adidas <span class="count-brand">(93)</span></label>
+                        </fieldset>
+                    </div>
+                </div>
             </div>
-            <div class="canvas-bottom d-block d-xl-none">
+            <div class="canvas-bottom">
                 <button id="reset-filter" class="tf-btn btn-border btn-reset">Clear All Filters</button>
             </div>
         </div>
@@ -2609,6 +2621,7 @@
     <script type="text/javascript" src="js/nouislider.min.js"></script>
     <script type="text/javascript" src="js/shop.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
+    <script type="text/javascript" src="js/simpleParallaxVanilla.umd.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

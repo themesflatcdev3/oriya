@@ -1171,6 +1171,13 @@ a:focus, a:hover {
   display: none;
 }
 
+.loadItem.hidden {
+  display: none !important;
+}
+.loadItem.card-product.style-list:not(.hidden) {
+  display: flex !important;
+}
+
 /*------------ Components ---------------- */
 /*------------ header ---------------- */
 .tf-topbar {
@@ -1606,7 +1613,6 @@ header {
   border-color: var(--main);
 }
 .mega-menu.mega-menu-1 {
-  background-color: transparent;
   padding: 0;
 }
 .mega-menu.mega-menu-1 .menu-heading {
@@ -1622,7 +1628,6 @@ header {
   display: flex;
   gap: 30px;
   padding: 36px 40px;
-  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
   border-radius: 0 0 20px 20px;
   background-color: var(--White);
 }
@@ -2730,6 +2735,19 @@ footer .footer-bottom-wrap .left {
 }
 .tf-loading.loading .text-btn {
   display: none;
+}
+
+.btn-infinite-scroll {
+  height: 32px;
+  padding: 0;
+  border: none;
+}
+.btn-infinite-scroll::before {
+  width: 22px;
+  height: 22px;
+  border: solid 2px var(--main);
+  opacity: 1;
+  animation-play-state: running;
 }
 
 @keyframes tf_rotator {

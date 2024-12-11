@@ -444,10 +444,10 @@
                                                             <div class="menu-heading text-title">Shop Layout</div>
                                                             <ul class="menu-list">
                                                                 <li><a href="shop-default.html"
-                                                                        class="menu-link-text text_secondary link">Shop
+                                                                        class="menu-link-text text_secondary link active">Shop
                                                                         Default</a></li>
                                                                 <li><a href="shop-list.html"
-                                                                        class="menu-link-text text_secondary link active">Shop
+                                                                        class="menu-link-text text_secondary link">Shop
                                                                         List</a></li>
                                                                 <li><a href="shop-filter-dropdown.html"
                                                                         class="menu-link-text text_secondary link">Shop
@@ -603,7 +603,7 @@
 
         <!-- .page-title -->
         <div class="page-title relative">
-            <div class="paralaximg" data-parallax="scroll" data-image-src="images/page-title/page-title-10.jpg">
+            <div class="paralaximg" data-parallax="scroll" data-image-src="images/page-title/page-title-9.jpg">
             </div>
             <div class="content">
                 <div class="container">
@@ -622,10 +622,12 @@
 
         <!-- Section product -->
         <section class="flat-spacing">
-            <div class="container">
+            <div class="container-full">
                 <div class="tf-shop-control">
                     <div class="tf-control-filter">
-                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop" class="tf-btn-filter"><span class="icon icon-filter"></span><span class="text">Filters</span></a>
+                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop"
+                            class="tf-btn-filter"><span class="icon icon-filter"></span><span
+                                class="text">Filters</span></a>
                         <div class="d-none d-lg-flex shop-sale-text">
                             <i class="icon icon-checkcircle"></i>
                             <p class="text-caption-1">Shop sale items only</p>
@@ -682,17 +684,33 @@
                                 </svg>
                             </div>
                         </li>
+                        <li class="tf-view-layout-switch sw-layout-5" data-value-layout="tf-col-5">
+                            <div class="item">
+                                <svg class="icon" width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="3" cy="6" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="11" cy="6" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="19" cy="6" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="27" cy="6" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="35" cy="6" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="3" cy="14" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="11" cy="14" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="19" cy="14" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="27" cy="14" r="2.5" stroke="#181818"></circle>
+                                    <circle cx="35" cy="14" r="2.5" stroke="#181818"></circle>
+                                </svg>
+                            </div>
+                        </li>
                     </ul>
                     <div class="tf-control-sorting">
                         <p class="d-none d-lg-block text-caption-1">Sort by:</p>
                         <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
                             <div class="btn-select">
-                                <span class="text-sort-value">Best selling</span>
+                                <span class="text-sort-value">Best Selling</span>
                                 <span class="icon icon-down"></span>
                             </div>
                             <div class="dropdown-menu">
                                 <div class="select-item" data-sort-value="best-selling">
-                                    <span class="text-value-item">Best Selling</span>
+                                    <span class="text-value-item">Best selling</span>
                                 </div>
                                 <div class="select-item" data-sort-value="a-z">
                                     <span class="text-value-item">Alphabetically, A-Z</span>
@@ -718,142 +736,9 @@
                         <button id="remove-all" class="remove-all-filters text-btn-uppercase"
                             style="display: none;">REMOVE ALL <i class="icon icon-close"></i></button>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-xl-3">
-                            <div class="sidebar-filter canvas-filter left">
-                                <div class="canvas-wrapper">
-                                    <div class="canvas-header d-flex d-xl-none">
-                                        <h5><span class="icon icon-filter"></span>Filters</h5>
-                                        <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas"
-                                            aria-label="Close"></span>
-                                    </div>
-                                    <div class="canvas-body">
-                                        <div class="widget-facet facet-categories">
-                                            <h6 class="facet-title">Product Categories</h6>
-                                            <ul class="facet-content">
-                                                <li><a href="#" class="link">Desks Wood <span
-                                                            class="count-cate">(112)</span></a></li>
-                                                <li><a href="#" class="link">Office Chairs <span
-                                                            class="count-cate">(32)</span> </a></li>
-                                                <li><a href="#" class="link">Storage Office <span
-                                                            class="count-cate">(42)</span></a></li>
-                                                <li><a href="#" class="link active">Decor Office <span
-                                                            class="count-cate">(65)</span></a></li>
-                                                <li><a href="#" class="link">Lighting <span
-                                                            class="count-cate">(13)</span></a></li>
-                                                <li><a href="#" class="link">Accessories <span
-                                                            class="count-cate">(52)</span></a></li>
-                                                <li><a href="#" class="link">Uncategorized <span
-                                                            class="count-cate">(14)</span></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="widget-facet facet-fieldset">
-                                            <h6 class="facet-title">Material</h6>
-                                            <div class="box-fieldset-item">
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="nike">
-                                                    <label for="nike">Wood <span
-                                                            class="count-brand">(112)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="LV">
-                                                    <label for="LV">Fabric<span class="count-brand">(2)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="hermes">
-                                                    <label for="hermes">Ceramic <span
-                                                            class="count-brand">(42)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="gucci">
-                                                    <label for="gucci">Cotton <span
-                                                            class="count-brand">(13)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="zalando">
-                                                    <label for="zalando">Metal <span
-                                                            class="count-brand">(54)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="checkbox" name="brand" class="tf-check" id="adidas">
-                                                    <label for="adidas">Silk <span
-                                                            class="count-brand">(93)</span></label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                        <div class="widget-facet facet-price">
-                                            <h6 class="facet-title">Price</h6>
-                                            <div class="price-val-range" id="price-value-range" data-min="0"
-                                                data-max="500"></div>
-                                            <div class="box-price-product">
-                                                <div class="box-price-item">
-                                                    <span class="title-price">Min price</span>
-                                                    <div class="price-val" id="price-min-value" data-currency="$"></div>
-                                                </div>
-                                                <div class="box-price-item">
-                                                    <span class="title-price">Max price</span>
-                                                    <div class="price-val" id="price-max-value" data-currency="$"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="widget-facet facet-color">
-                                            <h6 class="facet-title">Colors</h6>
-                                            <div class="facet-color-box">
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-light-pink-2"></span>Pink</div>
-                                                <div class="color-item color-check"><span class="color bg-red"></span>
-                                                    Red</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-beige-2"></span>Beige</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-orange-2"></span>Orange</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-light-green"></span>Green</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-main"></span>Black</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-purple-3"></span>Purple</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-grey"></span>Grey</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-light-blue-5"></span>Light Blue</div>
-                                                <div class="color-item color-check"><span
-                                                        class="color bg-dark-blue"></span>Dark Blue</div>
-                                            </div>
-                                        </div>
-                                        <div class="widget-facet facet-fieldset">
-                                            <h6 class="facet-title">Availability</h6>
-                                            <div class="box-fieldset-item">
-                                                <fieldset class="fieldset-item">
-                                                    <input type="radio" name="availability" class="tf-check"
-                                                        id="inStock">
-                                                    <label for="inStock">In stock <span
-                                                            class="count-stock">(32)</span></label>
-                                                </fieldset>
-                                                <fieldset class="fieldset-item">
-                                                    <input type="radio" name="availability" class="tf-check"
-                                                        id="outStock">
-                                                    <label for="outStock">Out of stock <span
-                                                            class="count-stock">(2)</span></label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="canvas-bottom d-block d-xl-none">
-                                        <button id="reset-filter" class="tf-btn btn-border btn-reset">Clear All
-                                            Filters</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-9">
-                        </div>
-                    </div> -->
                     <div class="tf-list-layout wrapper-shop" id="listLayout">
                         <!-- card product list 1 -->
-                        <div class="card-product style-list" data-availability="Out of stock"
-                            data-brand="adidas">
+                        <div class="card-product style-list" data-availability="Out of stock" data-brand="adidas">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
@@ -863,15 +748,13 @@
                                 </a>
                             </div>
                             <div class="card-product-info">
-                                <a href="product-detail.html" class="text-title title link">Ergonomic Chair
-                                    Pro</a>
+                                <a href="product-detail.html" class="text-title title link">Ergonomic Chair Pro</a>
                                 <div class="price text-button">
                                     <span class="old-price">$98.00</span>
                                     <span class="current-price">$219.99</span>
                                 </div>
-                                <p class="description text_secondary">Grounded in principles of
-                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance
-                                    pay
+                                <p class="description text_secondary text-body-default">Grounded in principles of
+                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance pay
                                     homage to the timeless design traditions that have defined Danish design for
                                     generations.</p>
                                 <div class="variant-wrap-list">
@@ -896,15 +779,14 @@
                                         </li>
                                     </ul>
                                     <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal"
-                                            class="btn-main-product">Add To
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                             cart</a>
                                         <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
                                             <span class="icon icon-heart"></span>
                                             <span class="tooltip">Wishlist</span>
                                         </a>
                                         <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                            class="box-icon compare ">
+                                            class="box-icon compare">
                                             <span class="icon icon-compare"></span>
                                             <span class="tooltip">Compare</span>
                                         </a>
@@ -928,12 +810,10 @@
                                 </a>
                             </div>
                             <div class="card-product-info">
-                                <a href="product-detail.html" class="text-title title link">Hybrid Laptop
-                                    Sleeve</a>
+                                <a href="product-detail.html" class="text-title title link">Hybrid Laptop Sleeve</a>
                                 <div class="price text-button"><span class="current-price">$59.99</span></div>
-                                <p class="description text_secondary">Grounded in principles of
-                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance
-                                    pay
+                                <p class="description text_secondary text-body-default">Grounded in principles of
+                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance pay
                                     homage to the timeless design traditions that have defined Danish design for
                                     generations.</p>
                                 <div class="variant-wrap-list">
@@ -958,15 +838,14 @@
                                         </li>
                                     </ul>
                                     <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal"
-                                            class="btn-main-product">Add To
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                             cart</a>
                                         <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
                                             <span class="icon icon-heart"></span>
                                             <span class="tooltip">Wishlist</span>
                                         </a>
                                         <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                            class="box-icon compare ">
+                                            class="box-icon compare">
                                             <span class="icon icon-compare"></span>
                                             <span class="tooltip">Compare</span>
                                         </a>
@@ -990,34 +869,29 @@
                                 </a>
                             </div>
                             <div class="card-product-info">
-                                <a href="product-detail.html" class="text-title title link">Wireless Charging
-                                    Tray</a>
+                                <a href="product-detail.html" class="text-title title link">Wireless Charging Tray</a>
                                 <div class="price text-button"><span class="current-price">$69.99</span></div>
-                                <p class="description text_secondary">Grounded in principles of
-                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance
-                                    pay
+                                <p class="description text_secondary text-body-default">Grounded in principles of
+                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance pay
                                     homage to the timeless design traditions that have defined Danish design for
                                     generations.</p>
                                 <div class="variant-wrap-list">
                                     <div class="wrap">
                                         <ul class="list-color-product mb_16">
                                             <li class="list-color-item color-swatch active">
-                                                <span class="d-none text-capitalize color-filter">Light
-                                                    Brown</span>
+                                                <span class="d-none text-capitalize color-filter">Light Brown</span>
                                                 <span class="swatch-value bg-light-brown"></span>
                                                 <img class="lazyload" data-src="images/shop/product-8.2.jpg"
                                                     src="images/shop/product-8.2.jpg" alt="image-product">
                                             </li>
                                             <li class="list-color-item color-swatch">
-                                                <span class="d-none text-capitalize color-filter">Light
-                                                    Bink</span>
+                                                <span class="d-none text-capitalize color-filter">Light Bink</span>
                                                 <span class="swatch-value bg-light-pink"></span>
                                                 <img class="lazyload" data-src="images/shop/product-8.3.jpg"
                                                     src="images/shop/product-8.3.jpg" alt="image-product">
                                             </li>
                                             <li class="list-color-item color-swatch">
-                                                <span class="d-none text-capitalize color-filter">Light
-                                                    Grey</span>
+                                                <span class="d-none text-capitalize color-filter">Light Grey</span>
                                                 <span class="swatch-value bg-dark-grey-2"></span>
                                                 <img class="lazyload" data-src="images/shop/product-8.4.jpg"
                                                     src="images/shop/product-8.4.jpg" alt="image-product">
@@ -1032,15 +906,14 @@
                                         </div>
                                     </div>
                                     <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal"
-                                            class="btn-main-product">Add To
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                             cart</a>
                                         <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
                                             <span class="icon icon-heart"></span>
                                             <span class="tooltip">Wishlist</span>
                                         </a>
                                         <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                            class="box-icon compare ">
+                                            class="box-icon compare">
                                             <span class="icon icon-compare"></span>
                                             <span class="tooltip">Compare</span>
                                         </a>
@@ -1064,12 +937,10 @@
                                 </a>
                             </div>
                             <div class="card-product-info">
-                                <a href="product-detail.html" class="text-title title link">Double Standing
-                                    Desk</a>
+                                <a href="product-detail.html" class="text-title title link">Double Standing Desk</a>
                                 <div class="price text-button"><span class="current-price">$59.99</span></div>
-                                <p class="description text_secondary">Grounded in principles of
-                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance
-                                    pay
+                                <p class="description text_secondary text-body-default">Grounded in principles of
+                                    simplicity and craftsmanship, Seoul’s clean lines and understated elegance pay
                                     homage to the timeless design traditions that have defined Danish design for
                                     generations.</p>
                                 <div class="variant-wrap-list">
@@ -1094,15 +965,14 @@
                                         </li>
                                     </ul>
                                     <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal"
-                                            class="btn-main-product">Add To
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                             cart</a>
                                         <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
                                             <span class="icon icon-heart"></span>
                                             <span class="tooltip">Wishlist</span>
                                         </a>
                                         <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                            class="box-icon compare ">
+                                            class="box-icon compare">
                                             <span class="icon icon-compare"></span>
                                             <span class="tooltip">Compare</span>
                                         </a>
@@ -1123,14 +993,12 @@
                                 <div class="pagination-item text-button">2</div>
                             </li>
                             <li><a href="#" class="pagination-item text-button">3</a></li>
-                            <li><a href="#" class="pagination-item text-button"><i class="icon-right"></i></a>
-                            </li>
+                            <li><a href="#" class="pagination-item text-button"><i class="icon-right"></i></a></li>
                         </ul>
                     </div>
                     <div class="tf-grid-layout wrapper-shop tf-col-4" id="gridLayout">
                         <!-- card product 1 -->
-                        <div class="card-product style-1 grid" data-availability="Out of stock"
-                            data-brand="adidas">
+                        <div class="card-product style-1 grid" data-availability="Out of stock" data-brand="adidas">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
@@ -1144,7 +1012,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1155,8 +1023,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1199,7 +1066,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1210,14 +1077,12 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
                             <div class="card-product-info ">
-                                <a href="product-detail.html" class="title link">Open Box - Adjustable Laptop
-                                    Stand</a>
+                                <a href="product-detail.html" class="title link">Open Box - Adjustable Laptop Stand</a>
                                 <div class="price text-body-default ">
                                     <span class="text-caption-1 old-price">$98.00</span>
                                     <span class="current-price">$69.99</span>
@@ -1255,7 +1120,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1266,8 +1131,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1294,8 +1158,7 @@
                             </div>
                         </div>
                         <!-- card product 4 -->
-                        <div class="card-product style-1 grid" data-availability="Out of stock"
-                            data-brand="gucci">
+                        <div class="card-product style-1 grid" data-availability="Out of stock" data-brand="gucci">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-4.jpg"
@@ -1309,7 +1172,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1320,8 +1183,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1354,8 +1216,7 @@
                             </div>
                         </div>
                         <!-- card product 5 -->
-                        <div class="card-product style-1 grid" data-availability="Out of stock"
-                            data-brand="hermes">
+                        <div class="card-product style-1 grid" data-availability="Out of stock" data-brand="hermes">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-5.jpg"
@@ -1371,7 +1232,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1382,8 +1243,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1410,8 +1270,7 @@
                             </div>
                         </div>
                         <!-- card product 6 -->
-                        <div class="card-product style-1 grid" data-availability="In stock"
-                            data-brand="zalando">
+                        <div class="card-product style-1 grid" data-availability="In stock" data-brand="zalando">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-6.jpg"
@@ -1425,7 +1284,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1436,8 +1295,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1480,7 +1338,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1491,8 +1349,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1533,7 +1390,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1544,8 +1401,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1592,7 +1448,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1603,8 +1459,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1647,7 +1502,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1658,8 +1513,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1686,8 +1540,7 @@
                             </div>
                         </div>
                         <!-- card product 11 -->
-                        <div class="card-product style-1 grid" data-availability="In stock"
-                            data-brand="zalando">
+                        <div class="card-product style-1 grid" data-availability="In stock" data-brand="zalando">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
                                     <img class="lazyload img-product" data-src="images/shop/product-11.jpg"
@@ -1703,7 +1556,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1714,8 +1567,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1756,7 +1608,7 @@
                                         <span class="tooltip">Wishlist</span>
                                     </a>
                                     <a href="#compare" data-bs-toggle="modal" aria-controls="compare"
-                                        class="box-icon compare ">
+                                        class="box-icon compare">
                                         <span class="icon icon-compare"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
@@ -1767,8 +1619,7 @@
                                     </a>
                                 </div>
                                 <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add
-                                        To
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
                                         cart</a>
                                 </div>
                             </div>
@@ -1807,8 +1658,7 @@
                                 <div class="pagination-item text-button">2</div>
                             </li>
                             <li><a href="#" class="pagination-item text-button">3</a></li>
-                            <li><a href="#" class="pagination-item text-button"><i class="icon-right"></i></a>
-                            </li>
+                            <li><a href="#" class="pagination-item text-button"><i class="icon-right"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -1857,8 +1707,7 @@
                                                     <a href="about.html" class=" link footer-menu_item">About Us</a>
                                                 </li>
                                                 <li class="text-body-default">
-                                                    <a href="store-list.html" class=" link footer-menu_item">Our
-                                                        Stories</a>
+                                                    <a href="store-list.html" class=" link footer-menu_item">Our Stories</a>
                                                 </li>
                                                 <li class="text-body-default">
                                                     <a href="#" class=" link footer-menu_item">Size Guide</a>
@@ -1870,8 +1719,7 @@
                                                     <a href="#" class=" link footer-menu_item">Career</a>
                                                 </li>
                                                 <li class="text-body-default">
-                                                    <a href="my-account.html" class=" link footer-menu_item">My
-                                                        Account</a>
+                                                    <a href="my-account.html" class=" link footer-menu_item">My Account</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2032,8 +1880,8 @@
                         </a>
                         <div id="dropdown-menu-two" class="collapse">
                             <ul class="sub-nav-menu">
-                                <li><a href="shop-default.html" class="sub-nav-link">Shop Default</a></li>
-                                <li><a href="shop-list.html" class="sub-nav-link active">Shop List</a></li>
+                                <li><a href="shop-default.html" class="sub-nav-link active">Shop Default</a></li>
+                                <li><a href="shop-list.html" class="sub-nav-link">Shop List</a></li>
                                 <li><a href="shop-filter-dropdown.html" class="sub-nav-link">Shop Filter Dropdown</a>
                                 </li>
                                 <li><a href="shopping-cart.html" class="sub-nav-link">Shopping Cart</a></li>
@@ -2154,7 +2002,7 @@
             </div>
         </div>
     </div>
-    <!-- /Filter -->
+    <!-- /mobile menu -->
 
     <!-- shoppingCart -->
     <div class="modal fullRight fade modal-shopping-cart" id="shoppingCart">
@@ -3224,9 +3072,9 @@
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/multiple-modal.js"></script>
     <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/shop.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
     <script type="text/javascript" src="js/simpleParallaxVanilla.umd.js"></script>
-    <script type="text/javascript" src="js/shop.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

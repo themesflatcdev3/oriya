@@ -211,6 +211,19 @@
    
 }
 
+.btn-infinite-scroll{
+    height: 32px;
+    padding: 0;
+    border: none;
+    &::before {
+        width: 22px;
+        height: 22px;
+        border: solid 2px var(--main);
+        opacity: 1;
+        animation-play-state: running;
+    }
+}
+
 @keyframes tf_rotator {
     0% {
         transform: rotate(0deg);

@@ -994,3 +994,12 @@ a {
 .loadmore-item .fl-item {
     display: none;
 }
+
+.loadItem{
+    &.hidden{
+        display: none !important;
+    }
+   &.card-product.style-list:not(.hidden){
+        display: flex !important;
+   }
+}
