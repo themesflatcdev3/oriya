@@ -629,8 +629,12 @@ video {
   background-color: #f6efdd !important;
 }
 
-.bg-beige-1 {
-  background-color: #f6f1ee !important;
+.bg-color-beige {
+  background-color: #dfc6b8 !important;
+}
+
+.bg-color-yellow {
+  background-color: var(--Yellow) !important;
 }
 
 .text_white {
@@ -874,6 +878,10 @@ a:focus, a:hover {
 
 .pb_0 {
   padding-bottom: 0px !important;
+}
+
+.pb_10 {
+  padding-bottom: 10px !important;
 }
 
 .pb_23 {
@@ -1992,6 +2000,56 @@ footer .footer-bottom-wrap .left {
   height: 24px;
 }
 
+.tf-toolbar-bottom {
+  display: none;
+  padding: 15px 0px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: fixed;
+  z-index: 60;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--White);
+}
+.tf-toolbar-bottom .toolbar-item {
+  flex: 1 0 20%;
+  position: relative;
+}
+.tf-toolbar-bottom .toolbar-item a {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 40px;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tf-toolbar-bottom .toolbar-item a .toolbar-icon {
+  position: relative;
+}
+.tf-toolbar-bottom .toolbar-item a .toolbar-icon i {
+  font-size: 20px;
+  color: var(--main);
+}
+.tf-toolbar-bottom .toolbar-item a .toolbar-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--Secondary);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-toolbar-bottom .toolbar-item a:hover .toolbar-label {
+  color: var(--main);
+  font-weight: 600;
+}
+
 /*------------ tabs ---------------- */
 .tab-banner .nav-tab-item .nav-tab-link {
   padding-top: 15px;
@@ -2536,6 +2594,7 @@ footer .footer-bottom-wrap .left {
   width: max-content;
   line-height: 26px;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
 }
 .tf-btn i {
   font-size: 20px;
@@ -5342,6 +5401,54 @@ form .cols > * {
   display: none;
 }
 
+.canvas-categories .canvas-header .icon-close {
+  font-size: 14px;
+}
+.canvas-categories .canvas-header .icon-left {
+  font-size: 24px;
+}
+.canvas-categories .wd-facet-categories {
+  padding: 12px 0px;
+  border-bottom: 1px solid var(--line);
+}
+.canvas-categories .wd-facet-categories:first-child {
+  padding-top: 0;
+}
+.canvas-categories .wd-facet-categories:last-child {
+  border: none;
+}
+.canvas-categories .wd-facet-categories .avt {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.canvas-categories .wd-facet-categories .facet-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.canvas-categories .wd-facet-categories .facet-title .title {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.canvas-categories .wd-facet-categories .facet-title .icon {
+  font-size: 16px;
+}
+.canvas-categories .wd-facet-categories .facet-body {
+  margin-top: 12px;
+  padding: 8px 10px;
+}
+.canvas-categories .wd-facet-categories .facet-body li .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.canvas-categories .wd-facet-categories .facet-body li:not(:last-child) .item {
+  margin-bottom: 16px;
+}
+
 /*------------ box icon ---------------- */
 .tf-social-icon {
   display: -webkit-box;
@@ -6476,8 +6583,8 @@ form .cols > * {
   border: 2px solid var(--line);
   border-radius: 50%;
   padding: 2px;
-  width: 48px;
-  height: 48px;
+  width: 75px;
+  height: 75px;
 }
 .variant-picker-item .variant-picker-values label.style-image-rounded img {
   border-radius: 50%;
@@ -6665,6 +6772,47 @@ form .cols > * {
 
 .frequently-bought-together-2 {
   margin-top: 40px;
+}
+
+.tf-sticky-btn-atc {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 70;
+  box-shadow: 0px 5px 18px 5px rgba(64, 72, 87, 0.15);
+  background-color: var(--White);
+}
+.tf-sticky-btn-atc .form-sticky-atc {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tf-sticky-btn-atc .form-sticky-atc .tf-dropdown-sort {
+  padding: 10px;
+}
+.tf-sticky-btn-atc .tf-sticky-atc-product {
+  display: flex;
+  gap: 16px;
+}
+.tf-sticky-btn-atc .tf-sticky-atc-product .image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tf-sticky-btn-atc .tf-sticky-atc-product .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tf-sticky-btn-atc .tf-sticky-atc-infos {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.tf-sticky-btn-atc .tf-sticky-atc-infos .tf-sticky-atc-btns {
+  width: 274px;
 }
 
 /*------------ shop ---------------- */
@@ -7223,6 +7371,17 @@ form .cols > * {
 }
 .wg-quantity .btn-quantity:hover {
   color: var(--Primary);
+}
+.wg-quantity.style-1 {
+  width: 140px;
+}
+.wg-quantity.style-1 .btn-quantity {
+  height: 44px;
+  font-size: 30px;
+}
+.wg-quantity.style-1 input {
+  pointer-events: none;
+  width: 50px;
 }
 
 .box-order {
@@ -10493,6 +10652,9 @@ ul.list-text.type-number {
   .tf-silideshow.style-4 .box-content {
     left: 32%;
   }
+  .modal-open .tf-sticky-btn-atc {
+    padding-right: 17px;
+  }
 }
 @media (max-width: 1515px) {
   .tf-silideshow .wrap-slider {
@@ -10523,6 +10685,9 @@ ul.list-text.type-number {
   }
 }
 @media (max-width: 1199px) {
+  .flat-spacing-8,
+  .flat-spacing-7,
+  .flat-spacing-6,
   .flat-spacing-5,
   .flat-spacing-4,
   .flat-spacing-3,
@@ -10585,6 +10750,20 @@ ul.list-text.type-number {
   .modal-size-guide .modal-dialog .modal-content {
     padding: 15px;
   }
+  .form-sticky-atc {
+    justify-content: center !important;
+  }
+  .form-sticky-atc .text-title,
+  .form-sticky-atc .tf-sticky-atc-product {
+    display: none;
+  }
+  .form-sticky-atc .tf-sticky-atc-infos {
+    gap: 15px;
+    width: 100%;
+  }
+  .form-sticky-atc .tf-sticky-atc-infos .tf-sticky-atc-btns {
+    width: 100%;
+  }
 }
 @media (max-width: 1100px) {
   .blog-detail-wrap > .inner > .tf-social-icon {
@@ -10613,6 +10792,9 @@ ul.list-text.type-number {
   }
 }
 @media (max-width: 991px) {
+  .tf-toolbar-bottom {
+    display: flex;
+  }
   .d_lg_none {
     display: none !important;
   }
@@ -10983,6 +11165,23 @@ ul.list-text.type-number {
   }
 }
 @media (max-width: 576px) {
+  .tf-countdown.style-2 .countdown__item {
+    width: 40px;
+  }
+  .form-sticky-atc .tf-sticky-atc-infos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .form-bundle-product {
+    padding: 23px 15px;
+  }
+  .tf-bundle-product-item .tf-product-bundle-image {
+    width: 80px;
+    height: 80px;
+  }
+  .tab-reviews .tab-reviews-heading .top {
+    flex-direction: column;
+  }
   .header-default .nav-icon {
     gap: 8px;
   }

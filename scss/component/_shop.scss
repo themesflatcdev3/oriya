@@ -553,6 +553,17 @@
             color: var(--Primary);
         }
     }
+    &.style-1 {
+        width: 140px;
+        .btn-quantity {
+            height: 44px;
+            font-size: 30px;
+        }
+        input {
+            pointer-events: none;
+            width: 50px;
+        }
+    }
 }
 
 .box-order {

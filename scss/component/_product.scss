@@ -856,8 +856,8 @@
                 border: 2px solid var(--line);
                 border-radius: 50%;
                 padding: 2px;
-                width: 48px;
-                height: 48px;
+                width: 75px;
+                height: 75px;
                 img {
                     border-radius: 50%;
                     width: 100%;
@@ -1059,4 +1059,46 @@
 
 .frequently-bought-together-2 {
     margin-top: 40px;
+}
+
+.tf-sticky-btn-atc {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 70;
+    box-shadow: 0px 5px 18px 5px rgba(64, 72, 87, 0.15);
+    background-color: var(--White);
+    .form-sticky-atc {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .tf-dropdown-sort{
+            padding: 10px;
+        }
+    }
+    .tf-sticky-atc-product {
+        display: flex;
+        gap: 16px;
+        .image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;            
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+    .tf-sticky-atc-infos {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        
+        .tf-sticky-atc-btns {
+            width: 274px;
+        }
+    }
 }

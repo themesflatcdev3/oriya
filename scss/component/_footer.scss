@@ -126,3 +126,51 @@ footer {
         }
     }
 }
+
+.tf-toolbar-bottom {
+    display: none; 
+    padding: 15px 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: fixed;
+    z-index: 60;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--White);
+    .toolbar-item {
+        flex: 1 0 20%;
+        position: relative;
+        a {
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+            height: 40px;
+            gap: 4px;
+            @include flex(center,center);
+            flex-direction: column;
+            .toolbar-icon {
+                
+                position: relative;
+                i {
+                    font-size: 20px;
+                    color: var(--main);
+                }
+            }
+            .toolbar-label {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 16px;
+                color: var(--Secondary);
+                @include transition3;
+            }
+            &:hover{
+                .toolbar-label{
+                    color: var(--main);
+                    font-weight: 600;
+                }
+            }
+        }
+        
+    }
+}
