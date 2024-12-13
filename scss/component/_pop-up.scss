@@ -1385,60 +1385,69 @@
     }
 }
 
-.canvas-categories{
-    .canvas-header{
-         .icon-close{
-             font-size: 14px;
-         }
-         .icon-left{
-             font-size: 24px;
-         }
-    } 
-    .wd-facet-categories{
-         padding: 12px 0px;
-         border-bottom: 1px solid var(--line);
-         &:first-child{
-             padding-top: 0;
-         }
-         &:last-child{
-             border: none;
-         }
-         .avt{
-             width: 32px;
-             height: 32px;
-             border-radius: 50%;
-         }
-         .facet-title{
-             display: flex;
-             align-items: center;
-             gap: 16px;
-            
-             .title{
-                 flex-grow: 1;
-                 font-size: 16px;
-                 line-height: 24px;
-                 font-weight: 500;
-             }
- 
-             .icon{
-                 font-size: 16px;
-             }
-         }
-         .facet-body{
-             margin-top: 12px;
-             padding: 8px 10px;
-             li{
-                 .item{
-                     display: flex;
-                     align-items: center;
-                     gap: 8px;
-                 }
-                 &:not(:last-child){
-                     .item{
-                         margin-bottom: 16px;
-                     }
-                 }
-             }
-         }
+.canvas-categories {
+    .canvas-header {
+        .icon-close {
+            font-size: 14px;
+        }
+
+        .icon-left {
+            font-size: 24px;
+        }
     }
- }
+
+    .wd-facet-categories {
+        padding: 12px 0px;
+        border-bottom: 1px solid var(--line);
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border: none;
+        }
+
+        .avt {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .facet-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .title {
+                flex-grow: 1;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+            }
+
+            .icon {
+                font-size: 16px;
+            }
+        }
+
+        .facet-body {
+            margin-top: 12px;
+            padding: 8px 10px;
+
+            li {
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                &:not(:last-child) {
+                    .item {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

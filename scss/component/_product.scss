@@ -1102,3 +1102,17 @@
         }
     }
 }
+
+.tf-product-stacked {
+    .item:first-child {
+        grid-column: 1 / 3;
+    }
+}
+
+.tf-product-pre-order {
+    padding: 4px 16px;
+    background-color: var(--main);
+    border-radius: 99px;
+    width: max-content;
+    color: var(--White);
+}

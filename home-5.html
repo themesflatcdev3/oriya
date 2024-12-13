@@ -95,7 +95,10 @@
                         <div class="col-xl-3 col-4 d-xl-none">
                             <a href="#mobileMenu" class="mobile-menu" data-bs-toggle="offcanvas"
                                 aria-controls="mobileMenu">
-                                <i class="icon icon-categories"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                                    </path>
+                                </svg>
                             </a>
                         </div>
                         <div class="col-xl-3 col-4 text-xl-start text-center">
@@ -359,7 +362,7 @@
                                 </a>
                                 <div class="content cls-content">
                                     <div class="cls-heading">
-                                        <h3 class="text_white">Super Sale Up To %50</h3>
+                                        <h3 class="text_white">Super Sale Up To 50%</h3>
                                         <p class="text_white">Reserved for special occasions</p>
                                     </div>
                                     <a href="product-detail.html" class="tf-btn btn-white ">Explore Collection <i
@@ -1457,7 +1460,7 @@
                             </div>
                             <div class="content cls-content">
                                 <div class="cls-heading mb_34">
-                                    <h1 class=""> <a href="shop-default.html" class="link text_white"> Super Sale Up To %50 </a>
+                                    <h1 class=""> <a href="shop-default.html" class="link text_white"> Super Sale Up To 50% </a>
                                     </h1>
                                     <p class="text_white text-body-1">Reserved for special occasions</p>
                                 </div>
@@ -1837,6 +1840,54 @@
         </footer>
         <!-- /.footer -->
 
+        <!-- toolbar-bottom -->
+        <div class="tf-toolbar-bottom">
+            <div class="toolbar-item">
+                <a href="shop-default.html">
+                    <div class="toolbar-icon">
+                        <span class="icon icon-squaresfour"></span>    
+                    </div>
+                    <div class="toolbar-label">Shop</div>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="#shopCategories" data-bs-toggle="offcanvas" aria-controls="shopCategories">
+                    <div class="toolbar-icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                                    </path>
+                                </svg> 
+                    </div>
+                    <div class="toolbar-label">Categories</div>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="#search" data-bs-toggle="modal">
+                    <div class="toolbar-icon">
+                        <span class="icon icon-search"></span>                            
+                    </div>
+                    <div class="toolbar-label">Search</div>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="wish-list.html">
+                    <div class="toolbar-icon">
+                        <span class="icon icon-heart"></span>  
+                    </div>
+                    <div class="toolbar-label">Wishlist</div>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="#shoppingCart" data-bs-toggle="modal">
+                    <div class="toolbar-icon">
+                        <span class="icon icon-cart"></span>  
+                    </div>
+                    <div class="toolbar-label">Cart</div>
+                </a>
+            </div>
+        </div>
+        <!-- /toolbar-bottom -->
+
     </div>
 
     <!-- mobile menu -->
@@ -1991,6 +2042,91 @@
             </div>
         </div>
     </div> <!-- /mobile menu -->
+
+    <!-- Categories -->
+    <div class="offcanvas offcanvas-start canvas-filter canvas-categories" id="shopCategories">
+        <div class="canvas-wrapper">
+            <div class="canvas-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                                    </path>
+                                </svg>
+                <h5>Categories</h5>
+                <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+            </div>
+            <div class="canvas-body">
+                <div class="wd-facet-categories">
+                    <div role="dialog" class="facet-title collapsed" data-bs-target="#forChair" data-bs-toggle="collapse" aria-expanded="true" aria-controls="forChair">
+                        <img class="avt" src="images/shop/product-1.jpg" alt="avt">
+                        <span class="title">Chair</span>
+                        <span class="icon icon-down"></span>
+                    </div>
+                    <div id="forChair" class="collapse">
+                        <ul class="facet-body">
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/product-1.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Chair</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/product-1.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Chair</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wd-facet-categories">
+                    <div role="dialog" class="facet-title collapsed" data-bs-target="#forDesk" data-bs-toggle="collapse" aria-expanded="true" aria-controls="forDesk">
+                        <img class="avt" src="images/shop/popup-slidebar-item-2.jpg" alt="avt">
+                        <span class="title">Desk</span>
+                        <span class="icon icon-down"></span>
+                    </div>
+                    <div id="forDesk" class="collapse">
+                        <ul class="facet-body">
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/popup-slidebar-item-2.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Desk</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/popup-slidebar-item-2.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Desk</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wd-facet-categories">
+                    <div role="dialog" class="facet-title collapsed" data-bs-target="#forPhone" data-bs-toggle="collapse" aria-expanded="true" aria-controls="forPhone">
+                        <img class="avt" src="images/shop/product-5.jpg" alt="avt">
+                        <span class="title">Phone</span>
+                        <span class="icon icon-down"></span>
+                    </div>
+                    <div id="forPhone" class="collapse">
+                        <ul class="facet-body">
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/product-5.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Phone</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/shop/product-5.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Phone</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wd-facet-categories">
+                    <div role="dialog" class="facet-title collapsed" data-bs-target="#forLamp" data-bs-toggle="collapse" aria-expanded="true" aria-controls="forLamp">
+                        <img class="avt" src="images/gallery/gallery-3.jpg" alt="avt">
+                        <span class="title">Lamp</span>
+                        <span class="icon icon-down"></span>
+                    </div>
+                    <div id="forLamp" class="collapse">
+                        <ul class="facet-body">
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/gallery/gallery-3.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Lamp</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="item link"><img class="avt" src="images/gallery/gallery-3.jpg" alt="avt"><span class="title-sub text-caption-1 text-secondary">Lamp</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div> 
+    <!-- /Categories -->
 
     <!-- shoppingCart -->
     <div class="modal fullRight fade modal-shopping-cart" id="shoppingCart">

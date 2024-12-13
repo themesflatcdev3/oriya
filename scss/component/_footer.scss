@@ -138,21 +138,26 @@ footer {
     right: 0;
     left: 0;
     background-color: var(--White);
+    box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+
     .toolbar-item {
         flex: 1 0 20%;
         position: relative;
         a {
             width: 100%;
-            padding-right: 10px;
-            padding-left: 10px;
+            padding-right: 7px;
+            padding-left: 7px;
             height: 40px;
             gap: 4px;
             @include flex(center,center);
             flex-direction: column;
             .toolbar-icon {
-                
+                display: flex;
                 position: relative;
-                i {
+                svg {
+                    width: 20px;
+                }
+                .icon {
                     font-size: 20px;
                     color: var(--main);
                 }
