@@ -821,7 +821,7 @@
                     transform: translate(-50%, -50%) rotate(45deg);
                     width: 32px;
                     height: 1.2px;
-                    border-bottom: 1.2px dashed var(--Secondary2);
+                    border-bottom: 1.2px dashed var(--Primary);
                 }
                 &::after {
                     position: absolute;
@@ -831,7 +831,7 @@
                     transform: translate(-50%, -50%) rotate(-45deg);
                     width: 32px;
                     height: 1.2px;
-                    border-bottom: 1.2px dashed var(--Secondary2);
+                    border-bottom: 1.2px dashed var(--Primary);
                 }
             }
             &.style-image {
@@ -998,8 +998,8 @@
     gap: 12px;
     .tf-product-bundle-image {
         flex-shrink: 0;
-        width: 173px;
-        height: 173px;
+        width: 150px;
+        height: 150px;
         border-radius: 8px;
         overflow: hidden;
         img {

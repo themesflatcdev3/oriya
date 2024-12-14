@@ -154,9 +154,9 @@ header {
         }
     }
     .mobile-menu {
-        display: inline-flex;
-        .icon {
-            font-size: 24px;
+        display: flex;
+        svg {
+            width: 22px;
         }
     }
     &.header-absolute {
@@ -177,13 +177,18 @@ header {
     }
     &.header-style-2 {
         padding: 40px 34px 0 34px;
-        margin-bottom: -128px;
+        margin-bottom: -138px;
         &.header-bg {
             padding-top: 0;
         }
         .main-header {
             border-left: 0;
             border-right: 0;
+        }
+        .main-header {
+            .menu-item {
+                padding: 37px 0;
+            }
         }
     }
     &.header-style-3 {

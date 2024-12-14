@@ -341,6 +341,10 @@
             }
         }
     }
+    &.has-boxshadow {
+        padding: 25px;
+        margin: -25px;
+    }
 }
 
 .categories-item {
@@ -405,7 +409,7 @@
     display: grid;
     gap: 40px;
     .relatest-post-item:not(:last-child) {
-        padding-bottom: 16.5px;
+        padding-bottom: 15.5px;
         border-bottom: 1px solid var(--line);
         margin-bottom: 16.5px;
     }

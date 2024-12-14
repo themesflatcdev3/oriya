@@ -232,3 +232,10 @@
         transform: rotate(360deg);
     }
 }
+
+.btn-sold-out {
+    pointer-events: none;
+    background-color: var(--line) !important;
+    color: var(--Secondary2) !important;
+    cursor: no-drop;
+}

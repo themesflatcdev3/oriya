@@ -70,12 +70,15 @@
         gap: 15px;
         .item1 {
             grid-area: item1;
+            max-height: 630px;
         }
         .item2 {
             grid-area: item2;
+            max-height: 300px;
         }
         .item3 {
             grid-area: item3;
+            max-height: 300px;
         }
     }
     .ask-question {
@@ -362,6 +365,7 @@
         flex-direction: row;
         .collection-position {
             height: 640px;
+            width: 50%;
         }
         &.style-2 {
             padding: 0 5px;
@@ -691,6 +695,18 @@
     .modal-open {
         .tf-sticky-btn-atc {
             padding-right: 17px;
+        }
+    }
+    .header-default {
+        &.header-style-1 {
+            .container-full {
+                padding: 0 50px;
+            }
+        }
+        &.header-style-2 {
+            .container-full {
+                padding: 0 57px;
+            }
         }
     }
 }
@@ -1097,6 +1113,11 @@
         }
     }
     .grid-cls-v2 {
+        .item1 {
+            .collection-position .img-style {
+                width: 100%;
+            }
+        }
         .collection-position {
             .img-style {
                 height: 400px;
