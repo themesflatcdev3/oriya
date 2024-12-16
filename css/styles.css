@@ -1149,7 +1149,7 @@ a:focus, a:hover {
   opacity: 1;
   visibility: visible;
 }
-#scroll-top.type-1 {
+#scroll-top.style-1 {
   bottom: 140px;
 }
 #scroll-top:hover {
@@ -1186,6 +1186,8 @@ a:focus, a:hover {
   display: flex !important;
 }
 
+/* Preload 
+------------------------------------------- */
 /*------------ Components ---------------- */
 /*------------ header ---------------- */
 .tf-topbar {
@@ -10426,6 +10428,9 @@ ul.list-text.type-number {
     bottom: 40px;
     right: 40px;
   }
+  #scroll-top.style-1 {
+    bottom: 80px;
+  }
   .flat-img-with-text-4 {
     gap: 60px;
     grid-template-columns: 1fr 1fr;
@@ -10838,6 +10843,9 @@ ul.list-text.type-number {
   }
 }
 @media (max-width: 991px) {
+  .tf-sticky-btn-atc {
+    bottom: 70px;
+  }
   .tf-toolbar-bottom {
     display: flex;
   }

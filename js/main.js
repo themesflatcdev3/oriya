@@ -76,7 +76,7 @@
                 $(".preload").fadeOut("slow", function () {
                     $(this).remove();
                 });
-            }, 100);
+            }, 300);
         }
     };
 

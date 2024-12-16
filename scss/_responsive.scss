@@ -346,6 +346,9 @@
     #scroll-top {
         bottom: 40px;
         right: 40px;
+        &.style-1 {
+            bottom: 80px;
+        }
     }
     .flat-img-with-text-4 {
         gap: 60px;
@@ -867,6 +870,9 @@
 }
 
 @media (max-width: 991px) {
+    .tf-sticky-btn-atc {
+        bottom: 70px;
+    }
     .tf-toolbar-bottom {
         display: flex;
     }
